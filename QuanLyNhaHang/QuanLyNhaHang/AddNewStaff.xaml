@@ -1,0 +1,372 @@
+﻿<Window x:Class="QuanLyNhaHang.AddNewStaff"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuanLyNhaHang"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="AddNewStaff" Height="648" Width="898" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" >
+    <Grid Margin="0,0,0,-6">
+        <Grid x:Name="gridImage"
+              Margin="50,50,0,0"
+              Width="150"
+              Height="150"
+              HorizontalAlignment="Left"
+              VerticalAlignment="Top"
+              >
+            <Rectangle x:Name="recImage"
+                       StrokeDashArray="4 2"
+                       Stroke="#FFF38413"
+                       StrokeThickness="4"
+                       RadiusX="4"
+                       RadiusY="4"
+                       Width="150"
+                       Height="150"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Top"/>
+
+            <Button
+            Style="{StaticResource MaterialDesignRaisedLightButton}"
+            Height="30"
+            materialDesign:ButtonAssist.CornerRadius="5"
+            ToolTip="MaterialDesignRaisedLightButton with Round Corners" Margin="30,94,30,0"
+            VerticalAlignment="Top" Background="#FFF38413"
+                >
+                <TextBlock Text="Select Image" FontWeight="Bold" FontSize="10" Foreground="White" />
+            </Button>
+            <materialDesign:PackIcon Kind="FileImageOutline"
+                                     Foreground="#FFF38413"
+                                     HorizontalAlignment="Center" Margin="0,19,0,0" Height="45" Width="50"/>
+
+
+        </Grid>
+        <Grid x:Name="gridInfo" Margin="400,20,0,129">
+            <Grid 
+                x:Name="grdIDEmployee"
+                Margin="0"
+                VerticalAlignment="Top"  
+                Width="420" 
+                Height="40">
+                <Label
+                    x:Name="lbIDEmployee"
+                    Content="ID"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Foreground="Black"
+                    FontSize="18"
+                    FontWeight="Bold" Margin="10,8,0,0"/>
+                <Rectangle x:Name="recIDEmployee"
+                           Height="40"
+                           Width="290"
+                           RadiusX="6"
+                           RadiusY="6" Margin="102,0,0,0"
+                           Stroke="Gray"
+                           HorizontalAlignment="Left"/>
+                <TextBox 
+                    x:Name="txtIDEmployee"
+                    materialDesign:HintAssist.Hint="Employee's ID"
+                    HorizontalAlignment="Left"  
+                    Width="265" 
+                    FontSize="14" 
+                    BorderThickness="0" 
+                    MaxLines="1"
+                    Padding="0" 
+                    Height="40" 
+                    HorizontalContentAlignment="Left"
+                    VerticalContentAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    SelectionBrush="{x:Null}"
+                    FontWeight="Bold" Margin="115,0,0,0" />
+            </Grid>
+            <Grid 
+                x:Name="grdNameEmployee"
+                Margin="0,60,-20,0"
+                VerticalAlignment="Top"  
+                Width="420" 
+                Height="40">
+                <Label
+                    x:Name="lbNameEmployee"
+                    Content="Name"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Foreground="Black"
+                    FontSize="18"
+                    FontWeight="Bold"/>
+                <Rectangle x:Name="recNameEmployee"
+                           Height="40"
+                           Width="290"
+                           RadiusX="6"
+                           RadiusY="6" Margin="90,0,0,0"
+                           Stroke="Gray"
+                           HorizontalAlignment="Left"/>
+                <TextBox 
+                    x:Name="txtNameEmployee"
+                    materialDesign:HintAssist.Hint="Employee's Name"
+                    HorizontalAlignment="Left"  
+                    Width="265" 
+                    FontSize="14" 
+                    BorderThickness="0" 
+                    MaxLines="1"
+                    Padding="0" 
+                    Height="40" 
+                    HorizontalContentAlignment="Left"
+                    VerticalContentAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    SelectionBrush="{x:Null}"
+                    FontWeight="Bold" Margin="115,0,0,0" />
+
+            </Grid>
+            <Grid 
+                Margin="0,120,-20,0"
+                VerticalAlignment="Top"
+                x:Name="grdSex" 
+                Width="420" 
+                Height="40">
+                <Label 
+                    x:Name="lbSex"
+                    Content="Sex"
+                    HorizontalAlignment="Left" 
+                    FontSize="18" 
+                    FontWeight="Bold" 
+   
+                    Height="32" 
+                    VerticalAlignment="Center"/>
+                <RadioButton
+                    x:Name="rdoMale"
+                    Style="{StaticResource MaterialDesignLightRadioButton}"
+                    IsChecked="True"
+                    Content="Male" 
+                    Height="24"
+                    Width="101"
+                    Margin="95,0,0,0" 
+                    Padding="20,1,0,0"
+                    FontSize="14"
+                    FontWeight="Bold" 
+                    HorizontalAlignment="Left" 
+                    VerticalAlignment="Center"/>
+                <RadioButton
+                    x:Name="rdoFemale"
+                    Style="{StaticResource MaterialDesignLightRadioButton}"
+                    Content="Female" 
+                    Margin="270,12,0,0" 
+                    Padding="20,1,0,0" 
+                    FontSize="14" 
+                    FontWeight="Bold"
+                    Height="24"
+                    Width="101" 
+                    VerticalAlignment="Top" 
+                    HorizontalAlignment="Left"/>
+            </Grid>
+            <Grid 
+                x:Name="grdPosition"
+                Margin="49,182,29,0"
+                VerticalAlignment="Top"  
+                Width="420" 
+                Height="40">
+                <Label
+                    x:Name="lbPosition"
+                    Content="Position"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Foreground="Black"
+                    FontSize="18"
+                    FontWeight="Bold"/>
+                <Rectangle x:Name="recPosition"
+                           Height="40"
+                           Width="285"
+                           RadiusX="6"
+                           RadiusY="6" Margin="90,0,0,0"
+                           Stroke="Gray"
+                           HorizontalAlignment="Left"/>
+                <ComboBox
+                    materialDesign:HintAssist.Hint="Staff's position"
+                    VerticalAlignment="Center"
+                    FontWeight="Bold"
+                    MinWidth="72"
+                    IsEditable="False"
+                     ItemsSource="{Binding LongListToTestComboVirtualization}" Margin="106,0,49,0" Height="31">
+                    <ComboBox.Text>
+                        <Binding
+                        Path="SelectedTextTwo"
+                        Mode="TwoWay"
+                        UpdateSourceTrigger="PropertyChanged">
+                        </Binding>
+                    </ComboBox.Text>
+                    <ComboBoxItem Content="Chef"/>
+                    <ComboBoxItem Content="Waiter"/>
+                    <ComboBoxItem Content="Manager"/>
+                    <ComboBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <VirtualizingStackPanel />
+                        </ItemsPanelTemplate>
+                    </ComboBox.ItemsPanel>
+                </ComboBox>
+
+            </Grid>
+            <Grid 
+                Margin="49,245,29,0" 
+                VerticalAlignment="Top" 
+                x:Name="grdBirthDate" 
+                Width="420" 
+                Height="40">
+                <Label 
+                    x:Name="lbBirthDate"
+                    Content="Birthday" 
+                    HorizontalAlignment="Left" 
+                    FontSize="18"
+                    FontWeight="Bold" 
+                    Height="32" 
+                    Margin="0" 
+                    VerticalAlignment="Center"/>
+                <Rectangle 
+                    x:Name="recBirthDate"
+                    Height="40" 
+                    Width="45"
+                    RadiusY="6"
+                    RadiusX="6" 
+                    Margin="375,0,0,0" 
+                    HorizontalAlignment="Left"/>
+                <DatePicker 
+                    
+                    x:Name="dpBirthDate"
+                    HorizontalAlignment="Left"
+                    Padding="0"
+                    materialDesign:HintAssist.Hint="Date of birth" 
+                    Width="275" 
+                    Height="40"
+                    BorderThickness="0" 
+                    FontSize="14"
+                    
+                    HorizontalContentAlignment="Left"
+                    FontWeight="Bold"
+                   
+                    VerticalContentAlignment="Center" Margin="100,0,0,0"/>
+            </Grid>
+            <Grid 
+                Margin="49,314,29,0" 
+                VerticalAlignment="Top" 
+                x:Name="grdBeginDate" 
+                Width="420" 
+                Height="40">
+                <Label 
+                    x:Name="lbBeginDate"
+                    Content="Begin Day" 
+                    HorizontalAlignment="Left" 
+                    FontSize="18"
+                    FontWeight="Bold" 
+                    Height="32" 
+                    Margin="0" 
+                    VerticalAlignment="Center"/>
+                <Rectangle 
+                    x:Name="recBeginDate"
+                    Height="40" 
+                    Width="45"
+                    RadiusY="6"
+                    RadiusX="6" 
+                    Margin="375,0,0,0" 
+                    HorizontalAlignment="Left"/>
+                <DatePicker 
+                    x:Name="dpBeginDay"
+                    HorizontalAlignment="Left"
+                    Padding="0"
+                    materialDesign:HintAssist.Hint="Begin date" 
+                    Width="275" 
+                    Height="40"
+                    BorderThickness="0" 
+                    FontSize="14"
+                    
+                    HorizontalContentAlignment="Left"
+                    FontWeight="Bold"
+                   
+                    VerticalContentAlignment="Center" Margin="100,0,0,0"/>
+            </Grid>
+            <Grid 
+                x:Name="grdSalaryEmployee"
+                Margin="49,379,29,0"
+                VerticalAlignment="Top"  
+                Width="420" 
+                Height="40">
+                <Label
+                    x:Name="lbSalaryEmployee"
+                    Content="Salary"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Foreground="Black"
+                    FontSize="18"
+                    FontWeight="Bold"/>
+                <Rectangle x:Name="recSalaryEmployee"
+                           Height="40"
+                           Width="285"
+                           RadiusX="6"
+                           RadiusY="6" Margin="95,0,0,0"
+                           Stroke="Gray"
+                           HorizontalAlignment="Left"/>
+                <TextBox 
+                    x:Name="txtSalaryEmployee"
+                    materialDesign:HintAssist.Hint="Employee's Salary"
+                    HorizontalAlignment="Left"  
+                    Width="265" 
+                    FontSize="14" 
+                    BorderThickness="0" 
+                    MaxLines="1"
+                    Padding="0" 
+                    Height="40" 
+                    HorizontalContentAlignment="Left"
+                    VerticalContentAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    SelectionBrush="{x:Null}"
+                    FontWeight="SemiBold" Margin="115,0,0,0" />
+
+            </Grid>
+            <Grid 
+                x:Name="grdPhoneEmployee"
+                Margin="49,439,29,0"
+                VerticalAlignment="Top"  
+                Width="420" 
+                Height="40">
+                <Label
+                    x:Name="lbPhoneEmployee"
+                    Content="Phone"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Foreground="Black"
+                    FontSize="18"
+                    FontWeight="Bold"/>
+                <Rectangle x:Name="recPhoneEmployee"
+                           Height="40"
+                           Width="285"
+                           RadiusX="6"
+                           RadiusY="6" Margin="95,0,0,0"
+                           Stroke="Gray"
+                           HorizontalAlignment="Left"/>
+                <TextBox 
+                    x:Name="txtPhoneEmployee"
+                    materialDesign:HintAssist.Hint="Employee's Phone Number"
+                    HorizontalAlignment="Left"  
+                    Width="265" 
+                    FontSize="14" 
+                    BorderThickness="0" 
+                    MaxLines="1"
+                    Padding="0" 
+                    Height="40" 
+                    HorizontalContentAlignment="Left"
+                    VerticalContentAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    SelectionBrush="{x:Null}"
+                    FontWeight="SemiBold" Margin="115,0,0,0" />
+
+            </Grid>
+        </Grid>
+        <Grid x:Name="grdSelection" Width="220" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,73,64" >
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnConfirm" Grid.Column="0" Background="#FFF38413" Content="Confirm" Foreground="White" FontSize="11" FontWeight="Bold" Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ButtonAssist.CornerRadius="10"/>
+
+            <Button x:Name="btnCancel" Grid.Column="2" Background="White" Content="Cancel" Foreground="#FFF38413" FontSize="11" FontWeight="Bold"  Style="{StaticResource MaterialDesignOutlinedButton}" materialDesign:ButtonAssist.CornerRadius="10"/>
+        </Grid>
+    </Grid>
+</Window>

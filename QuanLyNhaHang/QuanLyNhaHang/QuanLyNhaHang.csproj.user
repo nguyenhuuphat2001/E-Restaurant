@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="AddNewMeal.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddNewMenu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddNewStaff.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="BillTemplate.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ChangeMealStatus.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ChangeTableStatus.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ErrorBox.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MainMenu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TableManagement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="AddNewMeal.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddNewMenu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddNewStaff.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="BillTemplate.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ChangeMealStatus.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ChangeTableStatus.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ErrorBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Login.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainMenu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TableManagement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
