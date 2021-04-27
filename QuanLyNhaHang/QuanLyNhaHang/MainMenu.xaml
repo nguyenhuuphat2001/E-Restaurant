@@ -11,14 +11,14 @@
     <Window.Resources>
         <Storyboard x:Key="MenuOpen">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
-                <EasingDoubleKeyFrame KeyTime="0" Value="70"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="60"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="200"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="MenuClose">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
                 <EasingDoubleKeyFrame KeyTime="0" Value="200"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="70"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="60"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
     </Window.Resources>
@@ -122,7 +122,7 @@
                 </materialDesign:PopupBox>
             </StackPanel>
         </Grid>
-        <Grid x:Name="GridMenu" Width="70" HorizontalAlignment="Left" 
+        <Grid x:Name="GridMenu" Width="60" HorizontalAlignment="Left" 
               Background="#FFDA1B1B" >
             <Grid.Effect>
                 <DropShadowEffect BlurRadius="2" ShadowDepth="1" Color="#FFAEAEAE"/>
@@ -150,13 +150,21 @@
                             Click="ButtonOpenMenu_Click">
                         <materialDesign:PackIcon Foreground="#FF1B38" Kind="Menu" Width="25" Height="25"/>
                     </Button>
-                    <Button x:Name="ButtonCloseMenu" Width="60" Height="60" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Right" Visibility="Collapsed" Click="ButtonCloseMenu_Click">
+                    <Button x:Name="ButtonCloseMenu" 
+                            Width="60" Height="60" 
+                            Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" 
+                            Background="{x:Null}" BorderBrush="{x:Null}" 
+                            VerticalAlignment="Top" HorizontalAlignment="Right" 
+                            Visibility="Collapsed" 
+                            Click="ButtonCloseMenu_Click">
                         <materialDesign:PackIcon Foreground="#FF1B38" Kind="ArrowLeft" Width="25" Height="25"/>
                     </Button>
                     <Image Height="80" VerticalAlignment="Bottom"/>
 
                 </Grid>
-                <ListView x:Name="ListViewMenu" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="ListViewMenu_SelectionChanged">
+                <ListView x:Name="ListViewMenu" 
+                          ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                          SelectionChanged="ListViewMenu_SelectionChanged">
                     <ListViewItem Height="60 " Foreground="#FFDA1B1B">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Home" Width="25" Height="25" Foreground="#FFD4C0C0" Margin="10" VerticalAlignment="Center" />

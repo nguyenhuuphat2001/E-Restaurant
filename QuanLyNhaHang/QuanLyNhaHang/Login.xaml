@@ -26,11 +26,26 @@
         </Rectangle>
         <Grid Width="280" Height="240" VerticalAlignment="Bottom" Margin="0,100">
             <TextBlock Text="LOGIN" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" Foreground="Gray" FontSize="18" FontWeight="Bold"></TextBlock>
-            <StackPanel VerticalAlignment="Center" Margin="10">
-                <TextBox materialDesign:HintAssist.Hint="USERNAME" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,10" >
+            <StackPanel VerticalAlignment="Center" Margin="10,0,0,0">
+                <TextBox Name="usernameContainer" HorizontalAlignment="Left" materialDesign:HintAssist.Hint="USERNAME"  Margin="0,10" Width="220" >
                 </TextBox>
-                <PasswordBox materialDesign:HintAssist.Hint="PASSWORD" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="0,10"></PasswordBox>
+                <StackPanel x:Name="passwordStack" Orientation="Horizontal" Width="270">
+
+                    <Grid x:Name="passwordContainer">
+                        <TextBox x:Name="txbPassword" HorizontalAlignment="Center" VerticalAlignment="Center" Width="220" Height="31" />
+                        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Center" VerticalAlignment="Center" PasswordChanged="passwordBox_PasswordChanged"  materialDesign:HintAssist.Hint="PASSWORD" Margin="0,10,0,10" Width="220" Height="31"  >
+                        </PasswordBox>
+                    </Grid>
+
+
+                    <Button x:Name="passwordVisability" Width="45" Height="42" BorderBrush="White" Click="passwordShow_Click" Background="{x:Null}" >
+                        <materialDesign:PackIcon x:Name="passwordShow" Kind="EyeOff" VerticalAlignment="Center" Width="15" Height="23" HorizontalAlignment="Center"/>
+                    </Button>
+
+                </StackPanel>
+                <CheckBox Content="Remember Password" FontSize="15"/>
             </StackPanel>
+
         </Grid>
         <Button VerticalAlignment="Bottom" Margin="0,85" Width="150" Content="LOGIN" Background="#FFF36521" BorderBrush="#FFF3B021"></Button>
         <TextBlock Text="FORGOT YOUR PASSWORD?" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="50" FontSize="15" Foreground="Gray" FontWeight="Bold" Cursor="Hand"></TextBlock>

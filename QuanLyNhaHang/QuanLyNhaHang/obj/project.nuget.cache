@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GLmKXVy6HWvStqdPKzehrhXJR/EerR2Ajexj6NPIx0t21TTOjTF+uq93zaUJAuYvJRVBrEe87AYj4XJDfSpotg==",
+  "dgSpecHash": "T4vc3jZE8ObhZGVmN02Fl54h6yjfH3P9mY0+7pHvB6H0XcajtTCmKtZsCghap/auOzm7yddbcr7EcLQK5Cs9nw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Asus\\Downloads\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang.csproj",
+  "projectFilePath": "C:\\Users\\Asus\\Downloads\\Git\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asus\\.nuget\\packages\\livecharts\\0.9.7\\livecharts.0.9.7.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\livecharts.wpf\\0.9.7\\livecharts.wpf.0.9.7.nupkg.sha512",
