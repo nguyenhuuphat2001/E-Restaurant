@@ -158,11 +158,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Asus\\Downloads\\Git\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang.csproj",
+      "projectUniqueName": "C:\\Users\\Asus\\Downloads\\Git\\E-Restaurant-main\\E-Restaurant-main\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang.csproj",
       "projectName": "QuanLyNhaHang",
-      "projectPath": "C:\\Users\\Asus\\Downloads\\Git\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang.csproj",
+      "projectPath": "C:\\Users\\Asus\\Downloads\\Git\\E-Restaurant-main\\E-Restaurant-main\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang.csproj",
       "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Asus\\Downloads\\Git\\QuanLyNhaHang\\QuanLyNhaHang\\obj\\",
+      "outputPath": "C:\\Users\\Asus\\Downloads\\Git\\E-Restaurant-main\\E-Restaurant-main\\QuanLyNhaHang\\QuanLyNhaHang\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",

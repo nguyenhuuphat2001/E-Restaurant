@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="QuanLyNhaHang.CompareWithLastMonthCard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:QuanLyNhaHang"
+             mc:Ignorable="d" 
+             Height="Auto" Width="Auto">
+    <Grid>
+        <materialDesign:Card VerticalAlignment="Top" HorizontalAlignment="Left"
+  Foreground="#DD825D5D"
+  Width="320"
+  Height="190"
+  Padding="15" Background="#FFE06339">
+
+            <Grid>
+                <TextBlock x:Name="tbContent"  Text="Compare with last month" TextWrapping="Wrap" Margin="10,10,145,95" FontSize="18" FontWeight="Bold" Foreground="White"/>
+                
+                <Grid HorizontalAlignment="Right" >
+                    <Image Source="Assets/profit.png" Margin="10,0,0,0"/>
+                </Grid>
+                
+                <TextBlock x:Name="tbPercent" Text="%" TextWrapping="Wrap" Margin="10,95,223,0"  FontWeight="Bold" FontSize="35" Foreground="White"/>
+            </Grid>
+        </materialDesign:Card>
+    </Grid>
+</UserControl>

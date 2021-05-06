@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="QuanLyNhaHang.CartesianChart"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:QuanLyNhaHang"
+             mc:Ignorable="d" 
+             Height="Auto" Width="Auto">
+    <Grid Height="Auto" Width="Auto">
+        <materialDesign:Card
+                materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                >
+            <StackPanel>
+                <DatePicker HorizontalAlignment="Left"
+                        Width="250"
+                        materialDesign:HintAssist.Hint="Pick Date"
+                        Style="{StaticResource MaterialDesignOutlinedDatePicker}" Height="64" RenderTransformOrigin="0.5,0.5" >
+
+                </DatePicker>
+                <lvc:CartesianChart Height="224" Width="584"/>
+            </StackPanel>
+
+        </materialDesign:Card>
+    </Grid>
+</UserControl>

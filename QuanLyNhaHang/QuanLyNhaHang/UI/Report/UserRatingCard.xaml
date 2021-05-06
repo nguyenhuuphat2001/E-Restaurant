@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="QuanLyNhaHang.UserRatingCard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:QuanLyNhaHang"
+             mc:Ignorable="d" 
+             Height="Auto" Width="Auto">
+    <Grid>
+        <materialDesign:Card VerticalAlignment="Top" HorizontalAlignment="Center"
+  Foreground="#DD825D5D"
+  Width="320"
+  Height="190"
+  Padding="15" Background="#FFE039A5">
+
+            <Grid>
+                <TextBlock x:Name="tbContent"  Text="Average rating" TextWrapping="Wrap"  FontSize="18" FontWeight="Bold" Foreground="White"/>
+
+                <Grid HorizontalAlignment="Right" VerticalAlignment="Top">
+                    <Image Source="Assets/satisfy.png" Margin="10,0,0,0"/>
+                </Grid>
+
+                <materialDesign:RatingBar  HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                        Value="4"
+                        x:Name="BasicRatingBar"
+                        Height="30" Width="130" />
+            </Grid>
+        </materialDesign:Card>
+    </Grid>
+</UserControl>

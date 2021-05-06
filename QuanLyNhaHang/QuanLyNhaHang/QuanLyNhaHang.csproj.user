@@ -7,63 +7,189 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="AddNewMeal.xaml.cs">
+    <Compile Update="UI\Table\MealPicker\AdditionalNote.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="AddNewMenu.xaml.cs">
+    <Compile Update="UI\Table\MealPicker\SelectMeal.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="AddNewStaff.xaml.cs">
+    <Compile Update="UI\Table\MealStatus\MealStatusCard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="BillTemplate.xaml.cs">
+    <Compile Update="UI\Table\MealStatus\MealStatusManager.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="ChangeMealStatus.xaml.cs">
+    <Compile Update="UI\Table\MealPicker\SelectQuantity.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="ChangeTableStatus.xaml.cs">
+    <Compile Update="UI\Table\TableMangager\Table.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="ErrorBox.xaml.cs">
+    <Compile Update="UI\Table\TableMangager\TableRow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="MainMenu.xaml.cs">
+    <Compile Update="UI\Category\CategoryCard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="TableManagement.xaml.cs">
+    <Compile Update="UI\Category\CategoryManager.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\Report\CartesianChart.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\Report\CompareWithLastMonthCard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\Report\PieChart.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\Report\TotalProfitCard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\ButtonManager.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\Staff\EmployeeCard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MainTemplate\AddNewMeal.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MainTemplate\AddNewMenu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MainTemplate\AddNewStaff.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MainTemplate\BillTemplate.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MainTemplate\ChangeMealStatus.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MainTemplate\ChangeTableStatus.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MainTemplate\ErrorBox.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MainTemplate\MainMenu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\Meal\MealCard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\Meal\MealManager.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\Staff\StaffManager.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\Report\ReportManager.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MainTemplate\TableManagement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\Table\TableMangager\TableManager.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\Report\UserRatingCard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="AddNewMeal.xaml">
+    <Page Update="UI\Table\MealPicker\AdditionalNote.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="AddNewMenu.xaml">
+    <Page Update="UI\Table\MealPicker\SelectMeal.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="AddNewStaff.xaml">
+    <Page Update="UI\Table\MealStatus\MealStatusCard.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="BillTemplate.xaml">
+    <Page Update="UI\Table\MealStatus\MealStatusManager.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="ChangeMealStatus.xaml">
+    <Page Update="UI\Table\MealPicker\SelectQuantity.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="ChangeTableStatus.xaml">
+    <Page Update="UI\Table\TableMangager\Table.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="ErrorBox.xaml">
+    <Page Update="UI\Table\TableMangager\TableRow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Login.xaml">
+    <Page Update="UI\Category\CategoryCard.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MainMenu.xaml">
+    <Page Update="UI\Category\CategoryManager.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="TableManagement.xaml">
+    <Page Update="UI\Report\CartesianChart.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\Report\CompareWithLastMonthCard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\Report\PieChart.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\Report\TotalProfitCard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\ButtonManager.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\Staff\EmployeeCard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainTemplate\AddNewMeal.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainTemplate\AddNewMenu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainTemplate\AddNewStaff.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainTemplate\BillTemplate.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainTemplate\ChangeMealStatus.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainTemplate\ChangeTableStatus.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainTemplate\ErrorBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainTemplate\Login.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainTemplate\MainMenu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\Meal\MealCard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\Meal\MealManager.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\Staff\StaffManager.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\Report\ReportManager.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainTemplate\TableManagement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\Table\TableMangager\TableManager.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\Report\UserRatingCard.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

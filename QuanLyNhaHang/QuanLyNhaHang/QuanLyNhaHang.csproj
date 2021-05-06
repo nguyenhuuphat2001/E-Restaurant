@@ -8,22 +8,36 @@
 
   <ItemGroup>
     <None Remove="Assets\money.png" />
+    <None Remove="Assets\pork_rice.png.jpg" />
     <None Remove="Assets\profit.png" />
     <None Remove="Assets\restaurant.png" />
     <None Remove="Assets\satisfy.png" />
+    <None Remove="UI\Report\Assets\money.png" />
+    <None Remove="UI\Report\Assets\profit.png" />
+    <None Remove="UI\Report\Assets\satisfy.png" />
+    <None Remove="UI\Report\money.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Assets\money.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    <EmbeddedResource Include="Assets\pork_rice.png.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Resource Include="UI\Report\Assets\money.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Assets\profit.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    <Resource Include="UI\Report\Assets\profit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="UI\Report\Assets\satisfy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Assets\restaurant.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Assets\satisfy.png" />
+    <Resource Include="UI\Report\money.png" />
   </ItemGroup>
 
   <ItemGroup>
