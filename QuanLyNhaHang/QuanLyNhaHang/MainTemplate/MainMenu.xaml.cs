@@ -134,7 +134,7 @@ namespace QuanLyNhaHang
                 IncludeTotalProfitCard();
                 IncludeCompareWithLastMonthCard();
                 IncludeUserRatingCard();
-                IncludePieChart();
+                //IncludePieChart();
                 IncludeCartesianChart();
             }
             catch(Exception ex)

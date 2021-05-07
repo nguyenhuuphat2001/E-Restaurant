@@ -11,7 +11,7 @@
         <StackPanel Orientation="Horizontal">
             <materialDesign:PackIcon Kind="Magnify" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFA59D81" FontWeight="Bold"/>
             
-            <Separator VerticalAlignment="Center" Width="100" Background="#FFEAB24B">
+            <Separator VerticalAlignment="Center"  Width="100" Background="#FFEAB24B">
                 <Separator.LayoutTransform>
                     <RotateTransform Angle="90" />
                 </Separator.LayoutTransform>
