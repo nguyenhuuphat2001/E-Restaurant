@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="QuanLyNhaHang.SelectTable"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:QuanLyNhaHang"
+             mc:Ignorable="d" 
+             Height="Auto" Width="Auto">
+    <Grid>
+        <ComboBox
+  materialDesign:HintAssist.Hint="Select table"
+            IsEditable="True"
+  ItemsSource="{Binding LongListToTestComboVirtualization}"
+  Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+            <ComboBoxItem>
+                1
+            </ComboBoxItem>
+            <ComboBoxItem>
+                2
+            </ComboBoxItem>
+            <ComboBoxItem>
+                3
+            </ComboBoxItem>
+            <ComboBoxItem>
+                5
+            </ComboBoxItem>
+        </ComboBox>
+    </Grid>
+</UserControl>

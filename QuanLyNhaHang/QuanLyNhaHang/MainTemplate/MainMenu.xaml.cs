@@ -117,25 +117,31 @@ namespace QuanLyNhaHang
 
         private void SetGridPrincipal()
         {
-            DisableTableMangementContainer();
             DisableGridAssistant();
             EnableGridPrincipal();
         }
         private void SetGridAssistant()
         {
-            DisableTableMangementContainer();
             DisableGridPrincipal();
             EnableGridAssistant();
         }
         private void SetReportPage()
         {
-            SetGridAssistantToDefault();
-            SetGridAssistant();
-            IncludeTotalProfitCard();
-            IncludeCompareWithLastMonthCard();
-            IncludeUserRatingCard();
-            //IncludePieChart();
-            IncludeCartesianChart();
+            try
+            {
+                SetGridAssistantToDefault();
+                SetGridAssistant();
+                IncludeTotalProfitCard();
+                IncludeCompareWithLastMonthCard();
+                IncludeUserRatingCard();
+                IncludePieChart();
+                IncludeCartesianChart();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            
         }
         private void IncludeStaffManagerTable()
         {
@@ -192,37 +198,20 @@ namespace QuanLyNhaHang
             SetGridPrincipal();
             IncludeCategoryTable();
         }
-        private void DisableTableMangementContainer()
+        private void SetTablePage()
         {
-            TableManagerContainer.Visibility = Visibility.Collapsed;
-        }
-        private void EnableTableManagerContainer()
-        {
-            TableManagerContainer.Visibility = Visibility.Visible;
-        }
-        private void ResetTableManagerContainer()
-        {
-            TableManagerContainer.Children.Clear();
-        }
-        private void SetTableManagerContainerToDefault()
-        {
-            ResetTableManagerContainer();
-        }
-        private void SetTableManagerContainer()
-        {
-            DisableGridAssistant();
-            DisableGridPrincipal();
-            SetTableManagerContainerToDefault();
-            EnableTableManagerContainer();
+            SetGridPrincipalToDefault();
+            SetGridPrincipal();
+            IncludeTableManager();
         }
         private void IncludeTableManager()
         {
-            TableManagerContainer.Children.Add(new TableManager());
+            ManagerFieldHolder.Children.Add(new TableManager());
         }
         private void SetTableManagerPage()
         {
-            SetTableManagerContainerToDefault();
-            SetTableManagerContainer();
+            SetGridPrincipalToDefault();
+            SetGridPrincipal();
             IncludeTableManager();
         }
         private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)

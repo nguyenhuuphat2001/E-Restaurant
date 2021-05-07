@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\
+C:\Users\Asus\Downloads\Git\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\
 QuanLyNhaHang
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\App.xaml
-31-1786730734
+C:\Users\Asus\Downloads\Git\QuanLyNhaHang\QuanLyNhaHang\App.xaml
+38-1166198026
 
-35-2137882219
+42916301637
 197583402628
-MainTemplate\AddNewMeal.xaml;MainTemplate\AddNewMenu.xaml;MainTemplate\AddNewStaff.xaml;MainTemplate\BillTemplate.xaml;MainTemplate\ChangeMealStatus.xaml;MainTemplate\ChangeTableStatus.xaml;MainTemplate\ErrorBox.xaml;MainTemplate\Login.xaml;MainTemplate\MainMenu.xaml;MainTemplate\TableManagement.xaml;UI\ButtonManager.xaml;UI\Category\CategoryCard.xaml;UI\Category\CategoryManager.xaml;UI\Meal\MealCard.xaml;UI\Meal\MealManager.xaml;UI\Report\CartesianChart.xaml;UI\Report\CompareWithLastMonthCard.xaml;UI\Report\PieChart.xaml;UI\Report\ReportManager.xaml;UI\Report\TotalProfitCard.xaml;UI\Report\UserRatingCard.xaml;UI\Staff\EmployeeCard.xaml;UI\Staff\StaffManager.xaml;UI\Table\MealPicker\AdditionalNote.xaml;UI\Table\MealPicker\SelectMeal.xaml;UI\Table\MealPicker\SelectQuantity.xaml;UI\Table\MealStatus\MealStatusCard.xaml;UI\Table\MealStatus\MealStatusManager.xaml;UI\Table\TableMangager\Table.xaml;UI\Table\TableMangager\TableManager.xaml;UI\Table\TableMangager\TableRow.xaml;
+ChangeMealStatusCard.xaml;ChangeMealStatusManager.xaml;MainTemplate\AddNewMeal.xaml;MainTemplate\AddNewMenu.xaml;MainTemplate\AddNewStaff.xaml;MainTemplate\BillTemplate.xaml;MainTemplate\ChangeMealStatus.xaml;MainTemplate\ChangeTableStatus.xaml;MainTemplate\ErrorBox.xaml;MainTemplate\Login.xaml;MainTemplate\MainMenu.xaml;MainTemplate\TableManagement.xaml;SearchBox.xaml;UI\ButtonManager.xaml;UI\Category\CategoryCard.xaml;UI\Category\CategoryManager.xaml;UI\Meal\MealCard.xaml;UI\Meal\MealManager.xaml;UI\Report\CartesianChart.xaml;UI\Report\CompareWithLastMonthCard.xaml;UI\Report\PieChart.xaml;UI\Report\ReportManager.xaml;UI\Report\TotalProfitCard.xaml;UI\Report\UserRatingCard.xaml;UI\Staff\EmployeeCard.xaml;UI\Staff\StaffManager.xaml;UI\Table\MealPicker\AdditionalNote.xaml;UI\Table\MealPicker\SelectCategory.xaml;UI\Table\MealPicker\SelectMeal.xaml;UI\Table\MealPicker\SelectQuantity.xaml;UI\Table\MealStatus\MealStatusCard.xaml;UI\Table\MealStatus\MealStatusManager.xaml;UI\Table\TableCard.xaml;UI\Table\TableManager.xaml;UI\Table\TableMangager\DiscountField.xaml;UI\Table\TableMangager\SelectTable.xaml;UI\Table\TableMangager\Table.xaml;UI\Table\TableMangager\TableRow.xaml;
 
 True
 
