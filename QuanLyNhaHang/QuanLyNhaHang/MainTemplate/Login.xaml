@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:QuanLyNhaHang"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="Login" Height="500" Width="350" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+        Title="Login" Height="500" Width="350" ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen" >
     <Grid>
         <Rectangle Height="300" VerticalAlignment="Top">
             <Rectangle.Fill>
@@ -25,29 +26,41 @@
             </Rectangle.Effect>
         </Rectangle>
         <Grid Width="280" Height="240" VerticalAlignment="Bottom" Margin="0,100">
-            <TextBlock Text="LOGIN" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" Foreground="Gray" FontSize="18" FontWeight="Bold"></TextBlock>
-            <StackPanel VerticalAlignment="Center" Margin="10,0,0,0">
-                <TextBox Name="usernameContainer" HorizontalAlignment="Left" materialDesign:HintAssist.Hint="USERNAME"  Margin="0,10" Width="220" >
+            <TextBlock Text="LOGIN" HorizontalAlignment="Center" 
+                       VerticalAlignment="Top" Margin="5" 
+                        Foreground="Gray" FontSize="18" 
+                       FontWeight="Bold"></TextBlock>
+            <Grid VerticalAlignment="Center" Margin="10,0,0,0" >
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBox Name="usernameContainer" HorizontalAlignment="Left" VerticalAlignment="Center"
+                         materialDesign:HintAssist.Hint="USERNAME"  
+                         Margin="0,10,0,10" Width="250" Grid.Row="0">
                 </TextBox>
-                <StackPanel x:Name="passwordStack" Orientation="Horizontal" Width="270">
-
+                <Canvas x:Name="passwordStack"  Width="250" Grid.Row="1" HorizontalAlignment="Left">
                     <Grid x:Name="passwordContainer">
-                        <TextBox x:Name="txbPassword" HorizontalAlignment="Center" VerticalAlignment="Center" Width="220" Height="31" />
-                        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Center" VerticalAlignment="Center" PasswordChanged="passwordBox_PasswordChanged"  materialDesign:HintAssist.Hint="PASSWORD" Margin="0,10,0,10" Width="220" Height="31"  >
-                        </PasswordBox>
+                        <TextBox x:Name="txbPassword" HorizontalAlignment="Left" VerticalAlignment="Center"
+                                 Width="{Binding ActualWidth, ElementName=passwordStack}" />
+                        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" 
+                                     Width="{Binding ActualWidth, ElementName=passwordStack}"
+                                     VerticalAlignment="Center" PasswordChanged="passwordBox_PasswordChanged"  
+                                     materialDesign:HintAssist.Hint="PASSWORD" />
                     </Grid>
-
-
-                    <Button x:Name="passwordVisability" Width="45" Height="42" BorderBrush="White" Click="passwordShow_Click" Background="{x:Null}" >
+                    <Button x:Name="passwordVisability" Width="45" Height="42" BorderBrush="White" Click="passwordShow_Click" Background="{x:Null}" Canvas.Left="218" Canvas.Top="-11" >
                         <materialDesign:PackIcon x:Name="passwordShow" Kind="EyeOff" VerticalAlignment="Center" Width="15" Height="23" HorizontalAlignment="Center"/>
                     </Button>
-
-                </StackPanel>
-                <CheckBox Content="Remember Password" FontSize="15"/>
-            </StackPanel>
+                </Canvas>
+                <CheckBox Content="Remember Password" FontSize="15" Grid.Row="2" Margin="0,40,0,0"/>
+            </Grid>
 
         </Grid>
-        <Button VerticalAlignment="Bottom" Margin="0,85" Width="150" Content="LOGIN" Background="#FFF36521" BorderBrush="#FFF3B021"></Button>
+        <Button VerticalAlignment="Bottom" Margin="0,85" 
+                Width="150" Content="LOGIN" Background="#FFF36521" 
+                BorderBrush="#FFF3B021"
+                Click="Login_Click"></Button>
         <TextBlock Text="FORGOT YOUR PASSWORD?" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="50" FontSize="15" Foreground="Gray" FontWeight="Bold" Cursor="Hand"></TextBlock>
     </Grid>
 </Window>

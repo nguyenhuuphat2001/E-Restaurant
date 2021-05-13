@@ -7,28 +7,10 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="ChangeMealStatusCard.xaml.cs">
+    <Compile Update="UI\Account\AccountCard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="ChangeMealStatusManager.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="UI\Table\TableMangager\DiscountField.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="SearchBox.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="UI\Table\TableMangager\SelectTable.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="UI\Table\MealPicker\SelectCategory.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="UI\Table\TableCard.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="UI\Table\TableManager.xaml.cs">
+    <Compile Update="UI\Account\AccountManager.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UI\Table\MealPicker\AdditionalNote.xaml.cs">
@@ -44,6 +26,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UI\Table\MealPicker\SelectQuantity.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\Table\TableManagement.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UI\Table\TableMangager\Table.xaml.cs">
@@ -115,33 +100,18 @@
     <Compile Update="MainTemplate\TableManagement.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UI\Table\TableMangager\TableManager.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UI\Report\UserRatingCard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="ChangeMealStatusCard.xaml">
+    <Page Update="UI\Account\AccountCard.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="ChangeMealStatusManager.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="UI\Table\TableMangager\DiscountField.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="SearchBox.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="UI\Table\TableMangager\SelectTable.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="UI\Table\MealPicker\SelectCategory.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="UI\Table\TableCard.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="UI\Table\TableManager.xaml">
+    <Page Update="UI\Account\AccountManager.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UI\Table\MealPicker\AdditionalNote.xaml">
@@ -157,6 +127,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UI\Table\MealPicker\SelectQuantity.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\Table\TableManagement.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UI\Table\TableMangager\Table.xaml">
@@ -229,6 +202,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainTemplate\TableManagement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\Table\TableMangager\TableManager.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UI\Report\UserRatingCard.xaml">

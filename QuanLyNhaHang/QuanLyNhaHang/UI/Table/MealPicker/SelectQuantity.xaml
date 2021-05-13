@@ -9,22 +9,14 @@
              Height="Auto" Width="Auto">
     <Grid>
         <ComboBox
-  materialDesign:HintAssist.Hint="Select quantiy"
-            IsEditable="True"
+  materialDesign:HintAssist.Hint="Select Quantiy"
   ItemsSource="{Binding LongListToTestComboVirtualization}"
   Style="{StaticResource MaterialDesignFloatingHintComboBox}">
-            <ComboBoxItem>
-                1
-            </ComboBoxItem>
-            <ComboBoxItem>
-                2
-            </ComboBoxItem>
-            <ComboBoxItem>
-                3
-            </ComboBoxItem>
-            <ComboBoxItem>
-                5
-            </ComboBoxItem>
+            <ComboBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel />
+                </ItemsPanelTemplate>
+            </ComboBox.ItemsPanel>
         </ComboBox>
     </Grid>
 </UserControl>

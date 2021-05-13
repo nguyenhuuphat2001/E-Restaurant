@@ -24,12 +24,7 @@ namespace QuanLyNhaHang
         {
             InitializeComponent();
         }
-
-        private void LogoutButton_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
-        
+                
         private void ButtonOpenMenu_Click(object sender, RoutedEventArgs e)
         {
             ButtonOpenMenu.Visibility = Visibility.Collapsed;
@@ -117,31 +112,25 @@ namespace QuanLyNhaHang
 
         private void SetGridPrincipal()
         {
+            DisableTableMangementContainer();
             DisableGridAssistant();
             EnableGridPrincipal();
         }
         private void SetGridAssistant()
         {
+            DisableTableMangementContainer();
             DisableGridPrincipal();
             EnableGridAssistant();
         }
         private void SetReportPage()
         {
-            try
-            {
-                SetGridAssistantToDefault();
-                SetGridAssistant();
-                IncludeTotalProfitCard();
-                IncludeCompareWithLastMonthCard();
-                IncludeUserRatingCard();
-                //IncludePieChart();
-                IncludeCartesianChart();
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-            
+            SetGridAssistantToDefault();
+            SetGridAssistant();
+            IncludeTotalProfitCard();
+            IncludeCompareWithLastMonthCard();
+            IncludeUserRatingCard();
+            //IncludePieChart();
+            IncludeCartesianChart();
         }
         private void IncludeStaffManagerTable()
         {
@@ -198,21 +187,49 @@ namespace QuanLyNhaHang
             SetGridPrincipal();
             IncludeCategoryTable();
         }
-        private void SetTablePage()
+        private void DisableTableMangementContainer()
         {
-            SetGridPrincipalToDefault();
-            SetGridPrincipal();
-            IncludeTableManager();
+            TableManagerContainer.Visibility = Visibility.Collapsed;
+        }
+        private void EnableTableManagerContainer()
+        {
+            TableManagerContainer.Visibility = Visibility.Visible;
+        }
+        private void ResetTableManagerContainer()
+        {
+            TableManagerContainer.Children.Clear();
+        }
+        private void SetTableManagerContainerToDefault()
+        {
+            ResetTableManagerContainer();
+        }
+        private void SetTableManagerContainer()
+        {
+            DisableGridAssistant();
+            DisableGridPrincipal();
+            SetTableManagerContainerToDefault();
+            EnableTableManagerContainer();
         }
         private void IncludeTableManager()
         {
-            ManagerFieldHolder.Children.Add(new TableManager());
+            //TableManagerContainer.Children.Add(new TableManagement());
         }
         private void SetTableManagerPage()
         {
+            SetTableManagerContainerToDefault();
+            SetTableManagerContainer();
+            IncludeTableManager();
+        }
+        private void IncludeAccountManager()
+        {
+            ManagerFieldHolder.Children.Add(new AccountManager());
+        }
+        private void SetAccountManagerPage()
+        {
             SetGridPrincipalToDefault();
             SetGridPrincipal();
-            IncludeTableManager();
+            IncludeAccountManager();
+
         }
         private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -234,6 +251,9 @@ namespace QuanLyNhaHang
                     break;
                 case 4:
                     SetTableManagerPage();
+                    break;
+                case 5:
+                    SetAccountManagerPage();
                     break;
                 
             }

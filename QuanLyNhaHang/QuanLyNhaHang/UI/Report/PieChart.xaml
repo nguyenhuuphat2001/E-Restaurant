@@ -15,6 +15,7 @@
                 <lvc:PieSeries Title="Week2" Values="25" DataLabels="True" LabelPoint="{Binding PointLabel}"/>
                 <lvc:PieSeries Title="Week3" Values="25" DataLabels="True" LabelPoint="{Binding PointLabel}"/>
                 <lvc:PieSeries Title="Week4" Values="25" DataLabels="True" LabelPoint="{Binding PointLabel}"/>
+
             </lvc:PieChart.Series>
         </lvc:PieChart>
     </Grid>

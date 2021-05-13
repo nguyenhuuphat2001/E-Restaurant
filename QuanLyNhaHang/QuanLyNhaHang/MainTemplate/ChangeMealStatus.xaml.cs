@@ -23,10 +23,5 @@ namespace QuanLyNhaHang
         {
             InitializeComponent();
         }
-
-        private void LogoutButton_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
     }
 }

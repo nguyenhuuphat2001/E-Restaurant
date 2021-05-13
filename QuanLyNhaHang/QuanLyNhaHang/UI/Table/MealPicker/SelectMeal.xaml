@@ -1,5 +1,5 @@
 ﻿<UserControl x:Class="QuanLyNhaHang.SelectMeal"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
@@ -9,7 +9,7 @@
              Height="Auto" Width="Auto">
     <Grid>
         <ComboBox
-  materialDesign:HintAssist.Hint="Choose meal"
+  materialDesign:HintAssist.Hint="Select meal"
   materialDesign:HintAssist.HintOpacity=".26"
   IsEditable="True">
             <ComboBoxItem>

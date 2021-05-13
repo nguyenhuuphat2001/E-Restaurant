@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuanLyNhaHang.DAO;
+using QuanLyNhaHang.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,6 +26,8 @@ namespace QuanLyNhaHang
             InitializeComponent();
             txbPassword.Visibility = Visibility.Collapsed;
         }
+
+        #region Method
         private void DisablePasswordBox()
         {
             passwordBox.Visibility = Visibility.Collapsed;
@@ -62,12 +66,16 @@ namespace QuanLyNhaHang
             DisablePasswordTextBox();
             passwordShow.Kind = MaterialDesignThemes.Wpf.PackIconKind.EyeOff;
         }
+        bool Login(string username, string password) { return AccountDAO.Instance.Login(username, password); }
+        int GetPosition(string username) { return AccountDAO.Instance.GetPositionByUserName(username); }
+        #endregion
+
+        #region Event
         private void passwordShow_Click(object sender, RoutedEventArgs e)
         {
             if (passwordShow.Kind == MaterialDesignThemes.Wpf.PackIconKind.EyeOff)
             {
                 ShowPassword();
-
             }
             else
                 HidePassword();
@@ -75,7 +83,50 @@ namespace QuanLyNhaHang
 
         private void passwordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
-
+            UnmaskPassword();
         }
+
+        private void Login_Click(object sender, RoutedEventArgs e)
+        {
+            string userName = usernameContainer.Text;
+            string password;
+            if (txbPassword.Text != null)
+                password = txbPassword.Text;
+            else
+                return;
+
+            if (Login(userName, password))
+            {
+                int position = GetPosition(userName);
+                switch (position)
+                {
+                    case 0:
+                        MainMenu managerForm = new MainMenu();
+                        this.Hide();
+                        managerForm.ShowDialog();
+                        this.Show();
+                        break;
+                    case 1:
+                        TableManagement staffForm = new TableManagement();
+                        this.Hide();
+                        staffForm.ShowDialog();
+                        this.Show();
+                        break;
+                    case 2:
+                        ChangeMealStatus chefForm = new ChangeMealStatus();
+                        this.Hide();
+                        chefForm.ShowDialog();
+                        this.Show();
+                        break;
+                    default:
+                        break;
+                }                
+            }
+            else
+            {
+                MessageBox.Show("Wrong username or password");
+            }
+        }
+        #endregion        
     }
 }
