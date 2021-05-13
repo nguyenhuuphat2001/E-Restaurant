@@ -26,13 +26,12 @@
             </CheckBox>
             <StackPanel Orientation="Horizontal" Grid.Column="1" VerticalAlignment="Top" Height="16">
 
-                <TextBlock Text="Account"/>
+                <TextBlock Text="Username"/>
                 <materialDesign:PackIcon  Kind="ArrowBottom" Foreground="Red"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Grid.Column="2" VerticalAlignment="Top" Height="16">
 
                 <TextBlock Text="Password"/>
-                <materialDesign:PackIcon  Kind="ArrowBottom" Foreground="Red"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Grid.Column="3" VerticalAlignment="Top" Height="16">
 

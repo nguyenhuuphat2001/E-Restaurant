@@ -10,6 +10,9 @@
     <Grid>
         <TextBox
   x:Name="addtionalNoteTextbox"
+  VerticalScrollBarVisibility="Visible"
+  TextWrapping="Wrap"
+  AcceptsReturn="True"  
   materialDesign:HintAssist.Hint="Additonal note"
   materialDesign:HintAssist.HelperText="Special requirement" />
     </Grid>

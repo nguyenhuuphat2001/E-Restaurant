@@ -76,6 +76,7 @@ namespace QuanLyNhaHang
             if (passwordShow.Kind == MaterialDesignThemes.Wpf.PackIconKind.EyeOff)
             {
                 ShowPassword();
+
             }
             else
                 HidePassword();
@@ -92,8 +93,9 @@ namespace QuanLyNhaHang
             string password;
             if (txbPassword.Text != null)
                 password = txbPassword.Text;
-            else
+            else 
                 return;
+
 
             if (Login(userName, password))
             {
@@ -120,13 +122,15 @@ namespace QuanLyNhaHang
                         break;
                     default:
                         break;
-                }                
+                }
             }
             else
             {
                 MessageBox.Show("Wrong username or password");
             }
         }
-        #endregion        
+        #endregion
+
+
     }
 }

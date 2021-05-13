@@ -18,7 +18,7 @@ namespace QuanLyNhaHang
     /// <summary>
     /// Interaction logic for TableManager.xaml
     /// </summary>
-    public partial class TableManager : UserControl 
+    public partial class TableManager : UserControl
     {
         public TableManager()
         {

@@ -32,7 +32,6 @@ namespace QuanLyNhaHang.DAO
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-
                 SqlCommand command = new SqlCommand(query, connection);
 
                 if (parameter != null)

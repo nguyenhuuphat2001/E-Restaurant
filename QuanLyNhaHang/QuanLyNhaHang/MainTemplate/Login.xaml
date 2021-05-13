@@ -6,8 +6,7 @@
         xmlns:local="clr-namespace:QuanLyNhaHang"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="Login" Height="500" Width="350" ResizeMode="NoResize" 
-        WindowStartupLocation="CenterScreen" >
+        Title="Login" Height="500" Width="350" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" >
     <Grid>
         <Rectangle Height="300" VerticalAlignment="Top">
             <Rectangle.Fill>
@@ -38,7 +37,7 @@
                 </Grid.RowDefinitions>
                 <TextBox Name="usernameContainer" HorizontalAlignment="Left" VerticalAlignment="Center"
                          materialDesign:HintAssist.Hint="USERNAME"  
-                         Margin="0,10,0,10" Width="250" Grid.Row="0">
+                         Margin="0,10,0,10" Width="250" Grid.Row="0" TabIndex="1">
                 </TextBox>
                 <Canvas x:Name="passwordStack"  Width="250" Grid.Row="1" HorizontalAlignment="Left">
                     <Grid x:Name="passwordContainer">
@@ -47,20 +46,20 @@
                         <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" 
                                      Width="{Binding ActualWidth, ElementName=passwordStack}"
                                      VerticalAlignment="Center" PasswordChanged="passwordBox_PasswordChanged"  
-                                     materialDesign:HintAssist.Hint="PASSWORD" />
+                                     materialDesign:HintAssist.Hint="PASSWORD" TabIndex="2" />
                     </Grid>
                     <Button x:Name="passwordVisability" Width="45" Height="42" BorderBrush="White" Click="passwordShow_Click" Background="{x:Null}" Canvas.Left="218" Canvas.Top="-11" >
                         <materialDesign:PackIcon x:Name="passwordShow" Kind="EyeOff" VerticalAlignment="Center" Width="15" Height="23" HorizontalAlignment="Center"/>
                     </Button>
                 </Canvas>
-                <CheckBox Content="Remember Password" FontSize="15" Grid.Row="2" Margin="0,40,0,0"/>
+                <CheckBox Content="Remember Password" FontSize="15" Grid.Row="2" Margin="0,40,0,0" TabIndex="3"/>
             </Grid>
 
         </Grid>
         <Button VerticalAlignment="Bottom" Margin="0,85" 
                 Width="150" Content="LOGIN" Background="#FFF36521" 
                 BorderBrush="#FFF3B021"
-                Click="Login_Click"></Button>
+                Click="Login_Click" IsDefault="True" TabIndex="4"></Button>
         <TextBlock Text="FORGOT YOUR PASSWORD?" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="50" FontSize="15" Foreground="Gray" FontWeight="Bold" Cursor="Hand"></TextBlock>
     </Grid>
 </Window>

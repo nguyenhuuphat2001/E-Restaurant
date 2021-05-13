@@ -112,13 +112,11 @@ namespace QuanLyNhaHang
 
         private void SetGridPrincipal()
         {
-            DisableTableMangementContainer();
             DisableGridAssistant();
             EnableGridPrincipal();
         }
         private void SetGridAssistant()
         {
-            DisableTableMangementContainer();
             DisableGridPrincipal();
             EnableGridAssistant();
         }
@@ -187,38 +185,21 @@ namespace QuanLyNhaHang
             SetGridPrincipal();
             IncludeCategoryTable();
         }
-        private void DisableTableMangementContainer()
+        private void SetTableManagerPage()
         {
-            TableManagerContainer.Visibility = Visibility.Collapsed;
-        }
-        private void EnableTableManagerContainer()
-        {
-            TableManagerContainer.Visibility = Visibility.Visible;
-        }
-        private void ResetTableManagerContainer()
-        {
-            TableManagerContainer.Children.Clear();
-        }
-        private void SetTableManagerContainerToDefault()
-        {
-            ResetTableManagerContainer();
-        }
-        private void SetTableManagerContainer()
-        {
-            DisableGridAssistant();
-            DisableGridPrincipal();
-            SetTableManagerContainerToDefault();
-            EnableTableManagerContainer();
+            SetGridPrincipalToDefault();
+            SetGridPrincipal();
+            IncludeTableManager();
         }
         private void IncludeTableManager()
         {
-            //TableManagerContainer.Children.Add(new TableManagement());
+            ManagerFieldHolder.Children.Add(new TableManager());
         }
-        private void SetTableManagerPage()
+        private void SetAccountPage()
         {
-            SetTableManagerContainerToDefault();
-            SetTableManagerContainer();
-            IncludeTableManager();
+            SetGridPrincipalToDefault();
+            SetGridPrincipal();
+            IncludeAccountManager();
         }
         private void IncludeAccountManager()
         {
@@ -229,7 +210,6 @@ namespace QuanLyNhaHang
             SetGridPrincipalToDefault();
             SetGridPrincipal();
             IncludeAccountManager();
-
         }
         private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -255,7 +235,6 @@ namespace QuanLyNhaHang
                 case 5:
                     SetAccountManagerPage();
                     break;
-                
             }
 
 
@@ -282,6 +261,11 @@ namespace QuanLyNhaHang
             }
             var selectionSeries = (PieSeries)chartPoint.SeriesView;
             selectionSeries.PushOut = 0;
+        }
+
+        private void LogoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

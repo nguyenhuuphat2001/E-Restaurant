@@ -8,10 +8,11 @@
              mc:Ignorable="d" 
              Height="Auto" Width="Auto">
     <Grid>
-        <Button>
-            <StackPanel Orientation="Vertical"  >
-                <TextBlock x:Name="tableOrder" Text="Table 1" FontSize="10" Foreground="WhiteSmoke" FontWeight="Bold"/>
-                <TextBlock x:Name="tableStatus" Text="Reserved" FontSize="10" Foreground="WhiteSmoke" FontWeight="Bold"/>
+        <Button materialDesign:ButtonAssist.CornerRadius="20" 
+                Height="70" Width="100">
+            <StackPanel Orientation="Vertical">
+                <TextBlock x:Name="tableOrder" Text="Table 1" Foreground="WhiteSmoke" FontWeight="Bold"/>
+                <TextBlock x:Name="tableStatus" Text="Reserved" Foreground="WhiteSmoke" FontWeight="Bold"/>
             </StackPanel>
         </Button>
     </Grid>

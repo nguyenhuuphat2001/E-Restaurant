@@ -37,12 +37,12 @@ namespace QuanLyNhaHang
 
         private void deleteButton_MouseEnter(object sender, MouseEventArgs e)
         {
-            deleteButton.Foreground = Brushes.Red;
+            deleteIcon.Foreground = Brushes.Red;
         }
 
         private void deleteButton_MouseLeave(object sender, MouseEventArgs e)
         {
-            deleteButton.Foreground = Brushes.White;
+            deleteIcon.Foreground = Brushes.White;
         }
     }
 }

@@ -226,123 +226,419 @@ C:\Users\thinh\Downloads\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanL
 C:\Users\thinh\Downloads\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\Table.baml
 C:\Users\thinh\Downloads\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\TableRow.baml
 C:\Users\thinh\Downloads\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\TableManager.baml
-C:\Users\thinh\Downloads\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Account\AccountManager.baml
-C:\Users\thinh\Downloads\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Account\AccountCard.g.cs
-C:\Users\thinh\Downloads\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Account\AccountManager.g.cs
-C:\Users\thinh\Downloads\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Account\AccountCard.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.csprojAssemblyReference.cache
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\ChangeMealStatusManager.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Account\AccountManager.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Category\CategoryManager.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Meal\MealManager.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Staff\StaffManager.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealStatus\MealStatusManager.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\ChangeMealStatusCard.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\ChangeMealStatusManager.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewMeal.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewMenu.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewStaff.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\BillTemplate.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ChangeMealStatus.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ChangeTableStatus.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ErrorBox.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\Login.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\MainMenu.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\TableManagement.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\SearchBox.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Account\AccountCard.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Account\AccountManager.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\ButtonManager.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Category\CategoryCard.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Category\CategoryManager.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Meal\MealCard.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Meal\MealManager.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\CartesianChart.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\CompareWithLastMonthCard.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\PieChart.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\ReportManager.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\TotalProfitCard.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\UserRatingCard.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Staff\EmployeeCard.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Staff\StaffManager.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\AdditionalNote.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\SelectCategory.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\SelectMeal.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\SelectQuantity.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealStatus\MealStatusCard.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealStatus\MealStatusManager.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableCard.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\DiscountField.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\SelectTable.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\Table.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\TableManager.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\TableRow.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\App.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang_MarkupCompile.cache
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang_MarkupCompile.lref
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.dll
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\ref\QuanLyNhaHang.dll
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.pdb
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableManagement.g.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\Assets\pork_rice.png.jpg
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\QuanLyNhaHang.exe
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\QuanLyNhaHang.deps.json
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\QuanLyNhaHang.runtimeconfig.json
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\QuanLyNhaHang.runtimeconfig.dev.json
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\QuanLyNhaHang.dll
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\ref\QuanLyNhaHang.dll
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\QuanLyNhaHang.pdb
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\LiveCharts.dll
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\LiveCharts.Wpf.dll
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\MaterialDesignColors.dll
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\MaterialDesignThemes.Wpf.dll
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableManagement.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\App.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\ChangeMealStatusCard.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewMeal.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewMenu.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewStaff.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\BillTemplate.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ChangeMealStatus.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ChangeTableStatus.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ErrorBox.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\Login.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\MainMenu.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\TableManagement.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\SearchBox.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Account\AccountCard.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\ButtonManager.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Category\CategoryCard.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Meal\MealCard.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\CartesianChart.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\CompareWithLastMonthCard.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\PieChart.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\ReportManager.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\TotalProfitCard.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\UserRatingCard.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Staff\EmployeeCard.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\AdditionalNote.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\SelectCategory.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\SelectMeal.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\SelectQuantity.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealStatus\MealStatusCard.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableCard.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\DiscountField.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\SelectTable.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\Table.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\TableManager.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\TableRow.baml
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.g.resources
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.AssemblyInfoInputs.cache
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.AssemblyInfo.cs
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.csproj.CoreCompileInputs.cache
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.csproj.CopyComplete
-C:\Users\Asus\OneDrive\Tài liệu\GitHub\ER\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.genruntimeconfig.cache
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\Assets\pork_rice.png.jpg
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\QuanLyNhaHang.exe
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\QuanLyNhaHang.deps.json
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\QuanLyNhaHang.runtimeconfig.json
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\QuanLyNhaHang.runtimeconfig.dev.json
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\QuanLyNhaHang.dll
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\ref\QuanLyNhaHang.dll
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\QuanLyNhaHang.pdb
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\LiveCharts.dll
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\LiveCharts.Wpf.dll
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\MaterialDesignColors.dll
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\MaterialDesignThemes.Wpf.dll
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.csprojAssemblyReference.cache
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Category\CategoryManager.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Meal\MealManager.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Staff\StaffManager.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealStatus\MealStatusManager.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewMeal.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewMenu.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewStaff.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\BillTemplate.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ChangeMealStatus.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ChangeTableStatus.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ErrorBox.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\Login.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\MainMenu.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\TableManagement.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\ButtonManager.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Category\CategoryCard.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Category\CategoryManager.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Meal\MealCard.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Meal\MealManager.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\CartesianChart.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\CompareWithLastMonthCard.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\PieChart.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\ReportManager.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\TotalProfitCard.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\UserRatingCard.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Staff\EmployeeCard.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Staff\StaffManager.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\AdditionalNote.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\SelectMeal.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\SelectQuantity.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealStatus\MealStatusCard.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealStatus\MealStatusManager.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\Table.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\TableManager.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\TableRow.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang_MarkupCompile.cache
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang_MarkupCompile.lref
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\App.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewMeal.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewMenu.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewStaff.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\BillTemplate.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ChangeMealStatus.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ChangeTableStatus.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ErrorBox.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\Login.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\MainMenu.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\TableManagement.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\ButtonManager.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Category\CategoryCard.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Meal\MealCard.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\CartesianChart.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\CompareWithLastMonthCard.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\PieChart.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\ReportManager.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\TotalProfitCard.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\UserRatingCard.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Staff\EmployeeCard.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\AdditionalNote.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\SelectMeal.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\SelectQuantity.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealStatus\MealStatusCard.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\Table.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\TableManager.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\TableRow.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.g.resources
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.AssemblyInfoInputs.cache
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.AssemblyInfo.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.csproj.CopyComplete
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.dll
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\ref\QuanLyNhaHang.dll
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.pdb
+C:\Users\Asus\Downloads\Git\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.genruntimeconfig.cache
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\Assets\pork_rice.png.jpg
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\QuanLyNhaHang.exe
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\QuanLyNhaHang.deps.json
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\QuanLyNhaHang.runtimeconfig.json
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\QuanLyNhaHang.runtimeconfig.dev.json
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\QuanLyNhaHang.dll
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\ref\QuanLyNhaHang.dll
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\QuanLyNhaHang.pdb
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\LiveCharts.dll
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\LiveCharts.Wpf.dll
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\MaterialDesignColors.dll
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\MaterialDesignThemes.Wpf.dll
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.csprojAssemblyReference.cache
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Category\CategoryManager.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Meal\MealManager.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Staff\StaffManager.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealStatus\MealStatusManager.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewMeal.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewMenu.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewStaff.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\BillTemplate.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ChangeMealStatus.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ChangeTableStatus.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ErrorBox.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\Login.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\MainMenu.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\TableManagement.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\ButtonManager.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Category\CategoryCard.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Category\CategoryManager.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Meal\MealCard.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Meal\MealManager.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\CartesianChart.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\CompareWithLastMonthCard.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\PieChart.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\ReportManager.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\TotalProfitCard.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\UserRatingCard.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Staff\EmployeeCard.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Staff\StaffManager.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\AdditionalNote.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\SelectMeal.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\SelectQuantity.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealStatus\MealStatusCard.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealStatus\MealStatusManager.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\Table.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\TableRow.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\App.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang_MarkupCompile.cache
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang_MarkupCompile.lref
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\App.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewMeal.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewMenu.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewStaff.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\BillTemplate.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ChangeMealStatus.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ChangeTableStatus.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ErrorBox.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\Login.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\MainMenu.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\TableManagement.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\ButtonManager.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Category\CategoryCard.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Meal\MealCard.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\CartesianChart.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\CompareWithLastMonthCard.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\PieChart.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\ReportManager.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\TotalProfitCard.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\UserRatingCard.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Staff\EmployeeCard.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\AdditionalNote.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\SelectMeal.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\SelectQuantity.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealStatus\MealStatusCard.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\Table.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\TableRow.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.g.resources
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.GeneratedMSBuildEditorConfig.editorconfig
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.AssemblyInfoInputs.cache
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.AssemblyInfo.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.csproj.CoreCompileInputs.cache
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.csproj.CopyComplete
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.dll
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\ref\QuanLyNhaHang.dll
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.pdb
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.genruntimeconfig.cache
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\SearchBox.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\SearchBox.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableManager.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableCard.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableManager.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableCard.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\ChangeMealStatusManager.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\ChangeMealStatusCard.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\ChangeMealStatusManager.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\ChangeMealStatusCard.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\SelectCategory.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\SelectCategory.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\DiscountField.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\SelectTable.g.cs
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\DiscountField.baml
+C:\Năm 2\Học kỳ 2\Nhập môn công nghệ phần mềm\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\SelectTable.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\Assets\pork_rice.png.jpg
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\QuanLyNhaHang.exe
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\QuanLyNhaHang.deps.json
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\QuanLyNhaHang.runtimeconfig.json
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\QuanLyNhaHang.runtimeconfig.dev.json
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\QuanLyNhaHang.dll
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\ref\QuanLyNhaHang.dll
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\QuanLyNhaHang.pdb
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\LiveCharts.dll
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\LiveCharts.Wpf.dll
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\MaterialDesignColors.dll
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\MaterialDesignThemes.Wpf.dll
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.csprojAssemblyReference.cache
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\ChangeMealStatusManager.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Category\CategoryManager.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Meal\MealManager.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Staff\StaffManager.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealStatus\MealStatusManager.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableManager.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\ChangeMealStatusCard.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\ChangeMealStatusManager.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewMeal.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewMenu.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewStaff.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\BillTemplate.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ChangeMealStatus.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ChangeTableStatus.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ErrorBox.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\Login.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\MainMenu.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\TableManagement.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\SearchBox.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\ButtonManager.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Category\CategoryCard.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Category\CategoryManager.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Meal\MealCard.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Meal\MealManager.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\CartesianChart.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\CompareWithLastMonthCard.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\PieChart.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\ReportManager.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\TotalProfitCard.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\UserRatingCard.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Staff\EmployeeCard.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Staff\StaffManager.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\AdditionalNote.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\SelectCategory.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\SelectMeal.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\SelectQuantity.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealStatus\MealStatusCard.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealStatus\MealStatusManager.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableCard.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableManager.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\DiscountField.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\SelectTable.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\Table.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\TableRow.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\App.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang_MarkupCompile.cache
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang_MarkupCompile.lref
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\App.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\ChangeMealStatusCard.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewMeal.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewMenu.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewStaff.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\BillTemplate.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ChangeMealStatus.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ChangeTableStatus.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ErrorBox.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\Login.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\MainMenu.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\TableManagement.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\SearchBox.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\ButtonManager.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Category\CategoryCard.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Meal\MealCard.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\CartesianChart.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\CompareWithLastMonthCard.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\PieChart.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\ReportManager.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\TotalProfitCard.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\UserRatingCard.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Staff\EmployeeCard.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\AdditionalNote.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\SelectCategory.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\SelectMeal.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\SelectQuantity.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealStatus\MealStatusCard.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableCard.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\DiscountField.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\SelectTable.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\Table.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\TableRow.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.g.resources
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.GeneratedMSBuildEditorConfig.editorconfig
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.AssemblyInfoInputs.cache
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.AssemblyInfo.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.csproj.CoreCompileInputs.cache
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.csproj.CopyComplete
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.dll
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\ref\QuanLyNhaHang.dll
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.pdb
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.genruntimeconfig.cache
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Account\AccountManager.baml
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Account\AccountCard.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Account\AccountManager.g.cs
+C:\Game Developing\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Account\AccountCard.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\Assets\pork_rice.png.jpg
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\QuanLyNhaHang.exe
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\QuanLyNhaHang.deps.json
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\QuanLyNhaHang.runtimeconfig.json
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\QuanLyNhaHang.runtimeconfig.dev.json
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\QuanLyNhaHang.dll
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\ref\QuanLyNhaHang.dll
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\QuanLyNhaHang.pdb
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\LiveCharts.dll
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\LiveCharts.Wpf.dll
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\MaterialDesignColors.dll
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\MaterialDesignThemes.Wpf.dll
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.csprojAssemblyReference.cache
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\ChangeMealStatusManager.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Account\AccountManager.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Category\CategoryManager.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Meal\MealManager.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Staff\StaffManager.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealStatus\MealStatusManager.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableManager.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\ChangeMealStatusCard.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\ChangeMealStatusManager.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewMeal.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewMenu.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewStaff.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\BillTemplate.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ChangeMealStatus.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ChangeTableStatus.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ErrorBox.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\Login.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\MainMenu.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\TableManagement.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\SearchBox.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Account\AccountCard.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Account\AccountManager.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\ButtonManager.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Category\CategoryCard.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Category\CategoryManager.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Meal\MealCard.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Meal\MealManager.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\CartesianChart.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\CompareWithLastMonthCard.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\PieChart.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\ReportManager.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\TotalProfitCard.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\UserRatingCard.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Staff\EmployeeCard.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Staff\StaffManager.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\AdditionalNote.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\SelectCategory.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\SelectMeal.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\SelectQuantity.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealStatus\MealStatusCard.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealStatus\MealStatusManager.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableCard.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableManager.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\DiscountField.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\SelectTable.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\Table.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\TableRow.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang_MarkupCompile.cache
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang_MarkupCompile.lref
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\App.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\ChangeMealStatusCard.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewMeal.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewMenu.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewStaff.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\BillTemplate.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ChangeMealStatus.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ChangeTableStatus.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ErrorBox.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\Login.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\MainMenu.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\TableManagement.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\SearchBox.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Account\AccountCard.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\ButtonManager.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Category\CategoryCard.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Meal\MealCard.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\CartesianChart.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\CompareWithLastMonthCard.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\PieChart.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\ReportManager.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\TotalProfitCard.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\UserRatingCard.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Staff\EmployeeCard.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\AdditionalNote.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\SelectCategory.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\SelectMeal.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealPicker\SelectQuantity.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\MealStatus\MealStatusCard.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableCard.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\DiscountField.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\SelectTable.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\Table.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableMangager\TableRow.baml
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.g.resources
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.AssemblyInfoInputs.cache
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.AssemblyInfo.cs
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.csproj.CopyComplete
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.dll
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\ref\QuanLyNhaHang.dll
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.pdb
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.genruntimeconfig.cache
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Asus\Downloads\E-Restaurant-main\E-Restaurant-main\E-Restaurant-main\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
