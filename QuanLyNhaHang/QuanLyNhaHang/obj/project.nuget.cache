@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DjFy/ZAdZoKmTF0yxjDg3RovJjvLxXpZ0tmbigdpM7bO4fSJiyPwy9HBpGJsuQEGOhjV71bBiP3NGNNRBAz6RA==",
+  "dgSpecHash": "lviJ5AncV2OgbfHh6ifJkXeruaT/FLQTAcMpkxAxjhfp+diFmQhBPzzvSJDsRpHBiZvTPhiFPvaXIJ2jy07X0Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Asus\\Downloads\\E-Restaurant-main\\E-Restaurant-main\\E-Restaurant-main\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang.csproj",
+  "projectFilePath": "C:\\Users\\Asus\\Downloads\\Git\\E-Restaurant\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asus\\.nuget\\packages\\livecharts\\0.9.7\\livecharts.0.9.7.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\livecharts.wpf\\0.9.7\\livecharts.wpf.0.9.7.nupkg.sha512",

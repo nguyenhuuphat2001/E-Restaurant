@@ -159,3 +159,23 @@ INSERT dbo.Food ( name, idCategory, price )
 VALUES  ( N'7Up', 4, 15000)
 INSERT dbo.Food ( name, idCategory, price )
 VALUES  ( N'Cafe', 4, 12000)
+
+--Procedure
+CREATE PROC USP_Login
+@userName varchar(100), @passWord varchar(100)
+AS
+BEGIN
+	SELECT * FROM dbo.Account
+	WHERE UserName = @userName COLLATE SQL_Latin1_General_CP1_CS_AS
+    AND PassWord = @passWord COLLATE SQL_Latin1_General_CP1_CS_AS
+END
+GO
+
+CREATE PROC USP_GetPositionByUserName
+@userName varchar(100)
+AS 
+BEGIN
+	SELECT position FROM dbo.Account INNER JOIN dbo.Staff ON Staff.id = Account.idStaff
+	WHERE UserName = @userName COLLATE SQL_Latin1_General_CP1_CS_AS
+END
+GO
