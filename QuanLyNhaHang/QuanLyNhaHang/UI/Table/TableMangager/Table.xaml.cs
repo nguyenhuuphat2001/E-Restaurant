@@ -20,9 +20,33 @@ namespace QuanLyNhaHang
     /// </summary>
     public partial class Table : UserControl
     {
+        //string name=null;
+        //string status=null;
         public Table()
         {
             InitializeComponent();
+            
+        }
+
+        public Action<object, RoutedEventArgs> Click { get; internal set; }
+
+        public void SetTest(string name,string status)
+        {
+            tableName.Text = name;
+            tableStatus.Text = status;
+        }
+
+        public void SetBackGround(string status)
+        {
+            switch (status)
+            {
+                case "Empty":
+                    btnTable.Background = new SolidColorBrush(Colors.PaleGreen);
+                    break;
+                default:
+                    btnTable.Background = new SolidColorBrush(Colors.Salmon);
+                    break;
+            }
         }
     }
 }

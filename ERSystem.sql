@@ -1,46 +1,53 @@
 ﻿Create database ERSystem
 go
 USE ERSystem
-go
+GO
 
 CREATE TABLE Staff
 (
 	id INT IDENTITY PRIMARY KEY,
 	name NVARCHAR(100) NOT NULL,
 	sex NVARCHAR(5) NOT NULL,
-	email NVARCHAR(100),
+	email NVARCHAR(100) UNIQUE,
+	phone VARCHAR(10) UNIQUE,
 	salary int NOT NULL,
 	position INT NOT NULL  DEFAULT 0 -- 0: manager && 1: waiter && 2: chef
 )
+GO
 
 CREATE TABLE Account
 (
-id INT IDENTITY PRIMARY KEY,
-idStaff INT NOT NULL,
-userName NVARCHAR(100),	
-passWord NVARCHAR(1000) NOT NULL DEFAULT 123456,
+	id INT IDENTITY PRIMARY KEY,
+	idStaff INT NOT NULL UNIQUE,
+	userName VARCHAR(100) UNIQUE,	
+	passWord VARCHAR(1000) NOT NULL DEFAULT '123456',
 
-FOREIGN KEY (idStaff) REFERENCES dbo.Staff(id)
+	FOREIGN KEY (idStaff) REFERENCES dbo.Staff(id)
 )
+GO
 
 CREATE TABLE TableFood
 (
 	id INT IDENTITY PRIMARY KEY,
-	Type INT NOT NULL  DEFAULT 0 -- 0: Trống && 1: Có người 
+	name VARCHAR(100) NOT NULL DEFAULT 'No name',
+	status VARCHAR(100) NOT NULL DEFAULT 'Empty'	-- Empty || Using
 )
+GO
 
 CREATE TABLE FoodCategory
 (
 	id INT IDENTITY PRIMARY KEY,
-	name NVARCHAR(100) NOT NULL DEFAULT N'Chưa đặt tên'
+	name NVARCHAR(100) NOT NULL DEFAULT N'No name'
 )
+GO
 
 CREATE TABLE Food
 (
 	id INT IDENTITY PRIMARY KEY,
-	name NVARCHAR(100) NOT NULL DEFAULT N'Chưa đặt tên',
+	name NVARCHAR(100) NOT NULL DEFAULT N'No name',
 	idCategory INT NOT NULL,
-	price FLOAT NOT NULL DEFAULT 0	
+	price FLOAT NOT NULL DEFAULT 0
+	
 	FOREIGN KEY (idCategory) REFERENCES dbo.FoodCategory(id)
 )
  
@@ -53,6 +60,7 @@ CREATE TABLE Book
 	idTable INT NOT NULL,
 	FOREIGN KEY (idTable) REFERENCES dbo.TableFood(id)
 )
+GO
 
 CREATE TABLE Bill
 (
@@ -75,64 +83,122 @@ CREATE TABLE BillInfo
 	FOREIGN KEY (idBill) REFERENCES dbo.Bill(id),
 	FOREIGN KEY (idFood) REFERENCES dbo.Food(id)
 )
+GO
 
 --Thêm NV
 INSERT INTO dbo.Staff
 (
-name,
-email,
-salary,
-work_time
+    name,
+    sex,
+    email,
+    phone,
+    salary,
+    position
 )
 VALUES
-('Huu Phat',
-'nguyenhuuphat',
-10000000,
-'17:00:00')
+(   N'Duy Phúc',  -- name - nvarchar(100)
+    1, -- sex - bit
+    '19522038@gm.uit.edu.vn',   -- email - varchar(100)
+    '1234',   -- phone - varchar(100)
+    10000,    -- salary - int
+    0     -- position - int
+    )
+GO
 
 INSERT INTO dbo.Staff
 (
-name,
-email,
-salary,
-work_time
+    name,
+    sex,
+    email,
+    phone,
+    salary,
+    position
 )
 VALUES
-('Duy Phuc',
-'nguyenduyphuc',
-99999999,
-'7:00:00')
+(   N'Doãn Thịnh',  -- name - nvarchar(100)
+    1, -- sex - bit
+    '1952@gm.uit.edu.vn',   -- email - varchar(100)
+    '1351351',   -- phone - varchar(100)
+    10000,    -- salary - int
+    1     -- position - int
+    )
+GO
+
+INSERT INTO dbo.Staff
+(
+    name,
+    sex,
+    email,
+    phone,
+    salary,
+    position
+)
+VALUES
+(   N'Xuân Thái',  -- name - nvarchar(100)
+    1, -- sex - bit
+    '19wr23r52@gm.uit.edu.vn',   -- email - varchar(100)
+    '1232342',   -- phone - varchar(100)
+    10000,    -- salary - int
+    2     -- position - int
+    )
+GO
+
+INSERT INTO dbo.Staff
+(
+    name,
+    sex,
+    email,
+    phone,
+    salary,
+    position
+)
+VALUES
+(   N'Hữu Phát',  -- name - nvarchar(100)
+    1, -- sex - bit
+    '195r3r2@gm.uit.edu.vn',   -- email - varchar(100)
+    '122342334',   -- phone - varchar(100)
+    10000,    -- salary - int
+    1     -- position - int
+    )
+GO
 
 --Thêm TK
 INSERT INTO dbo.Account
 (
-idStaff, 
-UserName ,
-PassWord ,
-Type
+	idStaff, 
+	UserName 
 )
 VALUES  
 (
-1,
-'huuphat' , 
-'123456', 
-1
+	13,
+	'manager'
 )
+GO
 
 INSERT INTO dbo.Account
 (
-idStaff, 
-UserName ,
-PassWord ,
-Type
+	idStaff, 
+	UserName 
 )
 VALUES  
 (
-3,
-'duyphuc' , 
-'0123', 
-0
+	14,
+	'waiter'
 )
+GO
+
+INSERT INTO dbo.Account
+(
+	idStaff, 
+	UserName 
+)
+VALUES  
+(
+	15,
+	'chef'
+)
+GO
+
 
 -- thêm category
 INSERT dbo.FoodCategory ( name )
@@ -143,6 +209,7 @@ INSERT dbo.FoodCategory ( name )
 VALUES  ( N'Lâm sản' )
 INSERT dbo.FoodCategory ( name )
 VALUES  ( N'Nước' )
+GO
 
 -- thêm món ăn
 INSERT dbo.Food ( name, idCategory, price )
@@ -159,6 +226,16 @@ INSERT dbo.Food ( name, idCategory, price )
 VALUES  ( N'7Up', 4, 15000)
 INSERT dbo.Food ( name, idCategory, price )
 VALUES  ( N'Cafe', 4, 12000)
+GO
+
+--Thêm bàn
+DECLARE @i INT = 1
+WHILE @i <= 10
+BEGIN
+	INSERT dbo.TableFood (name) VALUES  ( 'Table ' + CAST(@i AS nvarchar(100)))
+	SET @i = @i + 1
+END
+GO
 
 --Procedure
 CREATE PROC USP_Login
@@ -179,3 +256,7 @@ BEGIN
 	WHERE UserName = @userName COLLATE SQL_Latin1_General_CP1_CS_AS
 END
 GO
+
+UPDATE dbo.TableFood
+SET status='Using'
+WHERE id>4 AND id < 7

@@ -9,26 +9,16 @@
         Title="TableManagement" Height="713" Width="943" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" >
     <Grid Margin="20">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="10*"/>
             <ColumnDefinition/>
             <ColumnDefinition Width="10*"/>
         </Grid.ColumnDefinitions>
         <Border CornerRadius="10" Background="Gray">
             <ScrollViewer Grid.Column="0">
-                <WrapPanel Orientation="Horizontal">
-                    <local:Table Margin="10"/>
-                    <local:Table Margin="10"/>
-                    <local:Table Margin="10"/>
-                    <local:Table Margin="10"/>
-                    <local:Table Margin="10"/>
-                    <local:Table Margin="10"/>
-                    <local:Table Margin="10"/>
-                    <local:Table Margin="10"/>
-                    <local:Table Margin="10"/>
-                    <local:Table Margin="10"/>
-                    <local:Table Margin="10"/>
-                    <local:Table Margin="10"/>
-                    <local:Table Margin="10"/>
+                <WrapPanel x:Name="wpTable" Orientation="Horizontal">
+                    <local:Table Margin="5"/>
+                    <local:Table Margin="5"/>
+                    <local:Table Margin="5"/>
                 </WrapPanel>
             </ScrollViewer>
         </Border>
