@@ -26,7 +26,7 @@ namespace QuanLyNhaHang.DTO
         {
             this.Id = (int)row["id"];
             this.Name = (string)row["name"].ToString();
-            this.CategoryID = (int)row["categoryID"];
+            this.CategoryID = (int)row["idCategory"];
             this.Price = (float)Convert.ToDouble(row["price"].ToString());
         }
 

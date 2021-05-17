@@ -41,6 +41,8 @@ CREATE TABLE FoodCategory
 )
 GO
 
+select * from FoodCategory where FoodCategory.name = 'Lâm sản'
+
 CREATE TABLE Food
 (
 	id INT IDENTITY PRIMARY KEY,

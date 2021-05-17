@@ -267,5 +267,7 @@ namespace QuanLyNhaHang
         {
             this.Close();
         }
+
+
     }
 }

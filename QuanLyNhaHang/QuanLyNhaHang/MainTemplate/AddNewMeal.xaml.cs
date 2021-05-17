@@ -73,7 +73,7 @@ namespace QuanLyNhaHang
         {
             string name = txtNameMeal.Text;
             int categoryID = 0;
-            string category = txtSupplierMeal.Text;
+            string category = txtCategory.Text;
             int id = Convert.ToInt32(txtIDMeal.Text);
             float price = float.Parse(txtUnityPrice.Text);
 
@@ -126,6 +126,7 @@ namespace QuanLyNhaHang
             add { DeleteMeal += value; }
             remove { DeleteMeal -= value; }
         }
+
         #endregion
 
 

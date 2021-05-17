@@ -56,7 +56,7 @@ namespace QuanLyNhaHang {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/QuanLyNhaHang;V1.0.0.0;component/ui/buttonmanager.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/QuanLyNhaHang;component/ui/buttonmanager.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\UI\ButtonManager.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
