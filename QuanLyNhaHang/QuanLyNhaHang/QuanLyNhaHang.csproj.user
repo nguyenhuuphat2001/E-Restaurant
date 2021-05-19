@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="MainTemplate\AddNewCategory.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UI\Account\AccountCard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -126,6 +129,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="MainTemplate\AddNewCategory.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="UI\Account\AccountCard.xaml">
       <SubType>Designer</SubType>
     </Page>

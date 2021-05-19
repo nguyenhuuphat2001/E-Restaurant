@@ -33,7 +33,7 @@ namespace QuanLyNhaHang
         {
             string name = txtNameMeal.Text;
             int categoryID = 0;
-            string category = txtSupplierMeal.Text;
+            string category = txtCategory.Text;
 
             switch (category)
             {

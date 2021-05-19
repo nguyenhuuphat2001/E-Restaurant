@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuanLyNhaHang.DAO;
+using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,12 +29,12 @@ namespace QuanLyNhaHang
 
         private void addButton_MouseEnter(object sender, MouseEventArgs e)
         {
-            addIcon.Foreground = Brushes.Green;
+            editIcon.Foreground = Brushes.Green;
         }
 
         private void addButton_MouseLeave(object sender, MouseEventArgs e)
         {
-            addIcon.Foreground = Brushes.White;
+            editIcon.Foreground = Brushes.White;
         }
 
         private void deleteButton_MouseEnter(object sender, MouseEventArgs e)
@@ -43,6 +45,37 @@ namespace QuanLyNhaHang
         private void deleteButton_MouseLeave(object sender, MouseEventArgs e)
         {
             deleteIcon.Foreground = Brushes.White;
+        }
+
+        private void editButton_Click(object sender, RoutedEventArgs e)
+        {
+            string name = Microsoft.VisualBasic.Interaction.InputBox("", "", "Insert name here");
+            int id = Convert.ToInt32(mealID.Text);
+            if (CategoryDAO.Instance.UpdateCategory(name, id))
+            {
+                MessageBox.Show("Edit category succesfully");
+
+            }
+            else
+            {
+                MessageBox.Show("Edit category failed");
+            }
+
+        }
+
+        private void deleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            int id = Convert.ToInt32(mealID.Text);
+            if (CategoryDAO.Instance.DeleteCategory( id))
+            {
+                MessageBox.Show("Delete category succesfully");
+
+            }
+            else
+            {
+                MessageBox.Show("Delete category failed");
+            }
+            
         }
     }
 }

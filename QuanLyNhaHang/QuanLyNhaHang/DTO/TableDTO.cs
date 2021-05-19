@@ -9,7 +9,7 @@ namespace QuanLyNhaHang.DTO
 {
     public class TableDTO
     {
-        int iD;
+        public int iD;
         string status, name;
 
         public int ID { get => iD; set => iD = value; }

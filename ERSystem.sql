@@ -259,6 +259,9 @@ BEGIN
 END
 GO
 
-UPDATE dbo.TableFood
-SET status='Using'
-WHERE id>4 AND id < 7
+
+
+
+select * from dbo.FoodCategory
+INSERT dbo.FoodCategory( name )
+VALUES ('Bottle')

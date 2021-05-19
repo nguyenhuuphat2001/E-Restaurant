@@ -128,7 +128,7 @@
                     </Grid>
                     <ScrollViewer x:Name="CardContainer" Grid.Row="1">
                         <StackPanel x:Name="ListHolder" Orientation="Vertical">
-                            <local:TableCard/>
+                            <local:CategoryCard/>
                         </StackPanel>
 
                     </ScrollViewer>
