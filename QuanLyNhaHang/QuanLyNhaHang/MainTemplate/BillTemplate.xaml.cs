@@ -23,5 +23,23 @@ namespace QuanLyNhaHang
         {
             InitializeComponent();
         }
+
+       
+        private void exportBillBtn_Click_1(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                this.IsEnabled = false;
+                PrintDialog printDialog = new PrintDialog();
+                if (printDialog.ShowDialog() == true)
+                {
+                    printDialog.PrintVisual(billGrd, "invoice");
+                }
+            }
+            finally
+            {
+                this.IsEnabled = true;
+            }
+        }
     }
 }

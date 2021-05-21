@@ -23,5 +23,15 @@ namespace QuanLyNhaHang
         {
             InitializeComponent();
         }
+
+        private void btnConfirm_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void passwordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

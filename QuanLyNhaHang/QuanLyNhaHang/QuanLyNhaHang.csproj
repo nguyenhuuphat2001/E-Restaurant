@@ -34,9 +34,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Assets\restaurant.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
+    <EmbeddedResource Include="Assets\restaurant.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <Resource Include="UI\Report\money.png" />
   </ItemGroup>
 

@@ -4,144 +4,125 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuanLyNhaHang"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="BillTemplate" Height="858" Width="853">
-    <Grid>
-        <Grid VerticalAlignment="Top" Height="180" Background="#FF5B9470">
+        Title="BillTemplate" Height="703" Width="793" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid x:Name="billGrd">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Image Grid.Column="0" Source="Assets/restaurant.png" HorizontalAlignment="Left" Margin="30"/>
-            <TextBlock Grid.Row="0" HorizontalAlignment="Left" Margin="160,50,0,0" Width="241" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Foreground="Orange" Height="38">
-                UIT Restaurant
-            </TextBlock>
-            <TextBlock Text="100 Mac Dinh Chi Street" Margin="159,90,41,0" FontSize="15" FontWeight="Bold" Foreground="Orange" VerticalAlignment="Top"/>
-            <TextBlock Text="0123456789" Margin="159,130,41,0" FontSize="15" FontWeight="Bold" Foreground="Orange" VerticalAlignment="Top"/>
-            <TextBlock Grid.Column="1" Text="RECEPIT" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" FontSize="55" Foreground="Orange" FontWeight="Bold" Height="190"/>
 
-            <Grid Grid.ColumnSpan="2" Margin="1,189,0,-434">
+            <Grid x:Name="restaurantInformation">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="32*"/>
-                    <ColumnDefinition Width="39*"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="28*" />
-                    <RowDefinition Height="57*"/>
-                </Grid.RowDefinitions>
-                <StackPanel Grid.Row="0" Grid.Column="0">
-                    <TextBlock HorizontalAlignment="Left"
-                               Margin="0"
-                               TextWrapping="Wrap"
-                               Text="Customer Information:"
-                               FontWeight="Bold"
-                               FontSize="18"/>
-                    <TextBlock HorizontalAlignment="Left"
-                               Margin="0"
-                               TextWrapping="Wrap"
-                               Text="Nguyen Doan Thinh"
-                               FontWeight="Bold"
-                               FontSize="25"/>
-                    <TextBlock HorizontalAlignment="Left"
-                               Margin="0"
-                               TextWrapping="Wrap"
-                               Text="0123456789"
-                               FontWeight="Bold"
-                               FontSize="18"/>
-                </StackPanel>
-                <StackPanel Grid.Row="0" Grid.Column="1" Margin="0,0,378,0">
-                    <TextBlock HorizontalAlignment="Left"
-                               Margin="0"
-                               TextWrapping="Wrap"
-                               Text="Day: "
-                               FontWeight="Bold"
-                               FontSize="18"/>
-                    <TextBlock HorizontalAlignment="Left"
-                               Margin="0"
-                               TextWrapping="Wrap"
-                               Text="Check in"
-                               FontWeight="Bold"
-                               FontSize="18"/>
-                    <TextBlock HorizontalAlignment="Left"
-                               Margin="0"
-                               TextWrapping="Wrap"
-                               Text="Check out:"
-                               FontWeight="Bold"
-                               FontSize="18"/>
-                </StackPanel>
-                <StackPanel Grid.Row="0" Grid.Column="1" Margin="100,0,0,0">
-                    <TextBlock HorizontalAlignment="Left"
-                               Margin="0"
-                               TextWrapping="Wrap"
-                               Text="9/4/2021"
-                               FontWeight="Bold"
-                               FontSize="18"/>
-                    <TextBlock HorizontalAlignment="Left"
-                               Margin="0"
-                               TextWrapping="Wrap"
-                               Text="9:22 AM"
-                               FontWeight="Bold"
-                               FontSize="18"/>
-                    <TextBlock HorizontalAlignment="Left"
-                               Margin="0"
-                               TextWrapping="Wrap"
-                               Text="11:00AM"
-                               FontWeight="Bold"
-                               FontSize="18"/>
-                </StackPanel>
-                <ListView Grid.Row="1"
-  ItemsSource="{Binding Items1}" Grid.ColumnSpan="2">
-                    <ListView.View>
-                        <GridView>
-                            <GridViewColumn
+                <Border Background="LightGray">
+                    <Image Grid.Column="0" Source="/Assets/restaurant.png"/>
+                </Border>
+
+            </Grid>
+
+
+            <Border Grid.Column="1" CornerRadius="10" BorderBrush="Green" BorderThickness="5">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+
+                    </Grid.RowDefinitions>
+                    <Grid x:Name="invoiceIDContainer" Grid.Row="0" >
+                        <TextBlock x:Name="invoiceID" Text="Invoice Number 1111" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"/>
+                    </Grid>
+                    <Grid x:Name="dateCheckinContainer" Grid.Row="1" >
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock  Text="Date check in: " HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"/>
+                            <TextBlock x:Name="dateCheckin" Text="18:00 28/1/2021" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"/>
+                        </StackPanel>
+                    </Grid>
+                    <Grid x:Name="dateCheckOutContainer" Grid.Row="2" >
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock  Text="Date check out: " HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"/>
+                            <TextBlock x:Name="dateCheckOut" Text="21:00 28/1/2021" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"/>
+                        </StackPanel>
+                    </Grid>
+
+                </Grid>
+            </Border>
+
+        </Grid>
+        <Grid Grid.Row="1" Margin="0,5,0,0">
+            <materialDesign:Card Background="LightGreen"/>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="Invoice" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="55"/>
+                <TextBlock x:Name="invoice" Grid.Column="1" Text="#1001" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="55" FontStyle="Italic"/>
+            </Grid>
+
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="357*"/>
+                <RowDefinition Height="97*"/>
+            </Grid.RowDefinitions>
+            <ListView x:Name="mealList" Grid.Row="0"
+  ItemsSource="{Binding Items1}" Margin="0,0,0,20" Cursor="Arrow">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn
         DisplayMemberBinding="{Binding Order}"
         Header="Order" Width="100" />
-                            <GridViewColumn
+                        <GridViewColumn
         DisplayMemberBinding="{Binding Name}"
         Header="Name" Width="200" />
-                            <GridViewColumn
+                        <GridViewColumn
         DisplayMemberBinding="{Binding Description}"
         Header="UnitPrice" />
-                            <GridViewColumn
+                        <GridViewColumn
         Header="Quantity" Width="200">
-                            </GridViewColumn>
-                            <GridViewColumn
+                        </GridViewColumn>
+                        <GridViewColumn
         Header="Total">
-                            </GridViewColumn>
+                        </GridViewColumn>
 
 
-                        </GridView>
-                    </ListView.View>
-                </ListView>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Grid Grid.Row="1">
+                <StackPanel HorizontalAlignment="Right" Margin="0,0,10,0">
+                    <TextBlock Text="Subtotal: " FontSize="10" FontWeight="Bold" Margin="5"/>
+                    <TextBlock Text="Discount: " FontSize="10" FontWeight="Bold" Margin="5"/>
+                    <TextBlock Text="Total: " FontSize="20" FontWeight="Bold" Margin="5"/>
+                </StackPanel>
             </Grid>
         </Grid>
-        <Grid VerticalAlignment="Top" Height="221" Margin="0,621,0,0" RenderTransformOrigin="0.5,0.5">
-            <Grid HorizontalAlignment="Left" Margin="481,0,0,0" RenderTransformOrigin="0.5,0.5" Width="372">
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-
-                <TextBlock Text="Total:"/>
-                <TextBlock Text="VAT" Grid.Row="1"/>
-                <TextBlock Text="Discount"  Grid.Row="2"/>
-                <TextBlock Text="Amount Due" Grid.Row="3"/>
-                <Button
-    Style="{StaticResource MaterialDesignRaisedButton}"
-    Height="50"
-    Margin="2"
-    ToolTip="MaterialDesignRaisedButton with Round Corners" Grid.Column="1"  Grid.Row="4" >
-                    <TextBlock
-      Text="Export Bill" />
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <TextBlock Text="Thanks for choosing us today" HorizontalAlignment="Center" VerticalAlignment="Center" FontStyle="Italic" FontWeight="Bold" FontSize="40" FontFamily="Blackadder ITC" Foreground="Green" />
+            </Grid>
+            <Grid Grid.Column="1">
+                <Button  x:Name="exportBillBtn"  HorizontalAlignment="Right" VerticalAlignment="Center" Height="63" Margin="0,0,10,0" Width="78" Click="exportBillBtn_Click_1">
+                    <materialDesign:PackIcon Kind="Printer" Foreground="Wheat" FontSize="15" VerticalAlignment="Center" Width="39" HorizontalAlignment="Center" Height="90"/>
                 </Button>
             </Grid>
         </Grid>
     </Grid>
+
 </Window>
