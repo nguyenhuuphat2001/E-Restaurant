@@ -58,10 +58,10 @@ namespace QuanLyNhaHang.DAO
 
             return list;
         }
-
+        
         //public int FindCategoryID(string idCategory)
         //{
-            
+
         //    string query = "select id from FoodCategory where Food.name = " + idCategory;
         //    int result = (int)DataProvider.Instance.ExecuteScalar(query, new object[] { idCategory });
         //    return result;

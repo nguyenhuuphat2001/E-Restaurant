@@ -48,8 +48,22 @@
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <local:SelectCategory Grid.Row="0"/>
-                    <local:SelectMeal Grid.Row="1"/>
+                    <ComboBox
+        Name="cbCategory"    
+  materialDesign:HintAssist.Hint="Select category"
+                        Grid.Row="0"
+  materialDesign:HintAssist.HintOpacity=".26"
+  IsEditable="True"  SelectionChanged="cbCategory_SelectionChanged" >
+
+
+
+                    </ComboBox>
+                    <ComboBox x:Name="cbFood"
+  materialDesign:HintAssist.Hint="Choose meal"
+  materialDesign:HintAssist.HintOpacity=".26" Grid.Row="1"
+  IsEditable="True" SelectionChanged="cbFood_SelectionChanged">
+
+                    </ComboBox>
                     <local:SelectQuantity Grid.Row="2"/>
 
                     <local:AdditionalNote Grid.Row="3"/>

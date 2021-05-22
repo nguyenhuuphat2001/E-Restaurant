@@ -35,6 +35,7 @@ namespace QuanLyNhaHang
 
             List<MenuDTO> listBill = MenuDAO.Instance.GetListMenuByTable(id);
             gridBill.ItemsSource = listBill;
+
         }
         private void LoadBillByTable(int id)
         {
