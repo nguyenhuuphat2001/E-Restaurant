@@ -144,7 +144,7 @@
                             </TextBlock>
                         </Grid>
                         <Grid Grid.Row="2">
-                            <Button Margin="3">
+                            <Button x:Name="exportBillBtn" Margin="3" Click="exportBillBtn_Click">
                                 <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Export bill" Foreground="WhiteSmoke" FontWeight="Bold"/>
                             </Button>
                         </Grid>

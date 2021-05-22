@@ -120,7 +120,7 @@ namespace QuanLyNhaHang {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/QuanLyNhaHang;component/ui/table/mealstatus/mealstatuscard.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/QuanLyNhaHang;V1.0.0.0;component/ui/table/mealstatus/mealstatuscard.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\..\UI\Table\MealStatus\MealStatusCard.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -72,36 +72,15 @@
             </Grid>
 
         </Grid>
-        <Grid Grid.Row="2">
+        <Grid Grid.Row="2" UseLayoutRounding="False">
             <Grid.RowDefinitions>
                 <RowDefinition Height="357*"/>
                 <RowDefinition Height="97*"/>
             </Grid.RowDefinitions>
-            <ListView x:Name="mealList" Grid.Row="0"
-  ItemsSource="{Binding Items1}" Margin="0,0,0,20" Cursor="Arrow">
-                <ListView.View>
-                    <GridView>
-                        <GridViewColumn
-        DisplayMemberBinding="{Binding Order}"
-        Header="Order" Width="100" />
-                        <GridViewColumn
-        DisplayMemberBinding="{Binding Name}"
-        Header="Name" Width="200" />
-                        <GridViewColumn
-        DisplayMemberBinding="{Binding Description}"
-        Header="UnitPrice" />
-                        <GridViewColumn
-        Header="Quantity" Width="200">
-                        </GridViewColumn>
-                        <GridViewColumn
-        Header="Total">
-                        </GridViewColumn>
-
-
-                    </GridView>
-                </ListView.View>
-            </ListView>
-            <Grid Grid.Row="1">
+            <DataGrid x:Name="gridBill" Grid.Row="0" AutoGenerateColumns="True">
+                
+            </DataGrid>
+            <Grid Grid.Row="1" >
                 <StackPanel HorizontalAlignment="Right" Margin="0,0,10,0">
                     <TextBlock Text="Subtotal: " FontSize="10" FontWeight="Bold" Margin="5"/>
                     <TextBlock Text="Discount: " FontSize="10" FontWeight="Bold" Margin="5"/>

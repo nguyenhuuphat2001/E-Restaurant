@@ -59,5 +59,11 @@ namespace QuanLyNhaHang
             //lvBill.Tag = (sender as Button).Tag;
             //ShowBill(tableID);
         }
+
+        private void exportBillBtn_Click(object sender, RoutedEventArgs e)
+        {
+            
+            
+        }
     }
 }

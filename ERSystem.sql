@@ -259,9 +259,6 @@ BEGIN
 END
 GO
 
-
-
-
-select * from dbo.FoodCategory
-INSERT dbo.FoodCategory( name )
-VALUES ('Bottle')
+SELECT f.name, bi.count,f.price, f.price*bi.count as totalPrice from BillInfo as bi, Bill as b , Food as f
+where bi.idBill = b.id and bi.idFood = f.id and b.idTable =3
+ 
