@@ -6,15 +6,18 @@
         xmlns:local="clr-namespace:QuanLyNhaHang"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="AddNewMeal" Height="648" Width="898" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" >
-    <Grid Margin="0,0,0,-6">
+        Title="AddNewMeal" Height="400" Width="900" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
         <Grid x:Name="gridImage"
-              Margin="50,50,0,0"
+              Margin="0,50,0,0"
               Width="150"
               Height="150"
-              HorizontalAlignment="Left"
-              VerticalAlignment="Top"
-              >
+              HorizontalAlignment="Center"
+              VerticalAlignment="Top">
             <Rectangle x:Name="recImage"
                        StrokeDashArray="4 2"
                        Stroke="#FFF38413"
@@ -25,14 +28,13 @@
                        Height="150"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Top"/>
-
             <Button
-            Style="{StaticResource MaterialDesignRaisedLightButton}"
-            Height="30"
-            materialDesign:ButtonAssist.CornerRadius="5"
-            ToolTip="MaterialDesignRaisedLightButton with Round Corners" Margin="30,94,30,0"
-            VerticalAlignment="Top" Background="#FFF38413"
-                >
+                Style="{StaticResource MaterialDesignRaisedLightButton}"
+                Height="30"
+                materialDesign:ButtonAssist.CornerRadius="5"
+                ToolTip="MaterialDesignRaisedLightButton with Round Corners" 
+                Margin="30,94,30,0"
+                VerticalAlignment="Top" Background="#FFF38413">
                 <TextBlock Text="Select Image" FontWeight="Bold" FontSize="10" Foreground="White" />
             </Button>
             <materialDesign:PackIcon Kind="FileImageOutline"
@@ -41,110 +43,68 @@
 
 
         </Grid>
-        <Grid x:Name="gridInfo" Margin="261,91,139,196">
+        <Grid x:Name="gridInfo" Grid.Column="1" Margin="0,50,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label
+                x:Name="lbNameMeal"     Content="Name"
+                HorizontalAlignment="Right" VerticalAlignment="Center"
+                Foreground="Black"        FontSize="18"
+                FontWeight="Bold"           Grid.Row="0"/>
             <Grid 
-                x:Name="grdIDMeal"
-                Margin="0"
-                VerticalAlignment="Top"  
-                Width="420" 
-                Height="40">
-                <Label
-                    x:Name="lbID"
-                    Content="ID"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"
-                    Foreground="Black"
-                    FontSize="18"
-                    FontWeight="Bold" Margin="10,8,0,0"/>
-                <Rectangle x:Name="recID"
-                           Height="40"
-                           Width="290"
-                           RadiusX="6"
-                           RadiusY="6" Margin="102,0,0,0"
-                           Stroke="Gray"
-                           HorizontalAlignment="Left"/>
-                <TextBox 
-                    x:Name="txtIDMeal"
-                    materialDesign:HintAssist.Hint="Meal's ID"
-                    HorizontalAlignment="Left"  
-                    Width="265" 
-                    FontSize="14" 
-                    BorderThickness="0" 
-                    MaxLines="1"
-                    Padding="0" 
-                    Height="40" 
-                    HorizontalContentAlignment="Left"
-                    VerticalContentAlignment="Center" 
-                    VerticalAlignment="Center" 
-                    SelectionBrush="{x:Null}"
-                    FontWeight="SemiBold" Margin="127,0,0,0" />
-            </Grid>
-            <Grid 
-                x:Name="grdNameMeal"
-                Margin="0,60,-20,0"
-                VerticalAlignment="Top"  
-                Width="420" 
-                Height="40">
-                <Label
-                    x:Name="lbNameMeal"
-                    Content="Name"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Center"
-                    Foreground="Black"
-                    FontSize="18"
-                    FontWeight="Bold"/>
+                x:Name="grdNameMeal"                
+                Margin="50,0,0,0"
+                Grid.Column="1">
                 <Rectangle x:Name="recNameMeal"
-                           Height="40"
-                           Width="290"
-                           RadiusX="6"
-                           RadiusY="6" Margin="90,0,0,0"
-                           Stroke="Gray"
-                           HorizontalAlignment="Left"/>
+                           Height="40"            Width="300"
+                           RadiusX="5"            RadiusY="5"
+                           Stroke="Gray"        HorizontalAlignment="Left"/>
                 <TextBox 
                     x:Name="txtNameMeal"
                     materialDesign:HintAssist.Hint="Meal's Name"
-                    HorizontalAlignment="Left"  
-                    Width="266" 
-                    FontSize="14" 
-                    BorderThickness="0" 
-                    MaxLines="1"
-                    Padding="0" 
-                    Height="40" 
-                    HorizontalContentAlignment="Left"
-                    VerticalContentAlignment="Center" 
-                    VerticalAlignment="Center" 
-                    SelectionBrush="{x:Null}"
-                    FontWeight="SemiBold" Margin="114,0,0,0" />
-
+                    Width="{Binding ActualWidth, ElementName=recNameMeal}" 
+                    Height="{Binding ActualHeight, ElementName=recNameMeal}" 
+                    FontSize="14"       BorderThickness="0" 
+                    MaxLines="1"        SelectionBrush="{x:Null}" 
+                    HorizontalContentAlignment="Left"   HorizontalAlignment="Left" 
+                    VerticalContentAlignment="Center"   VerticalAlignment="Center" 
+                    FontWeight="Bold" />
             </Grid>
+            <Label
+                x:Name="lbCategory"     Content="Category"      Grid.Row="1"
+                HorizontalAlignment="{Binding HorizontalAlignment, ElementName=lbNameMeal}" 
+                VerticalAlignment="{Binding VerticalAlignment, ElementName=lbNameMeal}"
+                Foreground="{Binding Foreground, ElementName=lbNameMeal}" 
+                FontSize="{Binding FontSize, ElementName=lbNameMeal}"
+                FontWeight="{Binding FontWeight, ElementName=lbNameMeal}"/>
             <Grid 
-                x:Name="grdNameSupplier"
-                Margin="0,120,-20,0"
-                VerticalAlignment="Top"  
-                Width="420" 
-                Height="40">
-                <Label
-                    x:Name="lbNameSupplier"
-                    Content="Category"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Center"
-                    Foreground="Black"
-                    FontSize="18"
-                    FontWeight="Bold"/>
-                <Rectangle x:Name="recNameSupplier"
-                           Height="40"
-                           Width="290"
-                           RadiusX="6"
-                           RadiusY="6" Margin="90,0,0,0"
-                           Stroke="Gray"
-                           HorizontalAlignment="Left"/>
-                <ComboBox x:Name="txtCategory"
-                    materialDesign:HintAssist.Hint="Categories"
-                    VerticalAlignment="Top"
-                    FontWeight="Bold"
-                    MinWidth="72"
-                    IsEditable="True"
-                     ItemsSource="{Binding LongListToTestComboVirtualization}" Margin="114,11,40,0" Height="31">
+                x:Name="grdCategory"    Margin="{Binding Margin, ElementName=grdNameMeal}"
+                Grid.Column="1"         Grid.Row="1">
+                <Rectangle x:Name="recCategory"
+                           Height="{Binding ActualHeight, ElementName=recNameMeal}"
+                           Width="{Binding ActualWidth, ElementName=recNameMeal}"
+                           RadiusX="{Binding RadiusX, ElementName=recNameMeal}"
+                           RadiusY="{Binding RadiusY, ElementName=recNameMeal}"
+                           Stroke="{Binding Stroke, ElementName=recNameMeal}"        
+                           Margin="{Binding Margin, ElementName=recNameMeal}"
+                           HorizontalAlignment="{Binding HorizontalAlignment, ElementName=recNameMeal}"/>
+                <ComboBox
+                    Name="cmbCategory"
+                    materialDesign:HintAssist.Hint="Meal's category"
+                    HorizontalAlignment="{Binding HorizontalAlignment, ElementName=txtNameMeal}"
+                    FontWeight="{Binding FontWeight, ElementName=txtNameMeal}"           
+                    IsEditable="False"
+                    Width="{Binding ActualWidth, ElementName=recNameMeal}"
+                    Height="{Binding ActualHeight, ElementName=recNameMeal}"
+                    ItemsSource="{Binding LongListToTestComboVirtualization}" >
                     <ComboBox.Text>
                         <Binding
                         Path="SelectedTextTwo"
@@ -164,84 +124,62 @@
                 </ComboBox>
 
             </Grid>
+            <Label
+                x:Name="lbPriceMeal"    Content="Price"     Grid.Row="2"
+                HorizontalAlignment="{Binding HorizontalAlignment, ElementName=lbNameMeal}" 
+                VerticalAlignment="{Binding VerticalAlignment, ElementName=lbNameMeal}"
+                Foreground="{Binding Foreground, ElementName=lbNameMeal}" 
+                FontSize="{Binding FontSize, ElementName=lbNameMeal}"
+                FontWeight="{Binding FontWeight, ElementName=lbNameMeal}"/>
             <Grid 
-                Margin="0,180,-20,0" 
-                VerticalAlignment="Top" 
-                x:Name="grdImportDate" 
-                Width="420" 
-                Height="40">
-                <Rectangle 
-                    x:Name="recImportDate"
-                    Height="40" 
-                    Width="45"
-                    RadiusY="6"
-                    RadiusX="6" 
-                    Margin="375,0,0,0" 
-                    HorizontalAlignment="Left"/>
-            </Grid>
-            <Grid 
-                x:Name="grdUnitPrice"
-                Margin="49,182,29,0"
-                VerticalAlignment="Top"  
-                Width="420" 
-                Height="40">
-                <Label
-                    x:Name="lbUnitPrice"
-                    Content="Price"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Center"
-                    Foreground="Black"
-                    FontSize="18"
-                    FontWeight="Bold" Margin="-1,0,0,0"/>
-                <Rectangle x:Name="recUnitPrice"
-                           Height="40"
-                           Width="285"
-                           RadiusX="6"
-                           RadiusY="6" Margin="95,0,0,0"
-                           Stroke="Gray"
-                           HorizontalAlignment="Left"/>
+                x:Name="grdPriceMeal"   Grid.Column="1"     Grid.Row="2"
+                Margin="{Binding Margin, ElementName=grdNameMeal}">
+                <Rectangle x:Name="recPriceMeal"
+                           Height="{Binding ActualHeight, ElementName=recNameMeal}"
+                           Width="{Binding ActualWidth, ElementName=recNameMeal}"
+                           RadiusX="{Binding RadiusX, ElementName=recNameMeal}"
+                           RadiusY="{Binding RadiusY, ElementName=recNameMeal}"
+                           Stroke="{Binding Stroke, ElementName=recNameMeal}"        
+                           HorizontalAlignment="{Binding HorizontalAlignment, ElementName=recNameMeal}"/>
                 <TextBox 
-                    x:Name="txtUnityPrice"
-                    materialDesign:HintAssist.Hint="Price per meal"
-                    HorizontalAlignment="Left"  
-                    Width="265" 
-                    FontSize="14" 
-                    BorderThickness="0" 
-                    MaxLines="1"
-                    Padding="0" 
-                    Height="40" 
-                    HorizontalContentAlignment="Left"
-                    VerticalContentAlignment="Center" 
-                    VerticalAlignment="Center" 
-                    SelectionBrush="{x:Null}"
-                    FontWeight="Bold" Margin="115,0,0,0" />
-
+                    x:Name="txtPriceMeal"
+                    materialDesign:HintAssist.Hint="Meal's price"
+                    Width="{Binding ActualWidth, ElementName=txtNameMeal}" 
+                    Height="{Binding ActualHeight, ElementName=txtNameMeal}" 
+                    FontSize="{Binding FontSize, ElementName=txtNameMeal}"
+                    BorderThickness="{Binding BorderThickness, ElementName=txtNameMeal}" 
+                    MaxLines="{Binding MaxLines, ElementName=txtNameMeal}"        
+                    SelectionBrush="{x:Null}" 
+                    HorizontalContentAlignment="{Binding HorizontalContentAlignment, ElementName=txtNameMeal}"  
+                    HorizontalAlignment="{Binding HorizontalAlignment, ElementName=txtNameMeal}" 
+                    VerticalContentAlignment="{Binding VerticalContentAlignment, ElementName=txtNameMeal}"   
+                    VerticalAlignment="{Binding VerticalAlignment, ElementName=txtNameMeal}" 
+                    FontWeight="{Binding FontWeight, ElementName=txtNameMeal}"/>
             </Grid>
-            <Grid 
-                x:Name="grdQuantity"
-                Margin="49,300,29,0"
-                VerticalAlignment="Top"  
-                Width="420" 
-                Height="40">
+            <Grid x:Name="grdSelection" 
+                  Width="{Binding ActualWidth, ElementName=recNameMeal}"
+                  Margin="{Binding Margin, ElementName=grdNameMeal}"
+                  VerticalAlignment="Center" HorizontalAlignment="Left" 
+                  Grid.Row="6" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnConfirm" Grid.Column="0" 
+                        Background="#FFF38413" Content="Confirm" 
+                        Foreground="White" FontSize="11" FontWeight="Bold" 
+                        Style="{StaticResource MaterialDesignFlatMidBgButton}" 
+                        materialDesign:ButtonAssist.CornerRadius="10"/>
 
-
+                <Button x:Name="btnCancel" Grid.Column="2" 
+                        Background="{Binding Foreground, ElementName=btnConfirm}" Content="Cancel" 
+                        Foreground="{Binding Background, ElementName=btnConfirm}" FontSize="11" 
+                        FontWeight="{Binding FontWeight, ElementName=btnConfirm}"  
+                        Style="{StaticResource MaterialDesignOutlinedButton}" 
+                        materialDesign:ButtonAssist.CornerRadius="10"/>
             </Grid>
-            <Grid 
-                x:Name="grdTotalPrice"
-                Margin="49,360,29,0"
-                VerticalAlignment="Top"  
-                Width="420" 
-                Height="40"/>
         </Grid>
-        <Grid x:Name="grdSelection" Width="220" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,73,64" >
-            <Grid.ColumnDefinitions >
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Button x:Name="btnConfirm" Grid.Column="0" Background="#FFF38413" Content="Confirm" Foreground="White" FontSize="11" FontWeight="Bold" Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ButtonAssist.CornerRadius="10" Click="btnConfirm_Click"/>
 
-            <Button x:Name="btnCancel" Grid.Column="2" Background="White" Content="Cancel" Foreground="#FFF38413" FontSize="11" FontWeight="Bold"  Style="{StaticResource MaterialDesignOutlinedButton}" materialDesign:ButtonAssist.CornerRadius="10"/>
-        </Grid>
     </Grid>
 </Window>

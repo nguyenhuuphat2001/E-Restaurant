@@ -9,14 +9,18 @@
              Height="Auto" Width="Auto">
     <Grid>
         <StackPanel Orientation="Horizontal">
-            <materialDesign:PackIcon Kind="Magnify" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFA59D81" FontWeight="Bold"/>
-            
+            <materialDesign:PackIcon Kind="Magnify" 
+                                     VerticalAlignment="Center" Foreground="#FFA59D81" 
+                                     Height="40" Width="40" 
+                                     
+                                     />
+
             <Separator VerticalAlignment="Center" Width="100" Background="#FFEAB24B">
                 <Separator.LayoutTransform>
                     <RotateTransform Angle="90" />
                 </Separator.LayoutTransform>
             </Separator>
-            
+
         </StackPanel>
     </Grid>
 </UserControl>

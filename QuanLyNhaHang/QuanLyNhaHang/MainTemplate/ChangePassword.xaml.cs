@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace QuanLyNhaHang
 {
     /// <summary>
-    /// Interaction logic for AddNewAccount.xaml
+    /// Interaction logic for ChangePassword.xaml
     /// </summary>
-    public partial class AddNewAccount : Window
+    public partial class ChangePassword : Window
     {
-        public AddNewAccount()
+        public ChangePassword()
         {
             InitializeComponent();
         }

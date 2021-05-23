@@ -24,14 +24,14 @@ namespace QuanLyNhaHang
         public TableManagement()
         {
             InitializeComponent();
-            Load();
-            LoadCategory();
-            LoadFoodList();
+            Load();            
         }
 
         private void Load()
         {
             LoadTable();
+            LoadCategory();
+            LoadFoodList();
         }
 
         private void LoadTable()
@@ -77,16 +77,16 @@ namespace QuanLyNhaHang
         }
         private void LoadFoodList()
         {
-            List<FoodDTO> listFood = FoodDAO.Instance.GetListFood();
-            cbFood.ItemsSource = listFood;
-            cbFood.DisplayMemberPath = "Name";
+            //List<FoodDTO> listFood = FoodDAO.Instance.GetListFood();
+            //cbFood.ItemsSource = listFood;
+            //cbFood.DisplayMemberPath = "Name";
         }
 
         private void LoadFoodListByCategory(int id)
         {
-            List<FoodDTO> listFood = FoodDAO.Instance.GetFoodByCategoryID(id);
-            cbFood.ItemsSource = listFood;
-            cbFood.DisplayMemberPath = "Name";
+            //List<FoodDTO> listFood = FoodDAO.Instance.GetFoodByCategoryID(id);
+            //cbFood.ItemsSource = listFood;
+            //cbFood.DisplayMemberPath = "Name";
 
         }
         private void cbCategory_SelectionChanged(object sender, SelectionChangedEventArgs e)

@@ -25,6 +25,7 @@ CREATE TABLE Account
 	FOREIGN KEY (idStaff) REFERENCES dbo.Staff(id)
 )
 GO
+SELECT * FROM Account
 
 CREATE TABLE TableFood
 (

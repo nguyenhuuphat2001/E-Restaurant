@@ -32,7 +32,7 @@
                     <TextBlock x:Name="mealCategory" Text="Main dish" Margin="10,0,10,0" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black"/>
                 </StackPanel>
                 
-                <Grid Grid.Column="3">
+                <Grid Grid.Column="3" HorizontalAlignment="Left">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition/>

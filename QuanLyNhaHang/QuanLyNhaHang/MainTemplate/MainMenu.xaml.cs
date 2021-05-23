@@ -13,6 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using LiveCharts;
 using LiveCharts.Wpf;
+using QuanLyNhaHang.DAO;
+using QuanLyNhaHang.DTO;
+
 namespace QuanLyNhaHang
 {
     /// <summary>
@@ -24,17 +27,9 @@ namespace QuanLyNhaHang
         {
             InitializeComponent();
         }
-                
-        private void ButtonOpenMenu_Click(object sender, RoutedEventArgs e)
-        {
-            ButtonOpenMenu.Visibility = Visibility.Collapsed;
-            ButtonCloseMenu.Visibility = Visibility.Visible;
-        }
-        private void ButtonCloseMenu_Click(object sender, RoutedEventArgs e)
-        {
-            ButtonOpenMenu.Visibility = Visibility.Visible;
-            ButtonCloseMenu.Visibility = Visibility.Collapsed;
-        }
+
+        #region Method
+        #region Reset
         private void ResetTotalProfitCardContainer()
         {
             TotalProfitCardContainer.Children.Clear();
@@ -55,6 +50,13 @@ namespace QuanLyNhaHang
         {
             CartesianChartContainer.Children.Clear();
         }
+        private void ResetManagerFieldHolder()
+        {
+            ManagerFieldHolder.Children.Clear();
+        }
+        #endregion
+
+        #region Set
         private void SetGridAssistantToDefault()
         {
             ResetTotalProfitCardContainer();
@@ -63,53 +65,10 @@ namespace QuanLyNhaHang
             ResetPieChartContainer();
             ResetCartesianChartContainer();
         }
-            
-        private void ResetManagerFieldHolder()
-        {
-            ManagerFieldHolder.Children.Clear();
-        }
         private void SetGridPrincipalToDefault()
         {
             ResetManagerFieldHolder();
         }
-        private void IncludeTotalProfitCard()
-        {
-            TotalProfitCardContainer.Children.Add(new TotalProfitCard());
-        }
-        private void IncludeCompareWithLastMonthCard()
-        {
-            CompareWithLastMonthCardContainer.Children.Add(new CompareWithLastMonthCard());
-        }
-        private void IncludeUserRatingCard()
-        {
-            UserRatingCardContainer.Children.Add(new UserRatingCard());
-        }
-        private void IncludePieChart()
-        {
-            PieChartContainer.Children.Add(new PieChart());
-        }
-        private void IncludeCartesianChart()
-        {
-            CartesianChartContainer.Children.Add(new CartesianChart());
-        }
-
-        private void DisableGridPrincipal()
-        {
-            GridPrincipal.Visibility = Visibility.Collapsed;
-        }
-        private void EnableGridPrincipal()
-        {
-            GridPrincipal.Visibility = Visibility.Visible;
-        }
-        private void DisableGridAssistant()
-        {
-            GridAssistant.Visibility = Visibility.Collapsed;
-        }
-        private void EnableGridAssistant()
-        {
-            GridAssistant.Visibility = Visibility.Visible;
-        }
-
         private void SetGridPrincipal()
         {
             DisableGridAssistant();
@@ -130,34 +89,12 @@ namespace QuanLyNhaHang
             //IncludePieChart();
             IncludeCartesianChart();
         }
-        private void IncludeStaffManagerTable()
-        {
-            ManagerFieldHolder.Children.Add(new StaffManager());
-        }
-        
-        private void IncludeStaffList()
-        {
-            ///<summary>
-            /// This function load staff list from SQL
-            ///</summary>
-
-        }
-       private void SetStaffPage()
+        private void SetStaffPage()
         {
             SetGridPrincipalToDefault();
             SetGridPrincipal();
             IncludeStaffManagerTable();
             IncludeStaffList();
-        }
-        private void IncludeMealManagerTable()
-        {
-            ManagerFieldHolder.Children.Add(new MealManager());
-        }
-        private void IncludeMealList()
-        {
-            ///<summary>
-            /// This function load meal list from SQL
-            ///</summary>
         }
         private void SetMealPage()
         {
@@ -165,7 +102,64 @@ namespace QuanLyNhaHang
             SetGridPrincipal();
             IncludeMealManagerTable();
         }
+        private void SetCategoryPage()
+        {
+            SetGridPrincipalToDefault();
+            SetGridPrincipal();
+            IncludeCategoryTable();
+            IncludeCategoryList();
+        }
+        private void SetTableManagerPage()
+        {
+            SetGridPrincipalToDefault();
+            SetGridPrincipal();
+            IncludeTableManager();
+        }
+        private void SetAccountManagerPage()
+        {
+            SetGridPrincipalToDefault();
+            SetGridPrincipal();
+            IncludeAccountManager();
+            IncludeAccountList();
+        }
+        #endregion
 
+        #region Include
+        private void IncludeTotalProfitCard()
+        {
+            TotalProfitCardContainer.Children.Add(new TotalProfitCard());
+        }
+        private void IncludeCompareWithLastMonthCard()
+        {
+            CompareWithLastMonthCardContainer.Children.Add(new CompareWithLastMonthCard());
+        }
+        private void IncludeUserRatingCard()
+        {
+            UserRatingCardContainer.Children.Add(new UserRatingCard());
+        }
+        private void IncludePieChart()
+        {
+            PieChartContainer.Children.Add(new PieChart());
+        }
+        private void IncludeCartesianChart()
+        {
+            CartesianChartContainer.Children.Add(new CartesianChart());
+        }
+        private void IncludeStaffManagerTable()
+        {
+            ManagerFieldHolder.Children.Add(new StaffManager());
+        }
+        private void IncludeStaffList()
+        {
+            ///<summary>
+            /// This function load staff list from SQL
+            ///</summary>
+
+        }
+        private void IncludeMealManagerTable()
+        {
+            ManagerFieldHolder.Children.Add(new MealManager());
+        }
         private void IncludeCategoryList()
         {
             ///<summary>
@@ -177,45 +171,85 @@ namespace QuanLyNhaHang
         {
             ManagerFieldHolder.Children.Add(new CategoryManager());
         }
-
-        
-        private void SetCategoryPage()
-        {
-            SetGridPrincipalToDefault();
-            SetGridPrincipal();
-            IncludeCategoryTable();
-        }
-        private void SetTableManagerPage()
-        {
-            SetGridPrincipalToDefault();
-            SetGridPrincipal();
-            IncludeTableManager();
-        }
         private void IncludeTableManager()
         {
             ManagerFieldHolder.Children.Add(new TableManager());
-        }
-        private void SetAccountPage()
-        {
-            SetGridPrincipalToDefault();
-            SetGridPrincipal();
-            IncludeAccountManager();
         }
         private void IncludeAccountManager()
         {
             ManagerFieldHolder.Children.Add(new AccountManager());
         }
-        private void SetAccountManagerPage()
+        private void IncludeMealList()
         {
-            SetGridPrincipalToDefault();
-            SetGridPrincipal();
-            IncludeAccountManager();
+            ///<summary>
+            /// This function load meal list from SQL
+            ///</summary>
+        }
+        private void IncludeAccountList()
+        {
+            ListHolder.Children.Clear();
+            List<AccountDTO> accountList = AccountDAO.Instance.GetListAccount();
+
+            foreach (AccountDTO item in accountList)
+            {
+                /// <example>
+                /// StaffDTO staff= StaffDAO().Instance.GetInfoAccount(item.IDStaff);
+                /// AccountCard acc = new AccountCard();
+                /// acc.SetText(item.UserName, staff.Name, staff.Position);
+                /// </example>
+
+                AccountCard acc = new AccountCard();
+                acc.SetText(item.UserName, "me", 0);
+                ListHolder.Children.Add(acc);
+            }
+        }
+        #endregion
+
+        private void DisableGridPrincipal()
+        {
+            GridPrincipal.Visibility = Visibility.Collapsed;
+        }
+        private void EnableGridPrincipal()
+        {
+            GridPrincipal.Visibility = Visibility.Visible;
+        }
+        private void DisableGridAssistant()
+        {
+            GridAssistant.Visibility = Visibility.Collapsed;
+        }
+        private void EnableGridAssistant()
+        {
+            GridAssistant.Visibility = Visibility.Visible;
+        }
+        
+        public void PieChar()
+        {
+            PointLabel = chartPoint => string.Format("{0}({1}:P)", chartPoint.Y, chartPoint.Participation);
+            DataContext = this;
+        }
+        private void MoveCursorMenu(int index)
+        {
+            //TrainsitioningContentSlide.OnApplyTemplate();
+            //GridCursor.Margin = new Thickness(0, (150+(60 * index)), 0, 0);
+        }
+        #endregion
+
+        #region Event
+        private void ButtonOpenMenu_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonOpenMenu.Visibility = Visibility.Collapsed;
+            ButtonCloseMenu.Visibility = Visibility.Visible;
+        }
+        private void ButtonCloseMenu_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonOpenMenu.Visibility = Visibility.Visible;
+            ButtonCloseMenu.Visibility = Visibility.Collapsed;
         }
         private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             int index = ListViewMenu.SelectedIndex;
             MoveCursorMenu(index);
-            switch(index)
+            switch (index)
             {
                 case 0:
                     SetReportPage();
@@ -240,18 +274,6 @@ namespace QuanLyNhaHang
 
 
         }
-        public Func<ChartPoint, string> PointLabel { get; set; }
-        public void PieChar()
-        {
-            PointLabel = chartPoint => string.Format("{0}({1}:P)", chartPoint.Y, chartPoint.Participation);
-            DataContext = this;
-        }
-        private void MoveCursorMenu(int index)
-        {
-            //TrainsitioningContentSlide.OnApplyTemplate();
-            //GridCursor.Margin = new Thickness(0, (150+(60 * index)), 0, 0);
-        }
-
         private void PieChart_DataClick(object sender, ChartPoint chartPoint)
         {
             var chart = (LiveCharts.Wpf.PieChart)chartPoint.ChartView;
@@ -262,12 +284,38 @@ namespace QuanLyNhaHang
             var selectionSeries = (PieSeries)chartPoint.SeriesView;
             selectionSeries.PushOut = 0;
         }
-
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            int index = ListViewMenu.SelectedIndex;
+            switch (index)
+            {
+                case 1:
+                    AddNewStaff addNewStaff = new AddNewStaff();
+                    addNewStaff.ShowDialog();
+                    break;
+                case 2:
+                    AddNewMeal addNewMeal = new AddNewMeal();
+                    addNewMeal.ShowDialog();
+                    break;
+                case 3:
+                    AddNewCategory addNewCategory = new AddNewCategory();
+                    addNewCategory.ShowDialog();
+                    break;
+                case 4:
+                    //AddNewTable
+                    break;
+            }
+        }
+        #endregion
 
+        #region Field
+        public Func<ChartPoint, string> PointLabel { get; set; }
+        #endregion
 
+        
     }
 }

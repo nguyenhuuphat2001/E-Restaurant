@@ -11,7 +11,7 @@ namespace QuanLyNhaHang.DAO
     class DataProvider
     {
         private static DataProvider instance;
-        private string connectionString = @"Data Source=LAPTOP-ERG4JEN2;Initial Catalog=ERSystem;Integrated Security=True";
+        private string connectionString = @"Data Source=.;Initial Catalog=ERSystem;Integrated Security=True";
 
         private DataProvider() { }
 

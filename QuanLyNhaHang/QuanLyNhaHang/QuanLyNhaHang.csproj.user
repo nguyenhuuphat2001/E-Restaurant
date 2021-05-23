@@ -7,9 +7,6 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="MainTemplate\AddNewAccount.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="MainTemplate\AddNewCategory.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -91,9 +88,6 @@
     <Compile Update="MainTemplate\AddNewMeal.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="MainTemplate\AddNewMenu.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="MainTemplate\AddNewStaff.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -132,9 +126,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="MainTemplate\AddNewAccount.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="MainTemplate\AddNewCategory.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -214,9 +205,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainTemplate\AddNewMeal.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="MainTemplate\AddNewMenu.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainTemplate\AddNewStaff.xaml">

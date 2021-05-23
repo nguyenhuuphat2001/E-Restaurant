@@ -31,7 +31,7 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal" Grid.Column="2" VerticalAlignment="Top" Height="16">
 
-                <TextBlock Text="Password"/>
+                <TextBlock Text="Owner"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Grid.Column="3" VerticalAlignment="Top" Height="16">
 

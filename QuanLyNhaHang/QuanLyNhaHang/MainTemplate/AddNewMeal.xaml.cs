@@ -33,7 +33,7 @@ namespace QuanLyNhaHang
         {
             string name = txtNameMeal.Text;
             int categoryID = 0;
-            string category = txtCategory.Text;
+            string category = cmbCategory.SelectedItem.ToString();
 
             switch (category)
             {
@@ -50,7 +50,7 @@ namespace QuanLyNhaHang
                     categoryID = 4;
                     break;
             }
-            float price = float.Parse(txtUnityPrice.Text);
+            float price = float.Parse(txtPriceMeal.Text);
 
             if (FoodDAO.Instance.AddMeal(name, categoryID, price))
             {
@@ -71,11 +71,13 @@ namespace QuanLyNhaHang
 
         private void EditMealEvent_Click(object sender, RoutedEventArgs e)
         {
+            //Fix: get IDfood by name, idCategory first then edit 
+            int id = 1; 
+            
             string name = txtNameMeal.Text;
             int categoryID = 0;
-            string category = txtCategory.Text;
-            int id = Convert.ToInt32(txtIDMeal.Text);
-            float price = float.Parse(txtUnityPrice.Text);
+            string category = cmbCategory.SelectedItem.ToString();            
+            float price = float.Parse(txtPriceMeal.Text);
 
 
             if (FoodDAO.Instance.EditMeal(id, name, categoryID, price))
@@ -92,7 +94,8 @@ namespace QuanLyNhaHang
 
         private void DeleteMealEvent_Click(object sender, RoutedEventArgs e)
         {
-            int id = Convert.ToInt32(txtIDMeal.Text);
+            //Fix: get IDfood by name, idCategory first then delete 
+            int id = 1;
 
             if (FoodDAO.Instance.DeleteMeal(id))
             {

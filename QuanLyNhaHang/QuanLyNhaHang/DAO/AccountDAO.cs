@@ -50,40 +50,52 @@ namespace QuanLyNhaHang.DAO
             return position;
         }
 
-        public bool UpdateAccount(string userName, string displayName, string password, string newPass)
+        public bool UpdateAccount(string userName, string password, string newPass)
         {
-            string query = "exec USP_UpdateAccount @userName , @displayName , @password , @newPassword";
-            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { userName, displayName, password, newPass });
+            string query = "exec USP_UpdateAccount @userName , @password , @newPassword";
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { userName, password, newPass });
 
             return result > 0;
         }
 
-        public DataTable GetListAccount()
+        public List<AccountDTO> GetListAccount()
         {
-            string query = string.Format("SELECT UserName, DisplayName,Type FROM Account");
+            List<AccountDTO> accounts = new List<AccountDTO>();
+            string query = string.Format("SELECT * FROM Account");
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
-            return data;
+            foreach (DataRow item in data.Rows)
+            {
+                AccountDTO account = new AccountDTO(item);
+                accounts.Add(account);
+            }
+            return accounts;
         }
 
-        public bool InsertAccount(string userName, string displayName, int type)
+        public int GetIDStaffByPhone(string phone)
         {
-            string query = string.Format("INSERT dbo.Account( UserName, DisplayName, Type) VALUES (N'{0}', N'{1}', {2})", userName, displayName, type);
+            string query = string.Format("SELECT id FROM dbo.Staff WHERE phone='{0}'", phone);
+            int id = DataProvider.Instance.ExecuteNonQuery(query);
+            return id;
+        }
+
+        public int GetIDStaffByUserName(string username)
+        {
+            string query = string.Format("SELECT id FROM dbo.Staff WHERE userName='{0}'", username);
+            int id = DataProvider.Instance.ExecuteNonQuery(query);
+            return id;
+        }
+
+        public bool InsertAccount(string userName, int idStaff)
+        {
+            string query = string.Format("INSERT dbo.Account( userName, idStaff) VALUES (N'{0}', {1})", userName, idStaff);
             int result = (int)DataProvider.Instance.ExecuteNonQuery(query);
-
-            return result > 0;
-        }
-
-        public bool UpdateAccount(string userName, string displayName, int type)
-        {
-            string query = string.Format("UPDATE dbo.Account SET DisplayName = N'{1}', Type = {2} WHERE UserName = N'{0}'", userName, displayName, type);
-            int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;
         }
 
         public bool DeleteAccount(string userName)
         {
-            string query = string.Format("Delete Account where UserName = {0}", userName);
+            string query = string.Format("Delete dbo.Account where UserName = {0}", userName);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;

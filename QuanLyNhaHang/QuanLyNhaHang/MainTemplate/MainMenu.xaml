@@ -76,8 +76,8 @@
                 </Grid.RowDefinitions>
                 <Grid x:Name="TopModifyContainer" Grid.Row="0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="267*"/>
-                        <ColumnDefinition Width="238*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition />
 
                     </Grid.ColumnDefinitions>
                     
@@ -87,34 +87,36 @@
                             <Border Background="LightGray" CornerRadius="20">
                                 <StackPanel Orientation="Horizontal">
                                     <local:SearchBox VerticalAlignment="Center"/>
-                                    <TextBox Width="500" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" materialDesign:HintAssist.Hint="Type to search"/>
+                                    <TextBox Width="500" HorizontalAlignment="Left" VerticalAlignment="Center" 
+                                             FontWeight="Bold" materialDesign:HintAssist.Hint="Type to search"
+                                             FontSize="19"/>
                                 </StackPanel>
                                 
                             </Border>
                         </Grid>
                         
                     </Grid>
-                    
-                    <Grid Grid.Column="1">
-                        <Grid x:Name="AddButtonContainer" HorizontalAlignment="Left" VerticalAlignment="Center" Height="88" Margin="304,0,0,0" Width="172">
-                            <Button
-            Style="{StaticResource MaterialDesignRaisedDarkButton}"
-            materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Background="#FF17A282" HorizontalAlignment="Left" VerticalAlignment="Center" Width="146" Height="45" Margin="10,0,0,0"  >
 
-                                <StackPanel Orientation="Horizontal" Width="220">
-                                    <materialDesign:PackIcon x:Name="AddFieldIcon" Kind="Plus" Height="41" Width="34" Foreground="White"/>
-                                    <Separator Width="41" Height="20" Background="White" >
-                                        <Separator.LayoutTransform>
-                                            <RotateTransform Angle="90" />
-                                        </Separator.LayoutTransform>
-                                    </Separator>
-                                    <TextBlock Text="New" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                                </StackPanel>
-
-                            </Button>
-                        </Grid>
-                    </Grid>
+                    <Button
+                        Margin="0,0,20,0"
+                        x:Name="AddButton"      Grid.Column="1"
+                        Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                        materialDesign:ButtonAssist.CornerRadius="25"
+                        ToolTip="MaterialDesignRaisedDarkButton with Round Corners" 
+                        Background="#FF17A282" HorizontalAlignment="Right" 
+                        VerticalAlignment="Center" Width="146" Height="45"
+                        Click="AddButton_Click">
+                        <StackPanel Orientation="Horizontal" >
+                            <materialDesign:PackIcon x:Name="AddFieldIcon" Kind="Plus" Height="41" Width="34" 
+                                                     Foreground="White" HorizontalAlignment="Left"/>
+                            <Separator Width="41" Height="20" Background="White" Margin="5,0,15,0" >
+                                <Separator.LayoutTransform>
+                                    <RotateTransform Angle="90" />
+                                </Separator.LayoutTransform>
+                            </Separator>
+                            <TextBlock Text="New" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
 
                 </Grid>
 

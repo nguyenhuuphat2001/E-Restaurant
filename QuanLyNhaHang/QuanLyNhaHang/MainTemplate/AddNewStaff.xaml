@@ -52,7 +52,8 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
-                
+                <RowDefinition></RowDefinition>
+
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
@@ -82,15 +83,50 @@
                     VerticalContentAlignment="Center"   VerticalAlignment="Center" 
                     FontWeight="Bold" />
             </Grid>
-            <Label 
-                x:Name="lbSex"      Content="Sex"       Grid.Row="1"
+            <Label
+                x:Name="lbUserNameEmployee"     Content="Username"      Grid.Row="1"
                 HorizontalAlignment="{Binding HorizontalAlignment, ElementName=lbNameEmployee}" 
                 VerticalAlignment="{Binding VerticalAlignment, ElementName=lbNameEmployee}"
                 Foreground="{Binding Foreground, ElementName=lbNameEmployee}" 
                 FontSize="{Binding FontSize, ElementName=lbNameEmployee}"
                 FontWeight="{Binding FontWeight, ElementName=lbNameEmployee}"/>
             <Grid 
-                x:Name="grdSex"     Grid.Column="1"         Grid.Row="1"                  
+                x:Name="grdUserNameEmployee"    Grid.Column="1"    Grid.Row="1"                  
+                Margin="{Binding Margin, ElementName=grdNameEmployee}"
+                HorizontalAlignment="{Binding HorizontalAlignment, ElementName=recNameEmployee}"
+                Width="{Binding ActualWidth, ElementName=recNameEmployee}">
+                <Rectangle x:Name="recUserNameEmployee"
+                           Height="{Binding ActualHeight, ElementName=recNameEmployee}"
+                           Width="{Binding ActualWidth, ElementName=recNameEmployee}"
+                           RadiusX="{Binding RadiusX, ElementName=recNameEmployee}"
+                           RadiusY="{Binding RadiusY, ElementName=recNameEmployee}"
+                           Stroke="{Binding Stroke, ElementName=recNameEmployee}"        
+                           Margin="{Binding Margin, ElementName=recNameEmployee}"
+                           HorizontalAlignment="{Binding HorizontalAlignment, ElementName=recNameEmployee}"/>
+                <TextBox 
+                    x:Name="txtUserNameEmployee"
+                    materialDesign:HintAssist.Hint="Employee's username"
+                    Width="{Binding ActualWidth, ElementName=txtNameEmployee}" 
+                    Height="{Binding ActualHeight, ElementName=txtNameEmployee}" 
+                    FontSize="{Binding FontSize, ElementName=txtNameEmployee}"
+                    BorderThickness="{Binding BorderThickness, ElementName=txtNameEmployee}" 
+                    MaxLines="{Binding MaxLines, ElementName=txtNameEmployee}"        
+                    SelectionBrush="{x:Null}" 
+                    HorizontalContentAlignment="{Binding HorizontalContentAlignment, ElementName=txtNameEmployee}"  
+                    HorizontalAlignment="{Binding HorizontalAlignment, ElementName=txtNameEmployee}" 
+                    VerticalContentAlignment="{Binding VerticalContentAlignment, ElementName=txtNameEmployee}"   
+                    VerticalAlignment="{Binding VerticalAlignment, ElementName=txtNameEmployee}" 
+                    FontWeight="{Binding FontWeight, ElementName=txtNameEmployee}" />
+            </Grid>
+            <Label 
+                x:Name="lbSex"      Content="Sex"       Grid.Row="2"
+                HorizontalAlignment="{Binding HorizontalAlignment, ElementName=lbNameEmployee}" 
+                VerticalAlignment="{Binding VerticalAlignment, ElementName=lbNameEmployee}"
+                Foreground="{Binding Foreground, ElementName=lbNameEmployee}" 
+                FontSize="{Binding FontSize, ElementName=lbNameEmployee}"
+                FontWeight="{Binding FontWeight, ElementName=lbNameEmployee}"/>
+            <Grid 
+                x:Name="grdSex"     Grid.Column="1"         Grid.Row="2"                  
                 Margin="{Binding Margin, ElementName=grdNameEmployee}"
                 HorizontalAlignment="{Binding HorizontalAlignment, ElementName=recNameEmployee}"
                 Width="{Binding ActualWidth, ElementName=recNameEmployee}">
@@ -112,7 +148,7 @@
                     VerticalAlignment="{Binding VerticalAlignment, ElementName=rdoMale}"/>
             </Grid>
             <Label
-                x:Name="lbPosition"     Content="Position"      Grid.Row="2"
+                x:Name="lbPosition"     Content="Position"      Grid.Row="3"
                 HorizontalAlignment="{Binding HorizontalAlignment, ElementName=lbNameEmployee}" 
                 VerticalAlignment="{Binding VerticalAlignment, ElementName=lbNameEmployee}"
                 Foreground="{Binding Foreground, ElementName=lbNameEmployee}" 
@@ -120,7 +156,7 @@
                 FontWeight="{Binding FontWeight, ElementName=lbNameEmployee}"/>
             <Grid 
                 x:Name="grdPosition"    Margin="{Binding Margin, ElementName=grdNameEmployee}"
-                Grid.Column="1"         Grid.Row="2">
+                Grid.Column="1"         Grid.Row="3">
                 <Rectangle x:Name="recPosition"
                            Height="{Binding ActualHeight, ElementName=recNameEmployee}"
                            Width="{Binding ActualWidth, ElementName=recNameEmployee}"
@@ -130,6 +166,7 @@
                            Margin="{Binding Margin, ElementName=recNameEmployee}"
                            HorizontalAlignment="{Binding HorizontalAlignment, ElementName=recNameEmployee}"/>
                 <ComboBox
+                    x:Name="cmbPoition"
                     materialDesign:HintAssist.Hint="Staff's position"
                     HorizontalAlignment="{Binding HorizontalAlignment, ElementName=txtNameEmployee}"
                     FontWeight="{Binding FontWeight, ElementName=txtNameEmployee}"           
@@ -163,7 +200,7 @@
                 FontSize="{Binding FontSize, ElementName=lbNameEmployee}"
                 FontWeight="{Binding FontWeight, ElementName=lbNameEmployee}"/>
             <Grid 
-                x:Name="grdEmailEmployee"   Grid.Column="1"     Grid.Row="3"
+                x:Name="grdEmailEmployee"   Grid.Column="1"     Grid.Row="4"
                 Margin="{Binding Margin, ElementName=grdNameEmployee}">
                 <Rectangle x:Name="recEmailEmployee"
                            Height="{Binding ActualHeight, ElementName=recNameEmployee}"
@@ -188,14 +225,14 @@
                     FontWeight="{Binding FontWeight, ElementName=txtNameEmployee}"/>
             </Grid>
             <Label
-                x:Name="lbSalaryEmployee"       Content="Salary"        Grid.Row="3"
+                x:Name="lbSalaryEmployee"       Content="Salary"        Grid.Row="5"
                 HorizontalAlignment="{Binding HorizontalAlignment, ElementName=lbNameEmployee}" 
                 VerticalAlignment="{Binding VerticalAlignment, ElementName=lbNameEmployee}"
                 Foreground="{Binding Foreground, ElementName=lbNameEmployee}" 
                 FontSize="{Binding FontSize, ElementName=lbNameEmployee}"
                 FontWeight="{Binding FontWeight, ElementName=lbNameEmployee}"/>
             <Grid 
-                x:Name="grdSalaryEmployee"      Grid.Column="1"     Grid.Row="4"
+                x:Name="grdSalaryEmployee"      Grid.Column="1"     Grid.Row="5"
                 Margin="{Binding Margin, ElementName=grdNameEmployee}">
 
                 <Rectangle x:Name="recSalaryEmployee"
@@ -222,14 +259,14 @@
 
             </Grid>
             <Label
-                x:Name="lbPhoneEmployee"    Content="Phone"     Grid.Row="5"
+                x:Name="lbPhoneEmployee"    Content="Phone"     Grid.Row="6"
                 HorizontalAlignment="{Binding HorizontalAlignment, ElementName=lbNameEmployee}" 
                 VerticalAlignment="{Binding VerticalAlignment, ElementName=lbNameEmployee}"
                 Foreground="{Binding Foreground, ElementName=lbNameEmployee}" 
                 FontSize="{Binding FontSize, ElementName=lbNameEmployee}"
                 FontWeight="{Binding FontWeight, ElementName=lbNameEmployee}"/>
             <Grid 
-                x:Name="grdPhoneEmployee"       Grid.Column="1"     Grid.Row="5"
+                x:Name="grdPhoneEmployee"       Grid.Column="1"     Grid.Row="6"
                 Margin="{Binding Margin, ElementName=grdNameEmployee}">
                 <Rectangle x:Name="recPhoneEmployee"
                            Height="{Binding ActualHeight, ElementName=recNameEmployee}"
@@ -258,7 +295,7 @@
                   Width="{Binding ActualWidth, ElementName=recNameEmployee}"
                   Margin="{Binding Margin, ElementName=grdNameEmployee}"
                   VerticalAlignment="Center" HorizontalAlignment="Left" 
-                  Grid.Row="6" Grid.Column="1">
+                  Grid.Row="7" Grid.Column="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
@@ -268,16 +305,18 @@
                         Background="#FFF38413" Content="Confirm" 
                         Foreground="White" FontSize="11" FontWeight="Bold" 
                         Style="{StaticResource MaterialDesignFlatMidBgButton}" 
-                        materialDesign:ButtonAssist.CornerRadius="10"/>
+                        materialDesign:ButtonAssist.CornerRadius="10"
+                        Click="btnConfirm_Click"/>
 
                 <Button x:Name="btnCancel" Grid.Column="2" 
                         Background="{Binding Foreground, ElementName=btnConfirm}" Content="Cancel" 
                         Foreground="{Binding Background, ElementName=btnConfirm}" FontSize="11" 
                         FontWeight="{Binding FontWeight, ElementName=btnConfirm}"  
                         Style="{StaticResource MaterialDesignOutlinedButton}" 
-                        materialDesign:ButtonAssist.CornerRadius="10"/>
+                        materialDesign:ButtonAssist.CornerRadius="10"
+                        Click="btnCancel_Click"/>
             </Grid>
         </Grid>
-
     </Grid>
 </Window>
+

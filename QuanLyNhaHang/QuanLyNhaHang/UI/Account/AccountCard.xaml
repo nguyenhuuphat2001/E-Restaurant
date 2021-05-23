@@ -28,30 +28,35 @@
                 </CheckBox>
                 <StackPanel x:Name="usernameContainer" Grid.Column="1" Orientation="Horizontal" Margin="5,0,5,0">
                     
-                    <TextBlock x:Name="username" Text="thinhhja2001" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black" />
+                    <TextBlock x:Name="txbUserName" Text="thinhhja2001" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black" />
                 </StackPanel>
-                <StackPanel x:Name="passwordContainer" Grid.Column="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,0,5,0">
-                    <TextBlock x:Name="password" Text="passwordgoeshere" VerticalAlignment="Center" />
+                <StackPanel x:Name="nameContainer" Grid.Column="2" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,5,0">
+                    <TextBlock x:Name="txbName" Text="nameOfOwner" VerticalAlignment="Center" HorizontalAlignment="Left" />
                 </StackPanel>
                 <StackPanel Name="positionContainer" Grid.Column="3" Orientation="Horizontal" Margin="5,0,5,0">
-                    <TextBlock x:Name="workingPosition" Text="Chef" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="txbWorkingPosition" Text="Chef" VerticalAlignment="Center"/>
                     
                 </StackPanel>
-                <Grid Grid.Column="4">
+                <Grid Grid.Column="4" HorizontalAlignment="Left">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Button x:Name="addButton" Grid.Column="0" Background="Gray" BorderBrush="Gray" MouseEnter="addButton_MouseEnter" MouseLeave="addButton_MouseLeave" >
-                        <materialDesign:PackIcon Kind="Pencil" Name="addIcon" Foreground="White" />
+                    <Button x:Name="addButton" Grid.Column="0" Background="Gray" BorderBrush="Gray" 
+                            MouseEnter="addButton_MouseEnter" MouseLeave="addButton_MouseLeave" >
+                        <materialDesign:PackIcon Kind="Restore" Name="addIcon" Foreground="White" />
                     </Button>
                     <Separator Grid.Column="1" Width="41" Height="20" Background="White" >
                         <Separator.LayoutTransform>
                             <RotateTransform Angle="90" />
                         </Separator.LayoutTransform>
                     </Separator>
-                    <Button x:Name="deleteButton" Grid.Column="2" Background="Gray" BorderBrush="Gray" MouseEnter="deleteButton_MouseEnter" MouseLeave="deleteButton_MouseLeave" >
+                    <Button x:Name="deleteButton" Grid.Column="2" 
+                            Background="Gray" BorderBrush="Gray" 
+                            MouseEnter="deleteButton_MouseEnter" 
+                            MouseLeave="deleteButton_MouseLeave"
+                            Click="deleteButton_Click">
                         <materialDesign:PackIcon x:Name="deleteIcon" Kind="GarbageCan" Foreground="White"/>
                     </Button>
                 </Grid>
