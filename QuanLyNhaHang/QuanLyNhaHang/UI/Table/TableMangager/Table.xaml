@@ -7,7 +7,7 @@
              xmlns:local="clr-namespace:QuanLyNhaHang"
              mc:Ignorable="d" 
              Height="Auto" Width="Auto">
-    <Grid>
+    <Grid Margin="5">
         <Button x:Name="btnTable" materialDesign:ButtonAssist.CornerRadius="20" 
                 Height="70" Width="100">
             <StackPanel Orientation="Vertical">

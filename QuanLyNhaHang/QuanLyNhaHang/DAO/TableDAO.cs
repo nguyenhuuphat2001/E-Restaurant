@@ -11,7 +11,6 @@ namespace QuanLyNhaHang.DAO
     public class TableDAO
     {
         private static TableDAO instance;
-        public static double tableMargin = 10;
         private TableDAO() { }
 
         public static TableDAO Instance

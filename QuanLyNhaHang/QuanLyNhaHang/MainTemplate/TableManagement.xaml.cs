@@ -1,5 +1,6 @@
 ﻿using QuanLyNhaHang.DAO;
 using QuanLyNhaHang.DTO;
+using QuanLyNhaHang.UI.Meal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,10 +45,6 @@ namespace QuanLyNhaHang
                 Table btn = new Table();
                 btn.SetTest(item.Name, item.Status);
                 btn.Tag = item;
-
-                Thickness margin = btn.Margin;
-                margin.Left = margin.Right = margin.Top = margin.Bottom = TableDAO.tableMargin;
-                btn.Margin = margin;
 
                 btn.SetBackGround(item.Status);
 
@@ -108,6 +105,11 @@ namespace QuanLyNhaHang
         private void cbFood_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void LogoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

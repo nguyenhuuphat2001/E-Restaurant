@@ -22,6 +22,9 @@
     <Compile Update="ChangeMealStatusManager.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UI\Meal\MealButton.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UI\Table\TableMangager\DiscountField.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -139,6 +142,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ChangeMealStatusManager.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\Meal\MealButton.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UI\Table\TableMangager\DiscountField.xaml">

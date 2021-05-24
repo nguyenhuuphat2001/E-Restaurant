@@ -5,82 +5,105 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuanLyNhaHang"
         mc:Ignorable="d"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="TableManagement" Height="700" Width="1400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" >
-    <Grid Margin="20">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="8*"/>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="8*"/>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="10*"/>
-        </Grid.ColumnDefinitions>
-        <Border CornerRadius="10" Background="Gray">
-            <ScrollViewer Grid.Column="0">
-                <WrapPanel x:Name="wpTable" Orientation="Horizontal">
-                    <local:Table Margin="5"/>
-                    <local:Table Margin="5"/>
-                    <local:Table Margin="5"/>
-                </WrapPanel>
-            </ScrollViewer>
-        </Border>
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:local1="clr-namespace:QuanLyNhaHang.UI.Meal"
+        Title="TableManagement" Height="700" Width="1500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" >
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid  Grid.Row="0" VerticalAlignment="Top" Background="#FFDA8046" >
+            <Grid.Effect>
+                <DropShadowEffect BlurRadius="1" ShadowDepth="1" Color="#FFACACAC"/>
+            </Grid.Effect>
+            <TextBlock Text="Waiter's form" FontSize="35" Foreground="BlanchedAlmond" 
+                       HorizontalAlignment="Center" VerticalAlignment="Center" ></TextBlock>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <TextBlock Text="waiter" Foreground="White" VerticalAlignment="Center" FontSize="18"></TextBlock>
+                <materialDesign:PopupBox  Margin="5" PlacementMode="BottomAndAlignRightEdges" 
+                                          StaysOpen="False" Foreground="White">
+                    <StackPanel Width="150">
+                        <Button Content="Account detail"></Button>
+                        <Button Content="Change password"></Button>
+                        <Separator/>
+                        <Button x:Name="LogoutButton" Content="Logout" 
+                                Click="LogoutButton_Click" Cursor="Hand"></Button>
+                    </StackPanel>
+                </materialDesign:PopupBox>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="9*"/>
+            </Grid.ColumnDefinitions>
+            <Border CornerRadius="10" Background="Gray">
+                <ScrollViewer Grid.Column="0">
+                    <WrapPanel x:Name="wpTable" Orientation="Horizontal">
+                        <local:Table Margin="5"/>
+                        <local:Table Margin="5"/>
+                        <local:Table Margin="5"/>
+                    </WrapPanel>
+                </ScrollViewer>
+            </Border>
 
-        <Separator Grid.Column="1">
-            <Separator.LayoutTransform>
-                <RotateTransform Angle="90" />
-            </Separator.LayoutTransform>
-        </Separator>
+            <Separator Grid.Column="1">
+                <Separator.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </Separator.LayoutTransform>
+            </Separator>
 
-        <Border Grid.Column="2" CornerRadius="10" Background="Gray">
-            <ScrollViewer Grid.Column="0">
-                <WrapPanel x:Name="wpFood" Orientation="Horizontal">
-                    <Button Content="Food 1" Margin="5"/>
-                    <Button Content="Food 1" Margin="5"/>
-                    <Button Content="Food 1" Margin="5"/>
-                    <Button Content="Food 1" Margin="5"/>
-                    <Button Content="Food 1" Margin="5"/>
-                </WrapPanel>
-            </ScrollViewer>
-        </Border>
+            <Border Grid.Column="2" CornerRadius="10" Background="Gray">
+                <ScrollViewer Grid.Column="0">
+                    <WrapPanel x:Name="wpFood" Orientation="Horizontal">
+                        <local1:MealButton/>
+                        <local1:MealButton/>
+                        <local1:MealButton/>
+                    </WrapPanel>
+                </ScrollViewer>
+            </Border>
 
-        <Separator Grid.Column="3">
-            <Separator.LayoutTransform>
-                <RotateTransform Angle="90" />
-            </Separator.LayoutTransform>
-        </Separator>
+            <Separator Grid.Column="3">
+                <Separator.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </Separator.LayoutTransform>
+            </Separator>
 
-        <Grid Grid.Column="3" Grid.ColumnSpan="2" Margin="40,0,0,0">
+            <Grid Grid.Column="3" Grid.ColumnSpan="2" Margin="40,0,0,0">
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="3*"/>
-                <RowDefinition Height="5*"/>
-                <RowDefinition Height="2*"/>
-            </Grid.RowDefinitions>
-            <Grid Grid.Row="0" x:Name="orderFieldContainer">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" x:Name="orderFieldContainer">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
 
-                <Grid Grid.Column="0">
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-                    <ComboBox 
+                    <Grid Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <ComboBox 
                         materialDesign:HintAssist.Hint="Select category"
                         materialDesign:HintAssist.HintOpacity=".26"
                         x:Name="cbCategory"
                         IsEditable="True" Grid.Row="0"/>
-                    <TextBox
+                        <TextBox
                         Grid.Row="1"
                         x:Name="txbQuantity"
                         MaxLines="1"
                         TextWrapping="Wrap"
                         AcceptsReturn="True" 
                         materialDesign:HintAssist.Hint="Input quantity" />
-                    <TextBox
+                        <TextBox
                         Grid.Row="2"
                         x:Name="addtionalNoteTextbox"
                         VerticalScrollBarVisibility="Visible"
@@ -88,99 +111,97 @@
                         AcceptsReturn="True" 
                         materialDesign:HintAssist.Hint="Additonal note"
                         materialDesign:HintAssist.HelperText="Special requirement" />
-                </Grid>
-                <Grid Grid.Column="1">
-                    <Button VerticalAlignment="Center" HorizontalAlignment="Center" Height="60" 
+                    </Grid>
+                    <Button Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Height="60" 
                             Content="Confirm" FontWeight="Bold" Foreground="WhiteSmoke">
                     </Button>
                 </Grid>
-            </Grid>
-            <Grid Margin="0,212,0,10" Grid.RowSpan="2">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="5*"/>
-                </Grid.RowDefinitions>
-                <Grid x:Name="MealStatusMangagerContainer" Grid.Row="0" Margin="0,0,0,0">
-                    <local:MealStatusManager VerticalAlignment="Center" />
-                </Grid>
-                <ScrollViewer x:Name="MealStatusCardContainer" Grid.Row="1">
-                    <StackPanel Orientation="Vertical">
-                        <local:MealStatusCard/>
-                        <local:MealStatusCard/>
-                        <local:MealStatusCard/>
-                    </StackPanel>
-                </ScrollViewer>   
-            </Grid>
-            <Grid Grid.Row="2" >
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-
-                <Grid Grid.Column="0" Margin="2">
+                <Grid Margin="0,212,0,10" Grid.RowSpan="2">
                     <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="5*"/>
                     </Grid.RowDefinitions>
-                    <materialDesign:Card Height="30" VerticalAlignment="Center" Background="#FF17A282" >
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Change table" Foreground="WhiteSmoke" FontWeight="Bold"/>
-                    </materialDesign:Card>
-
-                    <Grid Grid.Row="1" >
-                        <local:SelectTable Height="50"/>
+                    <Grid x:Name="MealStatusMangagerContainer" Grid.Row="0" Margin="0,0,0,0">
+                        <local:MealStatusManager VerticalAlignment="Center" />
                     </Grid>
-                    <Button  Foreground="WhiteSmoke" Margin="3" Grid.Row="2"
+                    <ScrollViewer x:Name="MealStatusCardContainer" Grid.Row="1">
+                        <StackPanel Orientation="Vertical">
+                            <local:MealStatusCard/>
+                            <local:MealStatusCard/>
+                            <local:MealStatusCard/>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+                <Grid Grid.Row="2" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0" Margin="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <materialDesign:Card Height="30" VerticalAlignment="Center" Background="#FF17A282" >
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Change table" Foreground="WhiteSmoke" FontWeight="Bold"/>
+                        </materialDesign:Card>
+
+                        <Grid Grid.Row="1" >
+                            <local:SelectTable Height="50"/>
+                        </Grid>
+                        <Button  Foreground="WhiteSmoke" Margin="3" Grid.Row="2"
                                      HorizontalAlignment="Stretch" VerticalAlignment="Center" 
                                      Content="Change" FontWeight="Bold">
-                    </Button>
-                </Grid>
-                <Grid Grid.Column="1" Margin="2">
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-                    <materialDesign:Card Height="30" VerticalAlignment="Center" Background="#FF17A282" >
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Discount" Foreground="WhiteSmoke" FontWeight="Bold"/>
-                    </materialDesign:Card>
-
-                    <Grid Grid.Row="1" >
-                        <local:DiscountField Height="50"/>
+                        </Button>
                     </Grid>
-                    <Button  Foreground="WhiteSmoke" Margin="3" Grid.Row="2"
+                    <Grid Grid.Column="1" Margin="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <materialDesign:Card Height="30" VerticalAlignment="Center" Background="#FF17A282" >
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Discount" Foreground="WhiteSmoke" FontWeight="Bold"/>
+                        </materialDesign:Card>
+
+                        <Grid Grid.Row="1" >
+                            <local:DiscountField Height="50"/>
+                        </Grid>
+                        <Button  Foreground="WhiteSmoke" Margin="3" Grid.Row="2"
                                  HorizontalAlignment="Stretch" VerticalAlignment="Center" 
                                  Content="Apply" FontWeight="Bold">
 
-                    </Button>
-                </Grid>
-                <Grid Grid.Column="2" Margin="2">
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-                    <materialDesign:Card Height="30" VerticalAlignment="Center" Background="#FF17A282"  >
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Total" Foreground="WhiteSmoke" FontWeight="Bold"/>
-                    </materialDesign:Card>
+                        </Button>
+                    </Grid>
+                    <Grid Grid.Column="2" Margin="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <materialDesign:Card Height="30" VerticalAlignment="Center" Background="#FF17A282"  >
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Total" Foreground="WhiteSmoke" FontWeight="Bold"/>
+                        </materialDesign:Card>
 
-                    <TextBlock  TextAlignment="Center"  Grid.Row="1"
+                        <TextBlock  TextAlignment="Center"  Grid.Row="1"
                                         TextWrapping="Wrap" Text="100000 VND"
                                         FontWeight="Bold" FontSize="19" 
                                         HorizontalAlignment="Stretch" 
                                         VerticalAlignment="Center">
-                    </TextBlock>
-                    <Button Grid.Row="2"
+                        </TextBlock>
+                        <Button Grid.Row="2"
                                      
                                            Content="Export bill" Foreground="WhiteSmoke" 
                                            FontWeight="Bold">
 
-                    </Button>
+                        </Button>
+                    </Grid>
                 </Grid>
+
             </Grid>
-
         </Grid>
-
     </Grid>
 </Window>
