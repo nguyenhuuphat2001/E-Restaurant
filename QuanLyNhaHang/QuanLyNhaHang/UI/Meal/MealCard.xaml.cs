@@ -52,17 +52,12 @@ namespace QuanLyNhaHang
             deleteIcon.Foreground = Brushes.White;
         }
 
-        public void SetText(string mealName, int mealCategory, float mealPrice )
+        public void SetText(string mealName, string mealCategory, float mealPrice, int orderQuantity)
         {
             this.mealName.Text = mealName;
-
-            string category = FoodDAO.Instance.GetCategoryByID(mealCategory);
-            this.mealCategory.Text = category;
+            this.mealCategory.Text = mealCategory;
             this.mealPrice.Text = mealPrice.ToString();
-            int quantity = FoodDAO.Instance.GetOrderQuantityByID(mealCategory);
-            this.orderQuantity.Text = quantity.ToString();
+            this.orderQuantity.Text = orderQuantity.ToString();
         }
-
-
     }
 }

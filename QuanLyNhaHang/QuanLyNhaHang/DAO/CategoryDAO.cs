@@ -55,5 +55,12 @@ namespace QuanLyNhaHang.DAO
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
+
+        public string GetCategoryByID(int id)
+        {
+            string query = string.Format("select fc.name from FoodCategory fc where fc.id = " + id);
+            string name = DataProvider.Instance.ExecuteScalar(query).ToString();
+            return name;
+        }
     }
 }

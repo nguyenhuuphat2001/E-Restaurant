@@ -205,8 +205,11 @@ namespace QuanLyNhaHang
             List<FoodDTO> foodList = FoodDAO.Instance.GetListFood();
             foreach(FoodDTO food in foodList)
             {
+                string category = CategoryDAO.Instance.GetCategoryByID(food.CategoryID);
+                int quantity = FoodDAO.Instance.GetOrderQuantityByID(food.Id);
+
                 MealCard meal = new MealCard();
-                meal.SetText(food.Name, food.CategoryID, food.Price);
+                meal.SetText(food.Name, category, food.Price, quantity);
                 ListHolder.Children.Add(meal);
             }
         }

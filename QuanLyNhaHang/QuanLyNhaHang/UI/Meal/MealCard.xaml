@@ -9,57 +9,56 @@
              Height="50">
     <Grid>
         <Border CornerRadius="10" Background="LightGray" Margin="5">
-        <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <CheckBox VerticalAlignment="Center" HorizontalAlignment="Center" Height="50">
-            <CheckBox.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="10"/>
-                </Style>
-            </CheckBox.Resources>
-        </CheckBox>
-        <StackPanel x:Name="mealInfo" Grid.Column="1" Orientation="Horizontal">
-            
-            <TextBlock x:Name="mealName" Text="Pork with rice" Margin="10,0,10,0" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black"/>
-        </StackPanel>
-                <StackPanel x:Name="mealCategoryContainer" Grid.Column="2" Orientation="Horizontal">
-
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <CheckBox VerticalAlignment="Center" HorizontalAlignment="Center" Height="50">
+                    <CheckBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </CheckBox.Resources>
+                </CheckBox>
+                <StackPanel x:Name="mealInfo" Grid.Column="1" Orientation="Horizontal">
+                    <TextBlock x:Name="mealName" Text="Pork with rice" Margin="10,0,10,0" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black"/>
+                </StackPanel>
+                <StackPanel x:Name="mealCategoryContainer" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Left">
                     <TextBlock x:Name="mealCategory" Text="Main dish" Margin="10,0,10,0" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black"/>
                 </StackPanel>
-                <StackPanel x:Name="mealPriceContainer" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock x:Name="mealPrice" Text="100000 Vnd" Margin="10,0,10,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
-            
-        </StackPanel>
-        <StackPanel Name="mealOrderQuantityContainer" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock x:Name="orderQuantity" Text="100" Margin="10,0,10,0"/>
-            
-        </StackPanel>
-        <Grid Grid.Column="5" MouseEnter="Grid_MouseEnter">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Button x:Name="addButton" Grid.Column="0" Background="Gray" BorderBrush="Gray" MouseEnter="addButton_MouseEnter" MouseLeave="addButton_MouseLeave"  >
-                <materialDesign:PackIcon Kind="Pencil" Name="addIcon" Foreground="White" />
-            </Button>
-            <Separator Grid.Column="1" Width="41" Height="20" Background="White" >
-                <Separator.LayoutTransform>
-                    <RotateTransform Angle="90" />
-                </Separator.LayoutTransform>
-            </Separator>
-            <Button x:Name="deleteButton" Grid.Column="2" Background="Gray" BorderBrush="Gray" MouseEnter="deleteButton_MouseEnter" MouseLeave="deleteButton_MouseLeave"  >
-                <materialDesign:PackIcon x:Name="deleteIcon" Kind="GarbageCan" Foreground="White"/>
-            </Button>
-        </Grid>
-        </Grid>
+                <StackPanel x:Name="mealPriceContainer" Grid.Column="3" 
+                            HorizontalAlignment="Left" 
+                            VerticalAlignment="Center">
+                    <TextBlock x:Name="mealPrice" Text="100000 Vnd" Margin="10,0,10,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </StackPanel>
+                <StackPanel Name="mealOrderQuantityContainer" 
+                            Grid.Column="4" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <TextBlock x:Name="orderQuantity" Text="100" Margin="10,0,10,0"/>
+                </StackPanel>
+                <Grid Grid.Column="5" MouseEnter="Grid_MouseEnter" HorizontalAlignment="Left">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="addButton" Grid.Column="0" Background="Gray" BorderBrush="Gray" MouseEnter="addButton_MouseEnter" MouseLeave="addButton_MouseLeave"  >
+                        <materialDesign:PackIcon Kind="Pencil" Name="addIcon" Foreground="White" />
+                    </Button>
+                    <Separator Grid.Column="1" Width="41" Height="20" Background="White" >
+                        <Separator.LayoutTransform>
+                            <RotateTransform Angle="90" />
+                        </Separator.LayoutTransform>
+                    </Separator>
+                    <Button x:Name="deleteButton" Grid.Column="2" Background="Gray" BorderBrush="Gray" MouseEnter="deleteButton_MouseEnter" MouseLeave="deleteButton_MouseLeave"  >
+                        <materialDesign:PackIcon x:Name="deleteIcon" Kind="GarbageCan" Foreground="White"/>
+                    </Button>
+                </Grid>
+            </Grid>
         </Border>
     </Grid>
 </UserControl>
