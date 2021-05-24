@@ -49,17 +49,18 @@ namespace QuanLyNhaHang.DAO
         }
         public int GetOrderQuantityByID(int id)
         {
-            string query = string.Format("select sum(bf.count) from BillInfo bf where bf.idFood = " + id);
+            string query = string.Format("select sum(bf.count) from BillInfo where bf.idFood"+id);
 
             int quantity;
-            try 
-            { 
-                quantity = (int)DataProvider.Instance.ExecuteScalar(query); 
+            try
+            {
+                quantity = (int)DataProvider.Instance.ExecuteScalar(query);
             }
             catch
             {
                 quantity = 0;
             }
+
             return quantity;
         }
         public List<FoodDTO> GetListFood()

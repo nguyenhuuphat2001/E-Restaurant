@@ -42,7 +42,7 @@ CREATE TABLE FoodCategory
 )
 GO
 
-select * from FoodCategory
+select fc.name from FoodCategory fc, Food f where fc.id = f.idCategory
 
 CREATE TABLE Food
 (
@@ -86,7 +86,7 @@ CREATE TABLE BillInfo
 	FOREIGN KEY (idBill) REFERENCES dbo.Bill(id),
 	FOREIGN KEY (idFood) REFERENCES dbo.Food(id)
 )
-SELECT f.name, f.iDCategory,f.price, sum(bi.count) as OrderQuantity from Food as f, BillInfo as bi where f.id = bi.idFood group by f.name,f.iDCategory,f.price
+select ISNULL(sum(bf.count),0) OrderQuantity  from BillInfo bf, Food f where bf.idFood = f.id
 
 GO
 
@@ -109,6 +109,8 @@ VALUES
     0     -- position - int
     )
 GO
+select fc.name from FoodCategory fc where fc.id = 3
+
 
 INSERT INTO dbo.Staff
 (
