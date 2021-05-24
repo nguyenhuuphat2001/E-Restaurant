@@ -50,25 +50,31 @@ namespace QuanLyNhaHang
             deleteIcon.Foreground = Brushes.White;
         }
 
-        //private void addButton_MouseEnter(object sender, MouseEventArgs e)
-        //{
-        //    addButton.Foreground = Brushes.Green;
-        //}
-
-        //private void addButton_MouseLeave(object sender, MouseEventArgs e)
-        //{
-        //    addButton.Foreground = Brushes.White;
-        //}
-
-        //private void deleteButton_MouseEnter(object sender, MouseEventArgs e)
-        //{
-        //    deleteButton.Foreground = Brushes.Red;
-        //}
-
-        //private void deleteButton_MouseLeave(object sender, MouseEventArgs e)
-        //{
-        //    deleteButton.Foreground = Brushes.White;
-        //}
+        public void SetText(string mealName, int mealCategory, float mealPrice,int orderQuantity )
+        {
+            this.mealName.Text = mealName;
+            
+            switch(mealCategory)
+            {
+                case 1:
+                    this.mealCategory.Text = "fasd";
+                    break;
+                case 2:
+                    this.mealCategory.Text = "Nông sản";
+                    break;
+                case 3:
+                    this.mealCategory.Text = "Lâm sản";
+                    break;
+                case 4:
+                    this.mealCategory.Text = "Nước";
+                    break;
+                case 5:
+                    this.mealCategory.Text = "Bottle";
+                    break;
+            }
+            this.mealPrice.Text = mealPrice.ToString();
+            this.orderQuantity.Text = orderQuantity.ToString();
+        }
 
 
     }

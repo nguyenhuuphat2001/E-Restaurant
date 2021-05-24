@@ -46,7 +46,7 @@ namespace QuanLyNhaHang.DAO
         {
             List<FoodDTO> list = new List<FoodDTO>();
 
-            string query = "select * from Food";
+            string query = "SELECT f.name, f.iDCategory,f.price, sum(bi.count) as OrderQuantity from Food as f, BillInfo as bi where f.id = bi.idFood group by f.name,f.iDCategory,f.price";
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 

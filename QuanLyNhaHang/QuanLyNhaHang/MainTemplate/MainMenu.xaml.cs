@@ -101,6 +101,7 @@ namespace QuanLyNhaHang
             SetGridPrincipalToDefault();
             SetGridPrincipal();
             IncludeMealManagerTable();
+            IncludeFoodList();
         }
         private void SetCategoryPage()
         {
@@ -179,12 +180,7 @@ namespace QuanLyNhaHang
         {
             ManagerFieldHolder.Children.Add(new AccountManager());
         }
-        private void IncludeMealList()
-        {
-            ///<summary>
-            /// This function load meal list from SQL
-            ///</summary>
-        }
+        
         private void IncludeAccountList()
         {
             ListHolder.Children.Clear();
@@ -201,6 +197,17 @@ namespace QuanLyNhaHang
                 AccountCard acc = new AccountCard();
                 acc.SetText(item.UserName, "me", 0);
                 ListHolder.Children.Add(acc);
+            }
+        }
+        private void IncludeFoodList()
+        {
+            ListHolder.Children.Clear();
+            List<FoodDTO> foodList = FoodDAO.Instance.GetListFood();
+            foreach(FoodDTO food in foodList)
+            {
+                MealCard meal = new MealCard();
+                meal.SetText(food.Name, food.CategoryID, food.Price, food.OrderQuantity);
+                ListHolder.Children.Add(meal);
             }
         }
         #endregion

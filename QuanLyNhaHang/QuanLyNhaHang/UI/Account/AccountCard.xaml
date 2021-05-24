@@ -45,7 +45,7 @@
                     </Grid.ColumnDefinitions>
                     <Button x:Name="addButton" Grid.Column="0" Background="Gray" BorderBrush="Gray" 
                             MouseEnter="addButton_MouseEnter" MouseLeave="addButton_MouseLeave" >
-                        <materialDesign:PackIcon Kind="Restore" Name="addIcon" Foreground="White" />
+                        <materialDesign:PackIcon Kind="Pencil" Name="addIcon" Foreground="White" />
                     </Button>
                     <Separator Grid.Column="1" Width="41" Height="20" Background="White" >
                         <Separator.LayoutTransform>
