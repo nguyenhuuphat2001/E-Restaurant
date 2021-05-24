@@ -13,14 +13,14 @@ namespace QuanLyNhaHang.DTO
         private string name;
         private int categoryID;
         private float price;
-        private int orderQuantity;
+        
         public FoodDTO(int id, string name, int categoryID, float price, int orderQuantity)
         {
             this.Id = id;
             this.Name = name;
             this.CategoryID = categoryID;
             this.Price = price;
-            this.OrderQuantity = orderQuantity;
+            
         }
 
         public FoodDTO(DataRow row)
@@ -42,6 +42,6 @@ namespace QuanLyNhaHang.DTO
         public string Name { get => name; set => name = value; }
         public int CategoryID { get => categoryID; set => categoryID = value; }
         public float Price { get => price; set => price = value; }
-        public int OrderQuantity { get => orderQuantity; set => orderQuantity = value; }
+        
     }
 }

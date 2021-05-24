@@ -41,12 +41,32 @@ namespace QuanLyNhaHang.DAO
 
             return list;
         }
+        public string GetCategoryByID(int id)
+        {
+            string query = string.Format("select fc.name from FoodCategory fc where fc.id = " + id);
+            string name = DataProvider.Instance.ExecuteScalar(query).ToString();
+            return name;
+        }
+        public int GetOrderQuantityByID(int id)
+        {
+            string query = string.Format("select sum(bf.count) from BillInfo bf where bf.idFood = " + id);
 
+            int quantity;
+            try 
+            { 
+                quantity = (int)DataProvider.Instance.ExecuteScalar(query); 
+            }
+            catch
+            {
+                quantity = 0;
+            }
+            return quantity;
+        }
         public List<FoodDTO> GetListFood()
         {
             List<FoodDTO> list = new List<FoodDTO>();
 
-            string query = "SELECT f.name, f.iDCategory,f.price, sum(bi.count) as OrderQuantity from Food as f, BillInfo as bi where f.id = bi.idFood group by f.name,f.iDCategory,f.price";
+            string query = "SELECT * FROM Food";
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
@@ -58,7 +78,7 @@ namespace QuanLyNhaHang.DAO
 
             return list;
         }
-        
+
         //public int FindCategoryID(string idCategory)
         //{
 

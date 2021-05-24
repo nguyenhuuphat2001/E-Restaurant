@@ -42,7 +42,7 @@ CREATE TABLE FoodCategory
 )
 GO
 
-select * from FoodCategory where FoodCategory.name = 'Lâm sản'
+select * from FoodCategory
 
 CREATE TABLE Food
 (
@@ -86,6 +86,8 @@ CREATE TABLE BillInfo
 	FOREIGN KEY (idBill) REFERENCES dbo.Bill(id),
 	FOREIGN KEY (idFood) REFERENCES dbo.Food(id)
 )
+SELECT f.name, f.iDCategory,f.price, sum(bi.count) as OrderQuantity from Food as f, BillInfo as bi where f.id = bi.idFood group by f.name,f.iDCategory,f.price
+
 GO
 
 --Thêm NV
@@ -262,4 +264,5 @@ GO
 
 SELECT f.name, bi.count,f.price, f.price*bi.count as totalPrice from BillInfo as bi, Bill as b , Food as f
 where bi.idBill = b.id and bi.idFood = f.id and b.idTable =3
+ 
  

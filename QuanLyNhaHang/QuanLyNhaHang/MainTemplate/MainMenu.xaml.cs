@@ -206,7 +206,7 @@ namespace QuanLyNhaHang
             foreach(FoodDTO food in foodList)
             {
                 MealCard meal = new MealCard();
-                meal.SetText(food.Name, food.CategoryID, food.Price, food.OrderQuantity);
+                meal.SetText(food.Name, food.CategoryID, food.Price);
                 ListHolder.Children.Add(meal);
             }
         }
