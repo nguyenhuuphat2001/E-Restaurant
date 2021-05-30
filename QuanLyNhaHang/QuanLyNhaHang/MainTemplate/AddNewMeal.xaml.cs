@@ -24,6 +24,7 @@ namespace QuanLyNhaHang
         public AddNewMeal()
         {
             InitializeComponent();
+            LoadCategory();
         }
 
 
@@ -31,25 +32,9 @@ namespace QuanLyNhaHang
         #region events
         private void btnConfirm_Click(object sender, RoutedEventArgs e)
         {
-            string name = txtNameMeal.Text;
-            int categoryID = 0;
+            string name = txtNameMeal.Text;            
             string category = cmbCategory.SelectedItem.ToString();
-
-            switch (category)
-            {
-                case "Hải sản":
-                    categoryID = 1;
-                    break;
-                case "Nông sản":
-                    categoryID = 2;
-                    break;
-                case "Lâm sản":
-                    categoryID = 3;
-                    break;
-                case "Nước":
-                    categoryID = 4;
-                    break;
-            }
+            int categoryID = CategoryDAO.Instance.GetIDCategoryByName(category);
             float price = float.Parse(txtPriceMeal.Text);
 
             if (FoodDAO.Instance.AddMeal(name, categoryID, price))
@@ -130,6 +115,15 @@ namespace QuanLyNhaHang
             remove { DeleteMeal -= value; }
         }
 
+        #endregion
+
+        #region Method
+        void LoadCategory()
+        {
+            List<CategoryDTO> listCategory = CategoryDAO.Instance.GetListCategory();
+            cmbCategory.ItemsSource = listCategory;
+            cmbCategory.DisplayMemberPath = "Name";
+        }
         #endregion
 
 

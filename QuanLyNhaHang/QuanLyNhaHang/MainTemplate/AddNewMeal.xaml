@@ -112,10 +112,6 @@
                         UpdateSourceTrigger="PropertyChanged">
                         </Binding>
                     </ComboBox.Text>
-                    <ComboBoxItem Content="Hải sản"/>
-                    <ComboBoxItem Content="Nông sản"/>
-                    <ComboBoxItem Content="Lâm sản"/>
-                    <ComboBoxItem Content="Nước"/>
                     <ComboBox.ItemsPanel>
                         <ItemsPanelTemplate>
                             <VirtualizingStackPanel />

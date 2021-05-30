@@ -70,7 +70,6 @@ namespace QuanLyNhaHang
             List<CategoryDTO> listCategory = CategoryDAO.Instance.GetListCategory();
             cbCategory.ItemsSource = listCategory;
             cbCategory.DisplayMemberPath = "Name";
-
         }
         private void LoadFoodList()
         {

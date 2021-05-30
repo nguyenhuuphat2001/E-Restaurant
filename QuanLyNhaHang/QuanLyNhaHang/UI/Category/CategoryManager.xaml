@@ -15,7 +15,7 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
-                
+                <ColumnDefinition Width="*"/>
 
             </Grid.ColumnDefinitions>
             <CheckBox VerticalAlignment="Top" HorizontalAlignment="Center" Height="18" Width="18">
@@ -27,11 +27,16 @@
             </CheckBox>
             <StackPanel Orientation="Horizontal" Grid.Column="1" VerticalAlignment="Top" Height="16">
 
-                <TextBlock Text="Type"/>
+                <TextBlock Text="ID"/>
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Column="2" VerticalAlignment="Top" Height="16">
+
+                <TextBlock Text="Name"/>
                 <materialDesign:PackIcon  Kind="ArrowBottom" Foreground="Red"/>
             </StackPanel>
             
-            <StackPanel Orientation="Horizontal" Grid.Column="2" VerticalAlignment="Top" Height="16">
+            <StackPanel Orientation="Horizontal" Grid.Column="3" VerticalAlignment="Top" Height="16">
 
                 <TextBlock Text="Manage"/>
 

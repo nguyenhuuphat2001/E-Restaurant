@@ -115,6 +115,7 @@ namespace QuanLyNhaHang
             SetGridPrincipalToDefault();
             SetGridPrincipal();
             IncludeTableManager();
+            IncludeTableList();
         }
         private void SetAccountManagerPage()
         {
@@ -163,10 +164,14 @@ namespace QuanLyNhaHang
         }
         private void IncludeCategoryList()
         {
-            ///<summary>
-            /// This function load category list from SQL
-            ///</summary>
-
+            ListHolder.Children.Clear();
+            List<CategoryDTO> categoryList = CategoryDAO.Instance.GetListCategory();
+            foreach (CategoryDTO category in categoryList)
+            {
+                CategoryCard categoryCard = new CategoryCard();
+                categoryCard.SetText(category.Id, category.Name);
+                ListHolder.Children.Add(categoryCard);
+            }
         }
         private void IncludeCategoryTable()
         {
@@ -211,6 +216,18 @@ namespace QuanLyNhaHang
                 MealCard meal = new MealCard();
                 meal.SetText(food.Name, category, food.Price, quantity);
                 ListHolder.Children.Add(meal);
+            }
+        }
+
+        private void IncludeTableList()
+        {
+            ListHolder.Children.Clear();
+            List<TableDTO> tableList = TableDAO.Instance.LoadTableList();
+            foreach (TableDTO table in tableList)
+            {
+                TableCard tableCard = new TableCard();
+                tableCard.SetText(table.Name, table.Status);
+                ListHolder.Children.Add(tableCard);
             }
         }
         #endregion

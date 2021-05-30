@@ -15,8 +15,6 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <CheckBox VerticalAlignment="Center" HorizontalAlignment="Center" Height="50">
                     <CheckBox.Resources>
@@ -25,17 +23,17 @@
                         </Style>
                     </CheckBox.Resources>
                 </CheckBox>
-                <StackPanel x:Name="tableOrder" Grid.Column="1" Orientation="Horizontal">
+                <StackPanel x:Name="tableName" Grid.Column="1" Orientation="Horizontal">
 
-                    <TextBlock x:Name="order" Text="1"  HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black"/>
+                    <TextBlock x:Name="tbkName" Text="1"  HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black"/>
                 </StackPanel>
                 <StackPanel x:Name="tableStatus" Grid.Column="2" Orientation="Horizontal">
 
-                    <TextBlock x:Name="status" Text="Reversed" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black"/>
+                    <TextBlock x:Name="tbkStatus" Text="Reversed" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black"/>
                 </StackPanel>
                 
                 
-                <Grid Grid.Column="5">
+                <Grid Grid.Column="5" HorizontalAlignment="Left">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition/>

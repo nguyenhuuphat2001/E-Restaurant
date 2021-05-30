@@ -74,14 +74,6 @@ namespace QuanLyNhaHang.DAO
             return list;
         }
 
-        //public int FindCategoryID(string idCategory)
-        //{
-
-        //    string query = "select id from FoodCategory where Food.name = " + idCategory;
-        //    int result = (int)DataProvider.Instance.ExecuteScalar(query, new object[] { idCategory });
-        //    return result;
-        //}
-
         public bool AddMeal(string name, int id, float price)
         {
             string query = string.Format("INSERT dbo.Food ( name, idCategory, price ) VALUES  ( N'{0}', {1}, {2})", name, id, price);
