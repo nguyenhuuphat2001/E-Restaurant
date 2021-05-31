@@ -24,5 +24,9 @@ namespace QuanLyNhaHang.UI.Meal
         {
             InitializeComponent();
         }
+        public void SetName(string name)
+        {
+            mealName.Text = name;
+        }
     }
 }

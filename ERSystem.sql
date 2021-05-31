@@ -25,7 +25,7 @@ CREATE TABLE Account
 	FOREIGN KEY (idStaff) REFERENCES dbo.Staff(id)
 )
 GO
-SELECT * FROM Account
+
 
 CREATE TABLE TableFood
 (
@@ -33,6 +33,8 @@ CREATE TABLE TableFood
 	name VARCHAR(100) NOT NULL DEFAULT 'No name',
 	status VARCHAR(100) NOT NULL DEFAULT 'Empty'	-- Empty || Using
 )
+
+
 GO
 
 CREATE TABLE FoodCategory
@@ -42,7 +44,7 @@ CREATE TABLE FoodCategory
 )
 GO
 
-select fc.name from FoodCategory fc, Food f where fc.id = f.idCategory
+
 
 CREATE TABLE Food
 (
@@ -75,6 +77,7 @@ CREATE TABLE Bill
 
 	FOREIGN KEY (idTable) REFERENCES dbo.TableFood(id)
 )
+
 
 CREATE TABLE BillInfo
 (
@@ -337,4 +340,9 @@ BEGIN
 	WHERE UserName = @userName COLLATE SQL_Latin1_General_CP1_CS_AS
 END
 GO
+select * from TableFood
+select * from Bill
+update TableFood set status = 'Empty'
+UPDATE TableFood SET TableFood.status = 'Using' where EXISTS (SELECT * from Bill where TableFood.id = Bill.idTable and Bill.status = 0)
 
+SELECT * FROM TableFood WHERE exists (SELECT * from Bill where TableFood.id = Bill.idTable and Bill.status = 0)

@@ -41,7 +41,7 @@
                 <ColumnDefinition Width="9*"/>
             </Grid.ColumnDefinitions>
             <Border CornerRadius="10" Background="Gray">
-                <ScrollViewer Grid.Column="0">
+                <ScrollViewer Grid.Column="0" >
                     <WrapPanel x:Name="wpTable" Orientation="Horizontal">
                         <local:Table Margin="5"/>
                         <local:Table Margin="5"/>
@@ -95,7 +95,7 @@
                         materialDesign:HintAssist.Hint="Select category"
                         materialDesign:HintAssist.HintOpacity=".26"
                         x:Name="cbCategory"
-                        IsEditable="True" Grid.Row="0"/>
+                        IsEditable="True" Grid.Row="0" SelectionChanged="cbCategory_SelectionChanged"/>
                         <TextBox
                         Grid.Row="1"
                         x:Name="txbQuantity"

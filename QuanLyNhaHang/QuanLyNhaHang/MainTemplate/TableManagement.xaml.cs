@@ -39,17 +39,48 @@ namespace QuanLyNhaHang
         {
             wpTable.Children.Clear();
             List<TableDTO> tableList = TableDAO.Instance.LoadTableList();
+            for(int i=0;i<tableList.Count;i++)
+            {
+                TableDAO.Instance.SetTableStatus();
+            }
 
             foreach (TableDTO item in tableList)
             {
                 Table btn = new Table();
                 btn.SetTest(item.Name, item.Status);
                 btn.Tag = item;
-
+                
                 btn.SetBackGround(item.Status);
 
                 btn.Click += BtnTable_Click;
                 wpTable.Children.Add(btn);
+            }
+        }
+        private void LoadFoodList()
+        {
+            wpFood.Children.Clear();
+            
+            List<FoodDTO> foodList = FoodDAO.Instance.GetListFood();
+            foreach(FoodDTO food in foodList)
+            {
+                MealButton foodBTN = new MealButton();
+                foodBTN.SetName(food.Name);
+                wpFood.Children.Add(foodBTN);
+            }
+            
+        }
+
+        private void LoadFoodListByCategory(int id)
+        {
+            wpFood.Children.Clear();
+
+            List<FoodDTO> listFoodByCategory = FoodDAO.Instance.GetFoodByCategoryID(id);
+            
+            foreach (FoodDTO food in listFoodByCategory)
+            {
+                MealButton foodBTN = new MealButton();
+                foodBTN.SetName(food.Name);
+                wpFood.Children.Add(foodBTN);
             }
         }
         private void BtnTable_Click(object sender, RoutedEventArgs e)
@@ -71,20 +102,7 @@ namespace QuanLyNhaHang
             cbCategory.ItemsSource = listCategory;
             cbCategory.DisplayMemberPath = "Name";
         }
-        private void LoadFoodList()
-        {
-            //List<FoodDTO> listFood = FoodDAO.Instance.GetListFood();
-            //cbFood.ItemsSource = listFood;
-            //cbFood.DisplayMemberPath = "Name";
-        }
-
-        private void LoadFoodListByCategory(int id)
-        {
-            //List<FoodDTO> listFood = FoodDAO.Instance.GetFoodByCategoryID(id);
-            //cbFood.ItemsSource = listFood;
-            //cbFood.DisplayMemberPath = "Name";
-
-        }
+        
         private void cbCategory_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -110,5 +128,7 @@ namespace QuanLyNhaHang
         {
             this.Close();
         }
+
+        
     }
 }
