@@ -41,15 +41,15 @@ namespace QuanLyNhaHang.DAO
 
             return list;
         }
-        
+
         public int GetOrderQuantityByID(int idFood)
         {
             string query = string.Format("select sum(bf.count) from BillInfo bf where bf.idFood = " + idFood);
             int quantity;
 
-            try 
-            { 
-                quantity = (int)DataProvider.Instance.ExecuteScalar(query); 
+            try
+            {
+                quantity = (int)DataProvider.Instance.ExecuteScalar(query);
             }
             catch
             {

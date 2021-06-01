@@ -30,7 +30,7 @@ namespace QuanLyNhaHang.DAO
         public List<BillInfoDTO> GetListBillInfo(int id)
         {
             List<BillInfoDTO> listBillInfo = new List<BillInfoDTO>();
-            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM dbo.BillInfo where idBill = "+ id);
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM dbo.BillInfo where idBill = " + id);
 
             foreach (DataRow item in data.Rows)
             {

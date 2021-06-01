@@ -25,7 +25,7 @@ namespace QuanLyNhaHang
         public TableManagement()
         {
             InitializeComponent();
-            Load();            
+            Load();
         }
 
         private void Load()
@@ -40,7 +40,7 @@ namespace QuanLyNhaHang
             TableDAO.Instance.SetTableStatus();
             wpTable.Children.Clear();
             List<TableDTO> tableList = TableDAO.Instance.LoadTableList();
-            for(int i=0;i<tableList.Count;i++)
+            for (int i = 0; i < tableList.Count; i++)
             {
                 TableDAO.Instance.SetTableStatus();
             }
@@ -50,7 +50,7 @@ namespace QuanLyNhaHang
                 Table btn = new Table();
                 btn.SetTest(item.Name, item.Status);
                 btn.Tag = item;
-                
+
                 btn.SetBackGround(item.Status);
 
                 btn.Click += BtnTable_Click;
@@ -60,15 +60,15 @@ namespace QuanLyNhaHang
         private void LoadFoodList()
         {
             wpFood.Children.Clear();
-            
+
             List<FoodDTO> foodList = FoodDAO.Instance.GetListFood();
-            foreach(FoodDTO food in foodList)
+            foreach (FoodDTO food in foodList)
             {
                 MealButton foodBTN = new MealButton();
                 foodBTN.SetName(food.Name);
                 wpFood.Children.Add(foodBTN);
             }
-            
+
         }
 
         private void LoadFoodListByCategory(int id)
@@ -76,7 +76,7 @@ namespace QuanLyNhaHang
             wpFood.Children.Clear();
 
             List<FoodDTO> listFoodByCategory = FoodDAO.Instance.GetFoodByCategoryID(id);
-            
+
             foreach (FoodDTO food in listFoodByCategory)
             {
                 MealButton foodBTN = new MealButton();
@@ -93,8 +93,8 @@ namespace QuanLyNhaHang
 
         private void exportBillBtn_Click(object sender, RoutedEventArgs e)
         {
-            
-            
+
+
         }
 
         void LoadCategory()
@@ -103,7 +103,7 @@ namespace QuanLyNhaHang
             cbCategory.ItemsSource = listCategory;
             cbCategory.DisplayMemberPath = "Name";
         }
-        
+
         private void cbCategory_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -130,6 +130,6 @@ namespace QuanLyNhaHang
             this.Close();
         }
 
-        
+
     }
 }

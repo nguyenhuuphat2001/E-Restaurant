@@ -18,12 +18,12 @@ namespace QuanLyNhaHang
     /// <summary>
     /// Interaction logic for StaffManager.xaml
     /// </summary>
-    public partial class StaffManager :UserControl
+    public partial class StaffManager : UserControl
     {
         public StaffManager()
         {
             InitializeComponent();
-            
+
         }
     }
 }

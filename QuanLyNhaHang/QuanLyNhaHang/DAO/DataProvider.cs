@@ -34,7 +34,7 @@ namespace QuanLyNhaHang.DAO
                 connection.Open();
                 SqlCommand command = new SqlCommand(query, connection);
 
-                if (parameter != null)  
+                if (parameter != null)
                 {
                     string[] listPara = query.Split(' ');
                     int i = 0;

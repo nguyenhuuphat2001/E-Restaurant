@@ -50,7 +50,7 @@ namespace QuanLyNhaHang
 
         private void deleteButton_Click(object sender, RoutedEventArgs e)
         {
-            if (MessageBox.Show("Delete account will delete staff. Do you want to countinue?", "Warning", MessageBoxButton.OKCancel,MessageBoxImage.Warning) != MessageBoxResult.OK)
+            if (MessageBox.Show("Delete account will delete staff. Do you want to countinue?", "Warning", MessageBoxButton.OKCancel, MessageBoxImage.Warning) != MessageBoxResult.OK)
             {
                 return;
             }
@@ -70,7 +70,7 @@ namespace QuanLyNhaHang
         public void SetText(string userName, string name, int position)
         {
             txbUserName.Text = userName;
-            txbName.Text = name;            
+            txbName.Text = name;
             switch (position)
             {
                 case 0:

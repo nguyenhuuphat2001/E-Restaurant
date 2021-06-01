@@ -16,7 +16,7 @@ namespace QuanLyNhaHang.DTO
             this.Price = price;
             this.TotalPrice = totalPrice;
         }
-        public MenuDTO(DataRow row )
+        public MenuDTO(DataRow row)
         {
             this.FoodName = row["foodName"].ToString();
             this.Count = (int)row["count"];

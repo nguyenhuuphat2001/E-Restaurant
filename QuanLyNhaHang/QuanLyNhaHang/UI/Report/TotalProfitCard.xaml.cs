@@ -32,7 +32,7 @@ namespace QuanLyNhaHang
         {
             float totalProfit = 0;
             List<ReportDTO> list = ReportDAO.Instance.GetListRevenue(currentMonth);
-            foreach(ReportDTO report in list)
+            foreach (ReportDTO report in list)
             {
                 totalProfit += report.Price;
             }

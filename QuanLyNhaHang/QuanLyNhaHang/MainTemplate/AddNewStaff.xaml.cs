@@ -36,14 +36,15 @@ namespace QuanLyNhaHang
             int sex = Convert.ToInt32(rdoMale.IsChecked.Value);
             int idStaff;
 
-            if(name==null||UserName==null||email==null||phone==null||salary==null||position==null||sex==null)
-                MessageBox.Show("Please fill out the form first","Error",MessageBoxButton.OK,MessageBoxImage.Error);
+            if (name == null || UserName == null || email == null || phone == null || salary == null || position == null || sex == null)
+                MessageBox.Show("Please fill out the form first", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             //AddStaff
 
             //AddAcount
             idStaff = AccountDAO.Instance.GetIDStaffByPhone(phone);
-            if (idStaff != null) {
-                if (AccountDAO.Instance.InsertAccount(UserName,idStaff))
+            if (idStaff != null)
+            {
+                if (AccountDAO.Instance.InsertAccount(UserName, idStaff))
                 {
                     MessageBox.Show("Create successful \n Default password: 123456");
                 }

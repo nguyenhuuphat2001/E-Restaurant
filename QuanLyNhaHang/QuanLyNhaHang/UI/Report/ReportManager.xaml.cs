@@ -18,7 +18,7 @@ namespace QuanLyNhaHang
     /// <summary>
     /// Interaction logic for Report.xaml
     /// </summary>
-    public partial class ReportManager :UserControl
+    public partial class ReportManager : UserControl
     {
         public ReportManager()
         {

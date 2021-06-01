@@ -93,7 +93,7 @@ namespace QuanLyNhaHang
             string password;
             if (txbPassword.Text != null)
                 password = txbPassword.Text;
-            else 
+            else
                 return;
 
 

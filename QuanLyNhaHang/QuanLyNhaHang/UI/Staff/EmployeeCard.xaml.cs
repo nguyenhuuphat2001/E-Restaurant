@@ -44,6 +44,6 @@ namespace QuanLyNhaHang
         {
             deleteIcon.Foreground = Brushes.White;
         }
-        
+
     }
 }

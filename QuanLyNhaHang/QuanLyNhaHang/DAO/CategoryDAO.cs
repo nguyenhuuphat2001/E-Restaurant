@@ -14,13 +14,13 @@ namespace QuanLyNhaHang.DAO
 
         public static CategoryDAO Instance
         {
-            get 
+            get
             {
                 if (instance == null)
                     instance = new CategoryDAO();
                 return CategoryDAO.instance;
             }
-            private set => instance = value; 
+            private set => instance = value;
         }
 
         private CategoryDAO() { }
@@ -30,7 +30,7 @@ namespace QuanLyNhaHang.DAO
             List<CategoryDTO> categories = new List<CategoryDTO>();
             string query = "select * from FoodCategory";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
-            foreach(DataRow item in data.Rows)
+            foreach (DataRow item in data.Rows)
             {
                 CategoryDTO category = new CategoryDTO(item);
                 categories.Add(category);
