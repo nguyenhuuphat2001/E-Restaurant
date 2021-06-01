@@ -49,10 +49,7 @@ namespace QuanLyNhaHang
 
 
 
-        private void LoadCollection()
-        {
-
-        }
+   
 
         private List<float> GetYearRevenue()
         {
