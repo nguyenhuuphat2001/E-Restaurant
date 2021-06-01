@@ -38,14 +38,8 @@ namespace QuanLyNhaHang
         {
             CompareWithLastMonthCardContainer.Children.Clear();
         }
-        private void ResetUserRatingCardContainer()
-        {
-            UserRatingCardContainer.Children.Clear();
-        }
-        private void ResetPieChartContainer()
-        {
-            PieChartContainer.Children.Clear();
-        }
+        
+        
         private void ResetCartesianChartContainer()
         {
             CartesianChartContainer.Children.Clear();
@@ -61,8 +55,7 @@ namespace QuanLyNhaHang
         {
             ResetTotalProfitCardContainer();
             ResetCompareWithLastMonthCardContainer();
-            ResetUserRatingCardContainer();
-            ResetPieChartContainer();
+           
             ResetCartesianChartContainer();
         }
         private void SetGridPrincipalToDefault()
@@ -85,8 +78,7 @@ namespace QuanLyNhaHang
             SetGridAssistant();
             IncludeTotalProfitCard();
             IncludeCompareWithLastMonthCard();
-            IncludeUserRatingCard();
-            //IncludePieChart();
+            
             IncludeCartesianChart();
         }
         private void SetStaffPage()
@@ -135,14 +127,8 @@ namespace QuanLyNhaHang
         {
             CompareWithLastMonthCardContainer.Children.Add(new CompareWithLastMonthCard());
         }
-        private void IncludeUserRatingCard()
-        {
-            UserRatingCardContainer.Children.Add(new UserRatingCard());
-        }
-        private void IncludePieChart()
-        {
-            PieChartContainer.Children.Add(new PieChart());
-        }
+        
+        
         private void IncludeCartesianChart()
         {
             CartesianChartContainer.Children.Add(new CartesianChart());

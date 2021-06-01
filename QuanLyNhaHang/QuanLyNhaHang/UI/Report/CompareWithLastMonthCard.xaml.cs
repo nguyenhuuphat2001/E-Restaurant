@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuanLyNhaHang.DAO;
+using QuanLyNhaHang.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,39 @@ namespace QuanLyNhaHang
     /// </summary>
     public partial class CompareWithLastMonthCard : UserControl
     {
+        int currentMonth = DateTime.Now.Month;
         public CompareWithLastMonthCard()
         {
             InitializeComponent();
+            SetPercentProfitWithLastMonth();
+        }
+        private float GetCurrentMonthProfit()
+        {
+            float profit = 0;
+            List<ReportDTO> list = ReportDAO.Instance.GetListRevenue(currentMonth);
+            foreach(ReportDTO report in list)
+            {
+                profit += report.Price;
+            }
+            return profit;
+        }
+        private float GetPreMonthProfit()
+        {
+            float profit = 0;
+            List<ReportDTO> list = ReportDAO.Instance.GetListRevenue(currentMonth - 1);
+            foreach (ReportDTO report in list)
+            {
+                profit += report.Price;
+            }
+            return profit;
+        }
+
+        private void SetPercentProfitWithLastMonth()
+        {
+            float currentProfit = GetCurrentMonthProfit();
+            float preProfit = GetPreMonthProfit() == 0 ? 1 : GetPreMonthProfit() ;
+            float percent = currentMonth / preProfit * 100;
+            tbPercent.Text = percent.ToString() + "%";
         }
     }
 }

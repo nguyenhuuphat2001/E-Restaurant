@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuanLyNhaHang.DAO;
+using QuanLyNhaHang.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,25 @@ namespace QuanLyNhaHang
     /// </summary>
     public partial class TotalProfitCard : UserControl
     {
+        int currentMonth = DateTime.Now.Month;
         public TotalProfitCard()
         {
             InitializeComponent();
+            SetTotalProfit();
+        }
+        private float GetTotalProfit()
+        {
+            float totalProfit = 0;
+            List<ReportDTO> list = ReportDAO.Instance.GetListRevenue(currentMonth);
+            foreach(ReportDTO report in list)
+            {
+                totalProfit += report.Price;
+            }
+            return totalProfit;
+        }
+        private void SetTotalProfit()
+        {
+            tbProfit.Text = "$ " + GetTotalProfit().ToString();
         }
     }
 }

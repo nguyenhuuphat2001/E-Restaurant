@@ -22,7 +22,7 @@
                     <Image Source="Assets/profit.png" Margin="10,0,0,0"/>
                 </Grid>
                 
-                <TextBlock x:Name="tbPercent" Text="%" TextWrapping="Wrap" Margin="10,95,223,0"  FontWeight="Bold" FontSize="35" Foreground="White"/>
+                <TextBlock x:Name="tbPercent" Text="%" TextWrapping="Wrap" Margin="10,95,170,0"  FontWeight="Bold" VerticalAlignment="Center" FontSize="12" Foreground="White"/>
             </Grid>
         </materialDesign:Card>
     </Grid>

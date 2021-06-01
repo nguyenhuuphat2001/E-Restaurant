@@ -44,25 +44,18 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
                         <ColumnDefinition/>
-                        <ColumnDefinition/>
+                        
                     </Grid.ColumnDefinitions>
 
                     <Grid Grid.Column="0" Name="TotalProfitCardContainer">
                     </Grid>
                     <Grid Grid.Column="1" Name="CompareWithLastMonthCardContainer">
                     </Grid>
-                    <Grid Grid.Column="2" Name="UserRatingCardContainer">
-
-                    </Grid>
                 </Grid>
                 <Grid Grid.Row="1">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition Width="3*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid Grid.Column="0" Name="PieChartContainer">
-                    </Grid>
-                    <Grid Grid.Column="1" Name="CartesianChartContainer">
+                   
+                    
+                    <Grid Name="CartesianChartContainer">
 
                     </Grid>
                 </Grid>

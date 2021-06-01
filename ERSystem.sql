@@ -33,8 +33,6 @@ CREATE TABLE TableFood
 	name VARCHAR(100) NOT NULL DEFAULT 'No name',
 	status VARCHAR(100) NOT NULL DEFAULT 'Empty'	-- Empty || Using
 )
-
-
 GO
 
 CREATE TABLE FoodCategory
@@ -112,7 +110,7 @@ VALUES
     0     -- position - int
     )
 GO
-select fc.name from FoodCategory fc where fc.id = 3
+
 
 
 INSERT INTO dbo.Staff
@@ -340,9 +338,25 @@ BEGIN
 	WHERE UserName = @userName COLLATE SQL_Latin1_General_CP1_CS_AS
 END
 GO
-select * from TableFood
-select * from Bill
-update TableFood set status = 'Empty'
-UPDATE TableFood SET TableFood.status = 'Using' where EXISTS (SELECT * from Bill where TableFood.id = Bill.idTable and Bill.status = 0)
 
-SELECT * FROM TableFood WHERE exists (SELECT * from Bill where TableFood.id = Bill.idTable and Bill.status = 0)
+select * from Food
+
+select * from Bill
+
+select * from BillInfo
+
+
+select b.id , sum(bf.count*f.price) as price
+from BillInfo bf, Bill b, food f
+where b.id = bf.idBill and f.id = bf.idFood and b.status = 1 and month(b.DateCheckIn) = 5
+group by b.id, bf.idFood
+
+
+---Lay tong so bill trong thang
+select b.id , sum(bf.count*f.price) as price,b.status
+INTO #SumBill
+from BillInfo bf, Bill b, food f
+where b.id = bf.idBill and f.id = bf.idFood and b.status = 1 and month(b.DateCheckIn) = 6
+group by b.id, bf.idFood,b.status
+SELECT SUM(price) AS TotalPrice  FROM #SumBill 
+	

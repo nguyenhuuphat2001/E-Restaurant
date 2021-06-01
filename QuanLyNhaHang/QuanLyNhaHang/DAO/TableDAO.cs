@@ -43,7 +43,7 @@ namespace QuanLyNhaHang.DAO
         }
 
         public void SetTableStatus()
-        { 
+        {
             string query = "UPDATE TableFood SET TableFood.status = 'Using' where EXISTS (SELECT * from Bill where TableFood.id = Bill.idTable and Bill.status = 0)";
             DataProvider.Instance.ExecuteNonQuery(query);
         }
