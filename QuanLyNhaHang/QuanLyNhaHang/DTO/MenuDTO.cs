@@ -18,10 +18,10 @@ namespace QuanLyNhaHang.DTO
         }
         public MenuDTO(DataRow row )
         {
-            this.FoodName = row["foodName"].ToString();
+            this.FoodName = row["name"].ToString();
             this.Count = (int)row["count"];
-            this.Price = (float)row["price"];
-            this.TotalPrice = (float)row["totalPrice"];
+            this.Price = (float)Convert.ToDouble(row["price"]);
+            this.TotalPrice = (float)Convert.ToDouble(row["totalPrice"]);
         }
 
         private float totalPrice;

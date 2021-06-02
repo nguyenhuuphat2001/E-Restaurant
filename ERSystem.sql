@@ -360,3 +360,7 @@ where b.id = bf.idBill and f.id = bf.idFood and b.status = 1 and month(b.DateChe
 group by b.id, bf.idFood,b.status
 SELECT SUM(price) AS TotalPrice  FROM #SumBill 
 	
+	select * from BillInfo
+
+SELECT f.name, bi.count,f.price, f.price*bi.count as totalPrice from BillInfo as bi, Bill as b , Food as f where bi.idBill = b.id and bi.idFood = f.id and b.idTable = 3 
+group by f.name, bi.count, f.price
