@@ -22,10 +22,11 @@ namespace QuanLyNhaHang
     /// Interaction logic for MainMenu.xaml
     /// </summary>
     public partial class MainMenu : Window
-    { 
+    {
         public MainMenu()
         {
             InitializeComponent();
+            SetReportPage();
         }
 
         #region Method
@@ -38,8 +39,8 @@ namespace QuanLyNhaHang
         {
             CompareWithLastMonthCardContainer.Children.Clear();
         }
-        
-        
+
+
         private void ResetCartesianChartContainer()
         {
             CartesianChartContainer.Children.Clear();
@@ -55,7 +56,7 @@ namespace QuanLyNhaHang
         {
             ResetTotalProfitCardContainer();
             ResetCompareWithLastMonthCardContainer();
-           
+
             ResetCartesianChartContainer();
         }
         private void SetGridPrincipalToDefault()
@@ -78,7 +79,7 @@ namespace QuanLyNhaHang
             SetGridAssistant();
             IncludeTotalProfitCard();
             IncludeCompareWithLastMonthCard();
-            
+
             IncludeCartesianChart();
         }
         private void SetStaffPage()
@@ -127,8 +128,6 @@ namespace QuanLyNhaHang
         {
             CompareWithLastMonthCardContainer.Children.Add(new CompareWithLastMonthCard());
         }
-        
-        
         private void IncludeCartesianChart()
         {
             CartesianChartContainer.Children.Add(new CartesianChart());
@@ -171,7 +170,7 @@ namespace QuanLyNhaHang
         {
             ManagerFieldHolder.Children.Add(new AccountManager());
         }
-        
+
         private void IncludeAccountList()
         {
             ListHolder.Children.Clear();
@@ -194,7 +193,7 @@ namespace QuanLyNhaHang
         {
             ListHolder.Children.Clear();
             List<FoodDTO> foodList = FoodDAO.Instance.GetListFood();
-            foreach(FoodDTO food in foodList)
+            foreach (FoodDTO food in foodList)
             {
                 string category = CategoryDAO.Instance.GetCategoryByID(food.CategoryID);
                 int quantity = FoodDAO.Instance.GetOrderQuantityByID(food.Id);
@@ -229,12 +228,14 @@ namespace QuanLyNhaHang
         private void DisableGridAssistant()
         {
             GridAssistant.Visibility = Visibility.Collapsed;
+            PickDate.Visibility = Visibility.Collapsed;
         }
         private void EnableGridAssistant()
         {
             GridAssistant.Visibility = Visibility.Visible;
+            PickDate.Visibility = Visibility.Visible;
         }
-        
+
         public void PieChar()
         {
             PointLabel = chartPoint => string.Format("{0}({1}:P)", chartPoint.Y, chartPoint.Participation);
@@ -329,6 +330,6 @@ namespace QuanLyNhaHang
         public Func<ChartPoint, string> PointLabel { get; set; }
         #endregion
 
-        
+
     }
 }

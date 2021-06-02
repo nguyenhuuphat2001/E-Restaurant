@@ -12,11 +12,11 @@ namespace QuanLyNhaHang.DAO
     {
         private static ReportDAO instance;
 
-        public static ReportDAO Instance 
+        public static ReportDAO Instance
         {
-            get 
+            get
             {
-                if(instance == null)
+                if (instance == null)
                     instance = new ReportDAO();
                 return instance;
             }
@@ -26,12 +26,12 @@ namespace QuanLyNhaHang.DAO
             }
         }
         private ReportDAO() { }
-        
+
         public List<ReportDTO> GetListRevenue(int month)
         {
             List<ReportDTO> list = new List<ReportDTO>();
-            string query = "select b.id , sum(bf.count*f.price) as price from BillInfo bf, Bill b, food f where b.id = bf.idBill and f.id = bf.idFood and b.status = 1 and month(b.DateCheckIn) = " + month + " group by b.id, bf.idFood" ;
-            DataTable data =DataProvider.Instance.ExecuteQuery(query);
+            string query = "select b.id , sum(bf.count*f.price) as price from BillInfo bf, Bill b, food f where b.id = bf.idBill and f.id = bf.idFood and b.status = 1 and month(b.DateCheckIn) = " + month + " group by b.id, bf.idFood";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow row in data.Rows)
             {
                 ReportDTO report = new ReportDTO(row);

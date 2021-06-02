@@ -70,7 +70,7 @@ namespace QuanLyNhaHang
         private void deleteButton_Click(object sender, RoutedEventArgs e)
         {
             int id = Convert.ToInt32(tbkID.Text);
-            if (CategoryDAO.Instance.DeleteCategory( id))
+            if (CategoryDAO.Instance.DeleteCategory(id))
             {
                 MessageBox.Show("Delete category succesfully");
 
@@ -79,7 +79,7 @@ namespace QuanLyNhaHang
             {
                 MessageBox.Show("Delete category failed");
             }
-            
+
         }
     }
 }

@@ -24,12 +24,12 @@ namespace QuanLyNhaHang
     {
         public BillTemplate()
         {
-            
+
             InitializeComponent();
-            
+
             ShowBill(3);
         }
-        
+
         private void ShowBill(int id)
         {
 
@@ -39,7 +39,7 @@ namespace QuanLyNhaHang
         }
         private void LoadBillByTable(int id)
         {
-            
+
         }
         private void exportBillBtn_Click_1(object sender, RoutedEventArgs e)
         {
@@ -50,7 +50,7 @@ namespace QuanLyNhaHang
                 if (printDialog.ShowDialog() == true)
                 {
                     printDialog.PrintVisual(billGrd, "invoice");
-                    
+
                 }
             }
             finally

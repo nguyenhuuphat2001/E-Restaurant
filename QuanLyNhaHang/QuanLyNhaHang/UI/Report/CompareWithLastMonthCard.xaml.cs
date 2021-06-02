@@ -32,7 +32,7 @@ namespace QuanLyNhaHang
         {
             float profit = 0;
             List<ReportDTO> list = ReportDAO.Instance.GetListRevenue(currentMonth);
-            foreach(ReportDTO report in list)
+            foreach (ReportDTO report in list)
             {
                 profit += report.Price;
             }
@@ -51,9 +51,9 @@ namespace QuanLyNhaHang
 
         private void SetPercentProfitWithLastMonth()
         {
-            float currentProfit = GetCurrentMonthProfit();
-            float preProfit = GetPreMonthProfit() == 0 ? 1 : GetPreMonthProfit() ;
-            float percent = currentMonth / preProfit * 100;
+            double currentProfit = GetCurrentMonthProfit();
+            double preProfit = GetPreMonthProfit() == 0 ? 1 : GetPreMonthProfit();
+            double percent = Math.Round(currentMonth / preProfit * 100,5);
             tbPercent.Text = percent.ToString() + "%";
         }
     }

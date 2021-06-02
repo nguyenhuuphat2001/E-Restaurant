@@ -46,7 +46,7 @@ namespace QuanLyNhaHang.DAO
         public int GetPositionByUserName(string userName)
         {
             string query = "exec USP_GetPositionByUserName @userName";
-            int position= (int)DataProvider.Instance.ExecuteScalar(query, new object[] { userName });
+            int position = (int)DataProvider.Instance.ExecuteScalar(query, new object[] { userName });
             return position;
         }
 

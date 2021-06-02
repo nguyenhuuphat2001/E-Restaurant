@@ -23,7 +23,7 @@ namespace QuanLyNhaHang
         public TableCard()
         {
             InitializeComponent();
-        }        
+        }
 
         private void deleteButton_MouseEnter(object sender, MouseEventArgs e)
         {

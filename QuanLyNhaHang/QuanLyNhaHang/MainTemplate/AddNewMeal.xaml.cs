@@ -32,7 +32,7 @@ namespace QuanLyNhaHang
         #region events
         private void btnConfirm_Click(object sender, RoutedEventArgs e)
         {
-            string name = txtNameMeal.Text;            
+            string name = txtNameMeal.Text;
             string category = cmbCategory.SelectedItem.ToString();
             int categoryID = CategoryDAO.Instance.GetIDCategoryByName(category);
             float price = float.Parse(txtPriceMeal.Text);
@@ -57,11 +57,11 @@ namespace QuanLyNhaHang
         private void EditMealEvent_Click(object sender, RoutedEventArgs e)
         {
             //Fix: get IDfood by name, idCategory first then edit 
-            int id = 1; 
-            
+            int id = 1;
+
             string name = txtNameMeal.Text;
             int categoryID = 0;
-            string category = cmbCategory.SelectedItem.ToString();            
+            string category = cmbCategory.SelectedItem.ToString();
             float price = float.Parse(txtPriceMeal.Text);
 
 
