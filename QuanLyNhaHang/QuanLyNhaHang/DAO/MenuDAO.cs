@@ -28,7 +28,7 @@ namespace QuanLyNhaHang.DAO
         {
             List<MenuDTO> listMenu = new List<MenuDTO>();
          
-            string query = "SELECT f.name, bi.count,f.price, f.price*bi.count as totalPrice from BillInfo as bi, Bill as b , Food as f where bi.idBill = b.id and bi.idFood = f.id and b.idTable = " + id + "group by f.name, bi.count, f.price";
+            string query = "SELECT f.name, bi.count,f.price, f.price*bi.count as totalPrice from BillInfo as bi, Bill as b , Food as f where bi.idBill = b.id and bi.idFood = f.id and b.status=0 and b.idTable = " + id + "group by f.name, bi.count, f.price";
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 

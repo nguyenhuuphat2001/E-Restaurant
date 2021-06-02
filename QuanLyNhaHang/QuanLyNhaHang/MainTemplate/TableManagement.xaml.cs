@@ -28,13 +28,13 @@ namespace QuanLyNhaHang
             Load();
         }
 
+        #region method
         private void Load()
         {
             LoadTable();
             LoadCategory();
             LoadFoodList();
         }
-
         private void LoadTable()
         {
             TableDAO.Instance.SetTableStatus();
@@ -70,7 +70,12 @@ namespace QuanLyNhaHang
             }
 
         }
-
+        void LoadCategory()
+        {
+            List<CategoryDTO> listCategory = CategoryDAO.Instance.GetListCategory();
+            cbCategory.ItemsSource = listCategory;
+            cbCategory.DisplayMemberPath = "Name";
+        }
         private void LoadFoodListByCategory(int id)
         {
             wpFood.Children.Clear();
@@ -84,26 +89,20 @@ namespace QuanLyNhaHang
                 wpFood.Children.Add(foodBTN);
             }
         }
+        #endregion
+
+        #region event
         private void BtnTable_Click(object sender, RoutedEventArgs e)
         {
             int tableID = ((sender as Button).Tag as TableDTO).ID;
             //lvBill.Tag = (sender as Button).Tag;
             //ShowBill(tableID);
         }
-
         private void exportBillBtn_Click(object sender, RoutedEventArgs e)
         {
-
-
+            BillTemplate bill = new BillTemplate();
+            bill.Show();
         }
-
-        void LoadCategory()
-        {
-            List<CategoryDTO> listCategory = CategoryDAO.Instance.GetListCategory();
-            cbCategory.ItemsSource = listCategory;
-            cbCategory.DisplayMemberPath = "Name";
-        }
-
         private void cbCategory_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -119,16 +118,16 @@ namespace QuanLyNhaHang
             LoadFoodListByCategory(id);
 
         }
-
         private void cbFood_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
-
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
+        #endregion
+
 
 
     }

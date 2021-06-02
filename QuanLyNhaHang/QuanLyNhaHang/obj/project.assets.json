@@ -596,24 +596,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\thinh\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Asus\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Nam2\\HocKy2\\nhap mon cnpm\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang.csproj",
+      "projectUniqueName": "C:\\Users\\Asus\\Downloads\\Git\\E-Restaurant\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang.csproj",
       "projectName": "QuanLyNhaHang",
-      "projectPath": "C:\\Nam2\\HocKy2\\nhap mon cnpm\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang.csproj",
-      "packagesPath": "C:\\Users\\thinh\\.nuget\\packages\\",
-      "outputPath": "C:\\Nam2\\HocKy2\\nhap mon cnpm\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang\\obj\\",
+      "projectPath": "C:\\Users\\Asus\\Downloads\\Git\\E-Restaurant\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang.csproj",
+      "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Asus\\Downloads\\Git\\E-Restaurant\\QuanLyNhaHang\\QuanLyNhaHang\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\thinh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

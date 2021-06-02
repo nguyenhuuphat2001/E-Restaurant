@@ -58,5 +58,31 @@ namespace QuanLyNhaHang
                 this.IsEnabled = true;
             }
         }
+        private void gridBill_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
+        {
+            string headername = e.Column.Header.ToString();
+
+            //update column details when generating
+            if (headername == "FoodName")
+            {
+                e.Column.Header = "Name";
+                e.Column.DisplayIndex = 0;
+            }
+            else if (headername == "Count")
+            {
+                e.Column.Header = "Quantity";
+                e.Column.DisplayIndex = 1;
+            }
+            else if (headername == "FoodName")
+            {
+                e.Column.Header = "Name";
+                e.Column.DisplayIndex = 2;
+            }
+            else if (headername == "TotalPrice")
+            {
+                e.Column.Header = "Total Price";
+                e.Column.DisplayIndex = 3;
+            }
+        }
     }
 }
