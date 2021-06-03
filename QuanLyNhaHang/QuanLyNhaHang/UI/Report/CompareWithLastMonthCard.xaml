@@ -9,7 +9,7 @@
              mc:Ignorable="d" 
              Height="Auto" Width="Auto">
     <Grid>
-        <materialDesign:Card VerticalAlignment="Top" HorizontalAlignment="Center"
+        <materialDesign:Card VerticalAlignment="Top" HorizontalAlignment="Left"
   Foreground="#DD825D5D"
   Width="320"
   Height="190"
@@ -34,7 +34,7 @@
                 <TextBlock x:Name="tbPercent" Text="%" 
                            TextWrapping="Wrap"      Grid.Row="1"
                            FontWeight="Bold" VerticalAlignment="Center" 
-                           FontSize="20" Foreground="White"/>
+                           FontSize="12" Foreground="White"/>
             </Grid>
         </materialDesign:Card>
     </Grid>

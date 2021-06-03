@@ -26,7 +26,21 @@ namespace QuanLyNhaHang.DAO
             }
         }
         private BillDAO() { }
+        public string GetDateCheckOut()
+        {
+            return DateTime.Now.ToString();
+        }
 
+        public string GetDateCheckInByTable(int id)
+        {
+            string query = "select b.DateCheckIn from Bill b where b.idTable = " + id + " and b.status = 0";
+            string dateCheckIn;
+            
+            dateCheckIn = Convert.ToString(DataProvider.Instance.ExecuteScalar(query));
+            
+            
+            return dateCheckIn;
+        }
         public int GetUncheckBillIDByTableID(int id)
         {
             DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM dbo.Bill where idTable = " + id + "AND status = 0");

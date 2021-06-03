@@ -3,6 +3,7 @@ go
 USE ERSystem
 GO
 
+set dateformat dmy
 CREATE TABLE Staff
 (
 	id INT IDENTITY PRIMARY KEY,
@@ -351,7 +352,7 @@ from BillInfo bf, Bill b, food f
 where b.id = bf.idBill and f.id = bf.idFood and b.status = 1 and month(b.DateCheckIn) = 5
 group by b.id, bf.idFood
 
-
+select * from TableFood
 ---Lay tong so bill trong thang
 select b.id , sum(bf.count*f.price) as price,b.status
 INTO #SumBill
@@ -360,7 +361,8 @@ where b.id = bf.idBill and f.id = bf.idFood and b.status = 1 and month(b.DateChe
 group by b.id, bf.idFood,b.status
 SELECT SUM(price) AS TotalPrice  FROM #SumBill 
 	
-	select * from BillInfo
+	select b.DateCheckIn from Bill b where b.idTable = 3 and b.status = 0
 
-SELECT f.name, bi.count,f.price, f.price*bi.count as totalPrice from BillInfo as bi, Bill as b , Food as f where bi.idBill = b.id and bi.idFood = f.id and b.idTable = 3 
+SELECT f.name, bi.count,f.price, f.price*bi.count as totalPrice 
+from BillInfo as bi, Bill as b , Food as f where bi.idBill = b.id and bi.idFood = f.id and b.idTable = 3 
 group by f.name, bi.count, f.price
