@@ -33,7 +33,13 @@ namespace QuanLyNhaHang
             year = datePicker.SelectedDate.Value.Year;
             totalProfitCard.SetTotalProfitByMonthAndYear(month, year);
             compareLastMonthCard.SetPercenProfitWithLastMonth(month, year);
-            cartesianChart.SetSelectedYearChart(year);
+
+            if(cartesianChartContainer.Children.Count > 0)
+            {
+                cartesianChartContainer.Children.Clear();
+
+                cartesianChartContainer.Children.Add(new CartesianChart(year));
+            }
         }
     }
 }

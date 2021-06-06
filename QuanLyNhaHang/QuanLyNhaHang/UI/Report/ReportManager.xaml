@@ -31,7 +31,7 @@
             <local:CompareWithLastMonthCard x:Name="compareLastMonthCard" Grid.Column="1" Margin="5,5,5,5" Grid.ColumnSpan="2"/>
         </Grid>
 
-        <Grid Grid.Row="2">
+        <Grid x:Name="cartesianChartContainer" Grid.Row="2">
             <local:CartesianChart x:Name="cartesianChart"/>
         </Grid>
 

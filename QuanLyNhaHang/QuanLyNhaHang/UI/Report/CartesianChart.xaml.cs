@@ -47,21 +47,9 @@ namespace QuanLyNhaHang
 
         }
         
-        public void SetSelectedYearChart(int year)
+        public CartesianChart(int year)
         {
-            try
-            {
-                if (SeriesCollection != null && SeriesCollection.Count > 0 && !collIsBusy)
-                {
-                    collIsBusy = true;
-                    SeriesCollection.Clear();
-                    collIsBusy = false;
-                }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Error in clearing seriesCollection\n")  ;
-            }
+            InitializeComponent();
             SeriesCollection = new SeriesCollection
             {
                 new ColumnSeries
@@ -69,13 +57,15 @@ namespace QuanLyNhaHang
                     Title = "Profit",
                     Values = new ChartValues<float>(GetSelectedYearRevenue(year))
                 }
+                
             };
-            
             Labels = new[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
-            MessageBox.Show("Set succesful");
             Formatter = value => value.ToString("N");
             DataContext = this;
+
         }
+
+        
         private List<float> GetYearRevenue()
         {
             List<float> list = new List<float>();
