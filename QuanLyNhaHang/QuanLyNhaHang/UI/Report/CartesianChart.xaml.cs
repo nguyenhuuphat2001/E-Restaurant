@@ -59,7 +59,6 @@ namespace QuanLyNhaHang
                 }
                 list.Add(profit);
             }
-
             return list;
         }
 

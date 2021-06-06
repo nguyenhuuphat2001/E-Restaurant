@@ -50,7 +50,7 @@ namespace QuanLyNhaHang.DAO
             return position;
         }
 
-        public bool UpdateAccount(string userName, string password, string newPass)
+        public bool ChangePassword(string userName, string password, string newPass)
         {
             string query = "exec USP_UpdateAccount @userName , @password , @newPassword";
             int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { userName, password, newPass });
@@ -95,7 +95,7 @@ namespace QuanLyNhaHang.DAO
 
         public bool DeleteAccount(string userName)
         {
-            string query = string.Format("Delete dbo.Account where UserName = {0}", userName);
+            string query = string.Format("Delete dbo.Account where userName = {0}", userName);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;
@@ -103,7 +103,7 @@ namespace QuanLyNhaHang.DAO
 
         public bool ResetPassword(string userName)
         {
-            string query = string.Format("UPDATE dbo.Account SET PassWord = 0 where UserName = {0}", userName);
+            string query = string.Format("UPDATE dbo.Account SET passWord = '123456' where userName = '{0}'", userName);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;
