@@ -7,10 +7,16 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="MainTemplate\AddNewTable.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MainTemplate\EditCategory.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MainTemplate\AddNewCategory.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MainTemplate\EditTable.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UI\Account\AccountCard.xaml.cs">
@@ -132,10 +138,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="MainTemplate\AddNewTable.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainTemplate\EditCategory.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainTemplate\AddNewCategory.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainTemplate\EditTable.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UI\Account\AccountCard.xaml">

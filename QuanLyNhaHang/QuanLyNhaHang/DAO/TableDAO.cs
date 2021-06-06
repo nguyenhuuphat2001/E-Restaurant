@@ -47,5 +47,23 @@ namespace QuanLyNhaHang.DAO
             string query = "UPDATE TableFood SET TableFood.status = 'Using' where EXISTS (SELECT * from Bill where TableFood.id = Bill.idTable and Bill.status = 0)";
             DataProvider.Instance.ExecuteNonQuery(query);
         }
+        public bool AddTable(string name)
+        {
+            string query = "INSERT dbo.TableFood VALUES ('" + name + "')";
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+        public bool EditTable(string name, string status, int id)
+        {
+            string query = string.Format("UPDATE dbo.TableFood Set name = N'{0}', status = {1}, where id = {2}", name,status, id);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+        public bool DeleteCategory(int id)
+        {
+            string query = string.Format("Delete dbo.TableFood where id = {0}", id);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
     }
 }
