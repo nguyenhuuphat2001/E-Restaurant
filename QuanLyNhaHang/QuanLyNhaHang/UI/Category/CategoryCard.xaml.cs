@@ -53,19 +53,17 @@ namespace QuanLyNhaHang
         }
         private void editButton_Click(object sender, RoutedEventArgs e)
         {
-            
-            string name = Microsoft.VisualBasic.Interaction.InputBox("", "", "Insert name here");
+            EditCategory editCategory = new EditCategory();
+            editCategory.ShowDialog();
+            string name = editCategory.categoryName;
             int id = Convert.ToInt32(tbkID.Text);
-            if (CategoryDAO.Instance.UpdateCategory(name, id))
+            if (editCategory.ableToChange == true)
             {
+                CategoryDAO.Instance.UpdateCategory(name, id);
                 MessageBox.Show("Edit category succesfully");
 
             }
-            else
-            {
-                MessageBox.Show("Edit category failed");
-            }
-
+           
         }
 
         private void deleteButton_Click(object sender, RoutedEventArgs e)

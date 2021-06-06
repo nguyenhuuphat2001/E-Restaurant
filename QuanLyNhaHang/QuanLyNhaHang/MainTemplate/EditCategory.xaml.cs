@@ -20,25 +20,27 @@ namespace QuanLyNhaHang
     public partial class EditCategory : Window
     {
         public string categoryName = "";
+        public bool ableToChange = false;
         public EditCategory()
         {
             InitializeComponent();
         }
         private void btnConfirm_Click(object sender, RoutedEventArgs e)
         {
-            categoryName = txtCategory.Text;
+            
             if (String.IsNullOrWhiteSpace(txtCategory.Text))
             {
                 MessageBox.Show("Category name must not be empty");
             }
             else
             {
+                ableToChange = true;
+                categoryName = txtCategory.Text;
                 this.Close();
             }
         }
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
-
             this.Close();
         }
 

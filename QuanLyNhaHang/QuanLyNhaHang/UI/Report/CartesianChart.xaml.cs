@@ -25,7 +25,7 @@ namespace QuanLyNhaHang
     /// </summary>
     public partial class CartesianChart : UserControl
     {
-
+        bool collIsBusy = false;
         public CartesianChart()
         {
             InitializeComponent();
@@ -36,7 +36,7 @@ namespace QuanLyNhaHang
                 new ColumnSeries
                 {
                     Title = "Profit",
-                    Values = new ChartValues<float>(GetSelectedYearRevenue(2020))
+                    Values = new ChartValues<float>(GetYearRevenue())
                 }
             };
 
@@ -49,6 +49,19 @@ namespace QuanLyNhaHang
         
         public void SetSelectedYearChart(int year)
         {
+            try
+            {
+                if (SeriesCollection != null && SeriesCollection.Count > 0 && !collIsBusy)
+                {
+                    collIsBusy = true;
+                    SeriesCollection.Clear();
+                    collIsBusy = false;
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error in clearing seriesCollection\n")  ;
+            }
             SeriesCollection = new SeriesCollection
             {
                 new ColumnSeries
@@ -57,7 +70,9 @@ namespace QuanLyNhaHang
                     Values = new ChartValues<float>(GetSelectedYearRevenue(year))
                 }
             };
+            
             Labels = new[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
+            MessageBox.Show("Set succesful");
             Formatter = value => value.ToString("N");
             DataContext = this;
         }
@@ -74,6 +89,7 @@ namespace QuanLyNhaHang
                 }
                 list.Add(profit);
             }
+
             return list;
         }
         private List<float> GetSelectedYearRevenue(int year)

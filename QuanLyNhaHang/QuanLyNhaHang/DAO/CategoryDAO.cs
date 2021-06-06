@@ -45,7 +45,7 @@ namespace QuanLyNhaHang.DAO
         }
         public bool UpdateCategory(string name, int id)
         {
-            string query = string.Format("UPDATE FoodCategory Set name = '{0}' where id = {1}", name, id);
+            string query = string.Format("UPDATE FoodCategory Set name = N'{0}' where id = {1}", name, id);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
