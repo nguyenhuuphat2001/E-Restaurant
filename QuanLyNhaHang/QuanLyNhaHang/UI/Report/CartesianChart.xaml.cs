@@ -74,7 +74,6 @@ namespace QuanLyNhaHang
                 }
                 list.Add(profit);
             }
-
             return list;
         }
         private List<float> GetSelectedYearRevenue(int year)
