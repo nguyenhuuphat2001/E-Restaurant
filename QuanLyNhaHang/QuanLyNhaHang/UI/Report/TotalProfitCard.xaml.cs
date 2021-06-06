@@ -22,7 +22,7 @@ namespace QuanLyNhaHang
     /// </summary>
     public partial class TotalProfitCard : UserControl
     {
-        int currentMonth = DateTime.Now.Month;
+        public int currentMonth = DateTime.Now.Month;
         public TotalProfitCard()
         {
             InitializeComponent();
@@ -38,9 +38,24 @@ namespace QuanLyNhaHang
             }
             return totalProfit;
         }
+        public float GetTotalProfitByMonthAndYear(int month, int year)
+        {
+            float totalProfit = 0;
+            List<ReportDTO> list = ReportDAO.Instance.GetListRevenue(month, year);
+            foreach(ReportDTO report in list)
+            {
+                totalProfit += report.Price;
+            }    
+            return totalProfit;
+        }
         private void SetTotalProfit()
         {
-            tbProfit.Text = "$ " + GetTotalProfit().ToString();
+            tbProfit.Text = GetTotalProfit().ToString() + " VND" ;
+        }
+        public void SetTotalProfitByMonthAndYear(int month, int year)
+        {
+            float profit = GetTotalProfitByMonthAndYear(month, year);
+            tbProfit.Text = profit.ToString() + " VND";
         }
     }
 }

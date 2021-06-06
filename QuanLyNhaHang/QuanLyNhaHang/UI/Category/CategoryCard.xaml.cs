@@ -53,6 +53,7 @@ namespace QuanLyNhaHang
         }
         private void editButton_Click(object sender, RoutedEventArgs e)
         {
+            
             string name = Microsoft.VisualBasic.Interaction.InputBox("", "", "Insert name here");
             int id = Convert.ToInt32(tbkID.Text);
             if (CategoryDAO.Instance.UpdateCategory(name, id))

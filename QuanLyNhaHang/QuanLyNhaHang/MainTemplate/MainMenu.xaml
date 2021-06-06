@@ -41,7 +41,7 @@
         <Grid x:Name="GridMain" Margin="60,60,0,0">
 
             <Grid x:Name="GridAssistant">
-                <Grid.RowDefinitions>
+                <!--<Grid.RowDefinitions>
                     <RowDefinition Height="2*" />
                     <RowDefinition />
                     <RowDefinition Height="5*" />
@@ -55,15 +55,10 @@
                     <Grid Name="TotalProfitCardContainer" Grid.Column="0" />
                     <Grid Name="CompareWithLastMonthCardContainer" Grid.Column="1" />
                 </Grid>
-                <DatePicker
-                    Name="PickDate"
-                    Grid.Row="1"        Width="200"
-                    Margin="100,0"      FontSize="20"
-                    materialDesign:HintAssist.Hint="Pick Date"
-                    Style="{StaticResource MaterialDesignFilledDatePicker}" HorizontalAlignment="Right" />
+                
                 <Grid Grid.Row="2">
                     <Grid Name="CartesianChartContainer" Margin="30,0" />
-                </Grid>
+                </Grid>-->
 
             </Grid>
             <Grid

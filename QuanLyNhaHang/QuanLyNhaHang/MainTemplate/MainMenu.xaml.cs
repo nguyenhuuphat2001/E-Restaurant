@@ -31,20 +31,11 @@ namespace QuanLyNhaHang
 
         #region Method
         #region Reset
-        private void ResetTotalProfitCardContainer()
+        private void ResetReportManager()
         {
-            TotalProfitCardContainer.Children.Clear();
+            GridAssistant.Children.Clear();
         }
-        private void ResetCompareWithLastMonthCardContainer()
-        {
-            CompareWithLastMonthCardContainer.Children.Clear();
-        }
-
-
-        private void ResetCartesianChartContainer()
-        {
-            CartesianChartContainer.Children.Clear();
-        }
+       
         private void ResetManagerFieldHolder()
         {
             ManagerFieldHolder.Children.Clear();
@@ -54,10 +45,7 @@ namespace QuanLyNhaHang
         #region Set
         private void SetGridAssistantToDefault()
         {
-            ResetTotalProfitCardContainer();
-            ResetCompareWithLastMonthCardContainer();
-
-            ResetCartesianChartContainer();
+            ResetReportManager();
         }
         private void SetGridPrincipalToDefault()
         {
@@ -77,10 +65,8 @@ namespace QuanLyNhaHang
         {
             SetGridAssistantToDefault();
             SetGridAssistant();
-            IncludeTotalProfitCard();
-            IncludeCompareWithLastMonthCard();
-
-            IncludeCartesianChart();
+            IncludeReportManager();
+            
         }
         private void SetStaffPage()
         {
@@ -120,17 +106,10 @@ namespace QuanLyNhaHang
         #endregion
 
         #region Include
-        private void IncludeTotalProfitCard()
+        
+        private void IncludeReportManager()
         {
-            TotalProfitCardContainer.Children.Add(new TotalProfitCard());
-        }
-        private void IncludeCompareWithLastMonthCard()
-        {
-            CompareWithLastMonthCardContainer.Children.Add(new CompareWithLastMonthCard());
-        }
-        private void IncludeCartesianChart()
-        {
-            CartesianChartContainer.Children.Add(new CartesianChart());
+            GridAssistant.Children.Add(new ReportManager());
         }
         private void IncludeStaffManagerTable()
         {
@@ -228,12 +207,12 @@ namespace QuanLyNhaHang
         private void DisableGridAssistant()
         {
             GridAssistant.Visibility = Visibility.Collapsed;
-            PickDate.Visibility = Visibility.Collapsed;
+            
         }
         private void EnableGridAssistant()
         {
             GridAssistant.Visibility = Visibility.Visible;
-            PickDate.Visibility = Visibility.Visible;
+            
         }
 
         public void PieChar()

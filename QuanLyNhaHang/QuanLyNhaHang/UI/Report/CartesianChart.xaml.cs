@@ -36,7 +36,7 @@ namespace QuanLyNhaHang
                 new ColumnSeries
                 {
                     Title = "Profit",
-                    Values = new ChartValues<float>(GetYearRevenue())
+                    Values = new ChartValues<float>(GetSelectedYearRevenue(2020))
                 }
             };
 
@@ -45,6 +45,21 @@ namespace QuanLyNhaHang
             Formatter = value => value.ToString("N");
             DataContext = this;
 
+        }
+        
+        public void SetSelectedYearChart(int year)
+        {
+            SeriesCollection = new SeriesCollection
+            {
+                new ColumnSeries
+                {
+                    Title = "Profit",
+                    Values = new ChartValues<float>(GetSelectedYearRevenue(year))
+                }
+            };
+            Labels = new[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
+            Formatter = value => value.ToString("N");
+            DataContext = this;
         }
         private List<float> GetYearRevenue()
         {
@@ -62,22 +77,20 @@ namespace QuanLyNhaHang
 
             return list;
         }
-
-        private void SetXAxis()
+        private List<float> GetSelectedYearRevenue(int year)
         {
-            SeriesCollection[1].Values.Add(48d);
-            Labels = new[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
-
-        }
-        private void SetYAxis()
-        {
-            List<float> profit = GetYearRevenue();
-            SeriesCollection.Add(new ColumnSeries
+            List<float> list = new List<float>();
+            for (int month = 1; month < 13; month++)
             {
-                Title = "Month",
-                Values = new ChartValues<float>(profit)
+                List<ReportDTO> reports = ReportDAO.Instance.GetListRevenue(month, year);
+                float profit = 0;
+                foreach (ReportDTO report in reports)
+                {
+                    profit += report.Price;
+                }
+                list.Add(profit);
             }
-            );
+            return list;
         }
 
         public SeriesCollection SeriesCollection

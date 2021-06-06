@@ -24,14 +24,14 @@
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBlock x:Name="tbContent"  Text="Total profit" 
+                <TextBlock x:Name="tbContent"  Text="Month profit" 
                            TextWrapping="Wrap"
                            FontSize="20" FontWeight="Bold" 
                            Foreground="White" VerticalAlignment="Center"/>
 
                 <Image Source="Assets/money.png" Grid.Column="1" Grid.RowSpan="2"/>
 
-                <TextBlock x:Name="tbProfit" Text="$" 
+                <TextBlock x:Name="tbProfit" Text="VND" 
                            Grid.Row="1"
                            TextWrapping="Wrap" HorizontalAlignment="Left" 
                            VerticalAlignment="Center"  FontWeight="Bold" 
