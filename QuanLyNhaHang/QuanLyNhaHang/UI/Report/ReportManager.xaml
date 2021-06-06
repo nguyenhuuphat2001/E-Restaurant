@@ -8,73 +8,36 @@
              xmlns:local="clr-namespace:QuanLyNhaHang"
              mc:Ignorable="d" Height="Auto" Width="Auto">
     <Grid>
-        <materialDesign:Card Margin="20,20,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"
-  Foreground="#DD825D5D"
-  Width="291"
-  Height="180"
-  Padding="15" Background="#FF9DE039">
-
-            <Image Source="Assets/money.png" Margin="148,0,0,0"/>
-
-        </materialDesign:Card>
-        <Label x:Name="lbProfit" Content="Total profit" Margin="25,25,785,462" FontSize="18" FontWeight="Bold" Foreground="White"/>
-        <Label x:Name="lbProfitCopy" Content="$" Margin="25,71,849,473" FontWeight="Bold" FontSize="35" Foreground="White"/>
-
-        <materialDesign:Card Margin="0,20,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"
-                Foreground="#DD825D5D"
-                Width="345"
-                Height="180"
-                Padding="15" Background="#FFE06339">
-
-            <Image Source="/Assets/profit.png" Margin="235,0,0,8"/>
-
-        </materialDesign:Card>
-
-        <Label x:Name="lbCompare" Content="Compare with last month" Margin="352,30,435,467" FontSize="18" FontWeight="Bold" Foreground="White"/>
-
-        <Label x:Name="lbCompareercent" Content="%" Margin="366,71,508,473" FontWeight="Bold" FontSize="35" Foreground="White"/>
-        <materialDesign:Card Margin="709,20,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"
-                Foreground="#DD825D5D"
-                Width="295"
-                Height="180"
-                Padding="15" Background="#FFE039A5">
-
-            <StackPanel Margin="0,0,0,-4">
-
-                <Image Source="/Assets/satisfy.png" Margin="200,0,0,48" Height="80"/>
-                <materialDesign:RatingBar  HorizontalAlignment="Left"
-                        Value="4"
-                        x:Name="BasicRatingBar"
-                        Height="30" Width="156" />
-            </StackPanel>
-
-
-        </materialDesign:Card >
-        <Label x:Name="lbAvarageRate" Content="Average rate" Margin="719,25,71,473" FontSize="18" FontWeight="Bold" Foreground="White"/>
-        <Grid Margin="20,216,704,28">
-            <lvc:PieChart LegendLocation="Bottom" HorizontalAlignment="Left" Hoverable="False" Margin="10,85,0,0" Width="281" VerticalAlignment="Bottom" Height="334" >
-                <lvc:PieChart.Series>
-                    <lvc:PieSeries Title="Week1" Values="25" DataLabels="True" LabelPoint="{Binding PointLabel}"/>
-                    <lvc:PieSeries Title="Week2" Values="25" DataLabels="True" LabelPoint="{Binding PointLabel}"/>
-                    <lvc:PieSeries Title="Week3" Values="25" DataLabels="True" LabelPoint="{Binding PointLabel}"/>
-                    <lvc:PieSeries Title="Week4" Values="25" DataLabels="True" LabelPoint="{Binding PointLabel}"/>
-
-                </lvc:PieChart.Series>
-            </lvc:PieChart>
-        </Grid>
-        <materialDesign:Card
-                materialDesign:ShadowAssist.ShadowDepth="Depth2"
-                Padding="32" Margin="334,275,28,54">
-            <StackPanel Margin="0,-15,0,4">
-                <DatePicker HorizontalAlignment="Left"
-                        Width="288"
-                        materialDesign:HintAssist.Hint="Pick Date"
-                        Style="{StaticResource MaterialDesignOutlinedDatePicker}" Height="64" RenderTransformOrigin="0.5,0.5" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Border Margin="5" CornerRadius="5" Background="Gray" Width="150" HorizontalAlignment="Right">
+                <DatePicker x:Name="datePicker"  materialDesign:HintAssist.Hint="Pick date" SelectedDateChanged="datePicker_SelectedDateChanged" >
 
                 </DatePicker>
-                <lvc:CartesianChart Height="224" Width="584"/>
-            </StackPanel>
+                
+            </Border>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="11*"/>
+                <ColumnDefinition Width="8*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <local:TotalProfitCard x:Name="totalProfitCard" Grid.Column="0" Margin="5,5,5,5"/>
+            <local:CompareWithLastMonthCard x:Name="compareLastMonthCard" Grid.Column="1" Margin="5,5,5,5" Grid.ColumnSpan="2"/>
+        </Grid>
 
-        </materialDesign:Card>
+        <Grid x:Name="cartesianChartContainer" Grid.Row="2">
+            <local:CartesianChart x:Name="cartesianChart"/>
+        </Grid>
+
+
+
+
+
     </Grid>
 </UserControl>

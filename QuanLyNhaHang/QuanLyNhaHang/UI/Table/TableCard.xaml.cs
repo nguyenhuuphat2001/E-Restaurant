@@ -25,11 +25,9 @@ namespace QuanLyNhaHang
             InitializeComponent();
         }
 
-        
-
         private void deleteButton_MouseEnter(object sender, MouseEventArgs e)
         {
-            deleteIcon.Foreground = Brushes.Green;
+            deleteIcon.Foreground = Brushes.Red;
         }
 
         private void deleteButton_MouseLeave(object sender, MouseEventArgs e)
@@ -45,6 +43,12 @@ namespace QuanLyNhaHang
         private void addButton_MouseLeave(object sender, MouseEventArgs e)
         {
             addIcon.Foreground = Brushes.White;
+        }
+
+        public void SetText(string name, string status)
+        {
+            tbkName.Text = name;
+            tbkStatus.Text = status;
         }
     }
 }

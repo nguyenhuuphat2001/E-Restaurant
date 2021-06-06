@@ -3,6 +3,7 @@ go
 USE ERSystem
 GO
 
+set dateformat dmy
 CREATE TABLE Staff
 (
 	id INT IDENTITY PRIMARY KEY,
@@ -25,7 +26,7 @@ CREATE TABLE Account
 	FOREIGN KEY (idStaff) REFERENCES dbo.Staff(id)
 )
 GO
-SELECT * FROM Account
+
 
 CREATE TABLE TableFood
 (
@@ -42,7 +43,7 @@ CREATE TABLE FoodCategory
 )
 GO
 
-select fc.name from FoodCategory fc, Food f where fc.id = f.idCategory
+
 
 CREATE TABLE Food
 (
@@ -75,6 +76,7 @@ CREATE TABLE Bill
 
 	FOREIGN KEY (idTable) REFERENCES dbo.TableFood(id)
 )
+
 
 CREATE TABLE BillInfo
 (
@@ -109,7 +111,7 @@ VALUES
     0     -- position - int
     )
 GO
-select fc.name from FoodCategory fc where fc.id = 3
+
 
 
 INSERT INTO dbo.Staff
@@ -338,3 +340,32 @@ BEGIN
 END
 GO
 
+select * from Food
+
+select * from Bill
+
+select * from BillInfo
+
+
+select b.id , sum(bf.count*f.price) as price
+from BillInfo bf, Bill b, food f
+where b.id = bf.idBill and f.id = bf.idFood and b.status = 1 and month(b.DateCheckIn) = 5
+group by b.id, bf.idFood
+
+select * from TableFood
+---Lay tong so bill trong thang
+select b.id , sum(bf.count*f.price) as price,b.status
+INTO #SumBill
+from BillInfo bf, Bill b, food f
+where b.id = bf.idBill and f.id = bf.idFood and b.status = 1 and month(b.DateCheckIn) = 6
+group by b.id, bf.idFood,b.status
+SELECT SUM(price) AS TotalPrice  FROM #SumBill 
+	
+	select b.DateCheckIn from Bill b where b.idTable = 3 and b.status = 0
+
+SELECT f.name, bi.count,f.price, f.price*bi.count as totalPrice 
+from BillInfo as bi, Bill as b , Food as f where bi.idBill = b.id and bi.idFood = f.id and b.idTable = 3 
+group by f.name, bi.count, f.price
+
+
+select b.id , sum(bf.count*f.price) as price from BillInfo bf, Bill b, food f where b.id = bf.idBill and f.id = bf.idFood and b.status = 1 and month(b.DateCheckIn) = 4 and year(b.DateCheckIn) =2020 group by b.id, bf.idFood

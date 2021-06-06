@@ -34,7 +34,7 @@ namespace QuanLyNhaHang
             if (CategoryDAO.Instance.InsertCategory(name))
             {
                 MessageBox.Show("Add new category succesfully");
-                
+
             }
             else
             {
@@ -43,6 +43,6 @@ namespace QuanLyNhaHang
         }
 
 
-        
+
     }
 }

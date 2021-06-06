@@ -24,6 +24,7 @@ namespace QuanLyNhaHang
         public AddNewMeal()
         {
             InitializeComponent();
+            LoadCategory();
         }
 
 
@@ -32,24 +33,8 @@ namespace QuanLyNhaHang
         private void btnConfirm_Click(object sender, RoutedEventArgs e)
         {
             string name = txtNameMeal.Text;
-            int categoryID = 0;
             string category = cmbCategory.SelectedItem.ToString();
-
-            switch (category)
-            {
-                case "Hải sản":
-                    categoryID = 1;
-                    break;
-                case "Nông sản":
-                    categoryID = 2;
-                    break;
-                case "Lâm sản":
-                    categoryID = 3;
-                    break;
-                case "Nước":
-                    categoryID = 4;
-                    break;
-            }
+            int categoryID = CategoryDAO.Instance.GetIDCategoryByName(category);
             float price = float.Parse(txtPriceMeal.Text);
 
             if (FoodDAO.Instance.AddMeal(name, categoryID, price))
@@ -72,11 +57,11 @@ namespace QuanLyNhaHang
         private void EditMealEvent_Click(object sender, RoutedEventArgs e)
         {
             //Fix: get IDfood by name, idCategory first then edit 
-            int id = 1; 
-            
+            int id = 1;
+
             string name = txtNameMeal.Text;
             int categoryID = 0;
-            string category = cmbCategory.SelectedItem.ToString();            
+            string category = cmbCategory.SelectedItem.ToString();
             float price = float.Parse(txtPriceMeal.Text);
 
 
@@ -130,6 +115,15 @@ namespace QuanLyNhaHang
             remove { DeleteMeal -= value; }
         }
 
+        #endregion
+
+        #region Method
+        void LoadCategory()
+        {
+            List<CategoryDTO> listCategory = CategoryDAO.Instance.GetListCategory();
+            cmbCategory.ItemsSource = listCategory;
+            cmbCategory.DisplayMemberPath = "Name";
+        }
         #endregion
 
 

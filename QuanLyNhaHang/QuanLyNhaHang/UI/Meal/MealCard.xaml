@@ -25,7 +25,7 @@
                         </Style>
                     </CheckBox.Resources>
                 </CheckBox>
-                <StackPanel x:Name="mealInfo" Grid.Column="1" Orientation="Horizontal">
+                <StackPanel x:Name="mealInfo" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left">
                     <TextBlock x:Name="mealName" Text="Pork with rice" Margin="10,0,10,0" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black"/>
                 </StackPanel>
                 <StackPanel x:Name="mealCategoryContainer" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Left">

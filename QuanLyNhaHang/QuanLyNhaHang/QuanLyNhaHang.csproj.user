@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="MainTemplate\EditCategory.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MainTemplate\AddNewCategory.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -129,6 +132,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="MainTemplate\EditCategory.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainTemplate\AddNewCategory.xaml">
       <SubType>Designer</SubType>
     </Page>

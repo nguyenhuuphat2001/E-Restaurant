@@ -22,24 +22,71 @@ namespace QuanLyNhaHang
     /// </summary>
     public partial class BillTemplate : Window
     {
+        private float subTotal = 0;
+        private float discount = 0;
+        private float total = 0;
         public BillTemplate()
         {
-            
+
             InitializeComponent();
-            
+
             ShowBill(3);
+            
         }
-        
+        public BillTemplate(int id)
+        {
+            InitializeComponent();
+            ShowBill(id);
+        }
         private void ShowBill(int id)
         {
 
-            List<MenuDTO> listBill = MenuDAO.Instance.GetListMenuByTable(id);
+            List<BillInfoDTO> listBill = BillInfoDAO.Instance.GetListMenuByTable(id);
+            foreach(BillInfoDTO bill in listBill)
+            {
+                subTotal += bill.TotalPrice;
+            }
             gridBill.ItemsSource = listBill;
+            GetDateCheckIn(id);
+            GetDateCheckOut();
+            GetUncheckedBillIDByTable(id);
+            GetSubTotal();
+            GetDiscount();
+            GetTotal();
 
+        }
+        private void GetUncheckedBillIDByTable(int id)
+        {
+            int billID = BillDAO.Instance.GetUncheckBillIDByTableID(id);
+            invoiceID.Text = "Invoice number " + billID.ToString();
+            invoice.Text = "Invoice #" + billID.ToString();
+        }
+        private void GetDateCheckOut()
+        {
+            string dateCheckOut = BillDAO.Instance.GetDateCheckOut();
+            dateCheckOutTxb.Text = dateCheckOut;
+        }
+        private void GetDateCheckIn(int id)
+        {
+            string dateCheckIn = BillDAO.Instance.GetDateCheckInByTable(id);
+            dateCheckinTxb.Text = dateCheckIn;
+        }
+        private void GetSubTotal()
+        {
+            subTotalTxb.Text = "Subtotal: " + subTotal.ToString() +" VND"; 
+        }
+        private void GetDiscount()
+        {
+            discountTxb.Text = "Discount: " + discount.ToString() + "%";
+        }
+        private void GetTotal()
+        {
+            total = subTotal * (100-discount) / 100;
+            totalTxb.Text = "Total: " + total.ToString() + " VND";
         }
         private void LoadBillByTable(int id)
         {
-            
+
         }
         private void exportBillBtn_Click_1(object sender, RoutedEventArgs e)
         {
@@ -50,12 +97,38 @@ namespace QuanLyNhaHang
                 if (printDialog.ShowDialog() == true)
                 {
                     printDialog.PrintVisual(billGrd, "invoice");
-                    
+
                 }
             }
             finally
             {
                 this.IsEnabled = true;
+            }
+        }
+        private void gridBill_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
+        {
+            string headername = e.Column.Header.ToString();
+
+            //update column details when generating
+            if (headername == "FoodName")
+            {
+                e.Column.Header = "Name";
+                e.Column.DisplayIndex = 0;
+            }
+            else if (headername == "Count")
+            {
+                e.Column.Header = "Quantity";
+                e.Column.DisplayIndex = 1;
+            }
+            else if (headername == "FoodName")
+            {
+                e.Column.Header = "Name";
+                e.Column.DisplayIndex = 2;
+            }
+            else if (headername == "TotalPrice")
+            {
+                e.Column.Header = "Total Price";
+                e.Column.DisplayIndex = 3;
             }
         }
     }

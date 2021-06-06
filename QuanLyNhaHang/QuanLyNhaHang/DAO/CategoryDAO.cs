@@ -14,13 +14,13 @@ namespace QuanLyNhaHang.DAO
 
         public static CategoryDAO Instance
         {
-            get 
+            get
             {
                 if (instance == null)
                     instance = new CategoryDAO();
                 return CategoryDAO.instance;
             }
-            private set => instance = value; 
+            private set => instance = value;
         }
 
         private CategoryDAO() { }
@@ -30,7 +30,7 @@ namespace QuanLyNhaHang.DAO
             List<CategoryDTO> categories = new List<CategoryDTO>();
             string query = "select * from FoodCategory";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
-            foreach(DataRow item in data.Rows)
+            foreach (DataRow item in data.Rows)
             {
                 CategoryDTO category = new CategoryDTO(item);
                 categories.Add(category);
@@ -45,7 +45,7 @@ namespace QuanLyNhaHang.DAO
         }
         public bool UpdateCategory(string name, int id)
         {
-            string query = string.Format("UPDATE FoodCategory Set name = '{0}' where id = {1}", name, id);
+            string query = string.Format("UPDATE FoodCategory Set name = N'{0}' where id = {1}", name, id);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
@@ -61,6 +61,13 @@ namespace QuanLyNhaHang.DAO
             string query = string.Format("select fc.name from FoodCategory fc where fc.id = " + id);
             string name = DataProvider.Instance.ExecuteScalar(query).ToString();
             return name;
+        }
+
+        public int GetIDCategoryByName(string name)
+        {
+            string query = string.Format("select fc.id from FoodCategory fc where fc.name = " + name);
+            int id = DataProvider.Instance.ExecuteNonQuery(query);
+            return id;
         }
     }
 }

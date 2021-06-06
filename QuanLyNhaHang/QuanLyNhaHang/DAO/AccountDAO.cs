@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -28,22 +27,8 @@ namespace QuanLyNhaHang.DAO
         public bool Login(string username, string password)
         {
 
-            
-            // Mã hoá mật khẩu
-            byte[] temp = ASCIIEncoding.ASCII.GetBytes(password);
-            byte[] hasData = new MD5CryptoServiceProvider().ComputeHash(temp);
-
-            string hasPass = "";
-
-            foreach (byte item in hasData)
-            {
-                hasPass += item;
-            }
-            //
-
-
             string query = "EXEC USP_Login @UserName , @PassWord";
-            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username, hasPass });
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username, password });
             return result.Rows.Count > 0;
         }
 
@@ -61,11 +46,11 @@ namespace QuanLyNhaHang.DAO
         public int GetPositionByUserName(string userName)
         {
             string query = "exec USP_GetPositionByUserName @userName";
-            int position= (int)DataProvider.Instance.ExecuteScalar(query, new object[] { userName });
+            int position = (int)DataProvider.Instance.ExecuteScalar(query, new object[] { userName });
             return position;
         }
 
-        public bool UpdateAccount(string userName, string password, string newPass)
+        public bool ChangePassword(string userName, string password, string newPass)
         {
             string query = "exec USP_UpdateAccount @userName , @password , @newPassword";
             int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { userName, password, newPass });
@@ -110,7 +95,7 @@ namespace QuanLyNhaHang.DAO
 
         public bool DeleteAccount(string userName)
         {
-            string query = string.Format("Delete dbo.Account where UserName = {0}", userName);
+            string query = string.Format("Delete dbo.Account where userName = {0}", userName);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;
@@ -118,7 +103,7 @@ namespace QuanLyNhaHang.DAO
 
         public bool ResetPassword(string userName)
         {
-            string query = string.Format("UPDATE dbo.Account SET PassWord = N'20720532132149213101239102231223249249135100218' where UserName = {0}", userName);
+            string query = string.Format("UPDATE dbo.Account SET passWord = '123456' where userName = '{0}'", userName);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;

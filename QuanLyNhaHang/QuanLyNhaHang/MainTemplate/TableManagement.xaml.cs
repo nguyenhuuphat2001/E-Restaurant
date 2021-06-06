@@ -25,20 +25,25 @@ namespace QuanLyNhaHang
         public TableManagement()
         {
             InitializeComponent();
-            Load();            
+            Load();
         }
 
+        #region method
         private void Load()
         {
             LoadTable();
             LoadCategory();
             LoadFoodList();
         }
-
         private void LoadTable()
         {
+            TableDAO.Instance.SetTableStatus();
             wpTable.Children.Clear();
             List<TableDTO> tableList = TableDAO.Instance.LoadTableList();
+            for (int i = 0; i < tableList.Count; i++)
+            {
+                TableDAO.Instance.SetTableStatus();
+            }
 
             foreach (TableDTO item in tableList)
             {
@@ -52,39 +57,51 @@ namespace QuanLyNhaHang
                 wpTable.Children.Add(btn);
             }
         }
+        private void LoadFoodList()
+        {
+            wpFood.Children.Clear();
+
+            List<FoodDTO> foodList = FoodDAO.Instance.GetListFood();
+            foreach (FoodDTO food in foodList)
+            {
+                MealButton foodBTN = new MealButton();
+                foodBTN.SetName(food.Name);
+                wpFood.Children.Add(foodBTN);
+            }
+
+        }
+        void LoadCategory()
+        {
+            List<CategoryDTO> listCategory = CategoryDAO.Instance.GetListCategory();
+            cbCategory.ItemsSource = listCategory;
+            cbCategory.DisplayMemberPath = "Name";
+        }
+        private void LoadFoodListByCategory(int id)
+        {
+            wpFood.Children.Clear();
+
+            List<FoodDTO> listFoodByCategory = FoodDAO.Instance.GetFoodByCategoryID(id);
+
+            foreach (FoodDTO food in listFoodByCategory)
+            {
+                MealButton foodBTN = new MealButton();
+                foodBTN.SetName(food.Name);
+                wpFood.Children.Add(foodBTN);
+            }
+        }
+        #endregion
+
+        #region event
         private void BtnTable_Click(object sender, RoutedEventArgs e)
         {
             int tableID = ((sender as Button).Tag as TableDTO).ID;
             //lvBill.Tag = (sender as Button).Tag;
             //ShowBill(tableID);
         }
-
         private void exportBillBtn_Click(object sender, RoutedEventArgs e)
         {
-            
-            
-        }
-
-        void LoadCategory()
-        {
-            List<CategoryDTO> listCategory = CategoryDAO.Instance.GetListCategory();
-            cbCategory.ItemsSource = listCategory;
-            cbCategory.DisplayMemberPath = "Name";
-
-        }
-        private void LoadFoodList()
-        {
-            //List<FoodDTO> listFood = FoodDAO.Instance.GetListFood();
-            //cbFood.ItemsSource = listFood;
-            //cbFood.DisplayMemberPath = "Name";
-        }
-
-        private void LoadFoodListByCategory(int id)
-        {
-            //List<FoodDTO> listFood = FoodDAO.Instance.GetFoodByCategoryID(id);
-            //cbFood.ItemsSource = listFood;
-            //cbFood.DisplayMemberPath = "Name";
-
+            BillTemplate bill = new BillTemplate();
+            bill.Show();
         }
         private void cbCategory_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -101,15 +118,17 @@ namespace QuanLyNhaHang
             LoadFoodListByCategory(id);
 
         }
-
         private void cbFood_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
-
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
+        #endregion
+
+
+
     }
 }

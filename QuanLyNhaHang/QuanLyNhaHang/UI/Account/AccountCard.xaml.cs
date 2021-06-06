@@ -28,14 +28,14 @@ namespace QuanLyNhaHang
             InitializeComponent();
         }
 
-        private void addButton_MouseEnter(object sender, MouseEventArgs e)
+        private void resetPasswordButton_MouseEnter(object sender, MouseEventArgs e)
         {
-            addIcon.Foreground = Brushes.Green;
+            resetPasswordIcon.Foreground = Brushes.Green;
         }
 
-        private void addButton_MouseLeave(object sender, MouseEventArgs e)
+        private void resetPasswordButton_MouseLeave(object sender, MouseEventArgs e)
         {
-            addIcon.Foreground = Brushes.White;
+            resetPasswordIcon.Foreground = Brushes.White;
         }
 
         private void deleteButton_MouseEnter(object sender, MouseEventArgs e)
@@ -50,7 +50,7 @@ namespace QuanLyNhaHang
 
         private void deleteButton_Click(object sender, RoutedEventArgs e)
         {
-            if (MessageBox.Show("Delete account will delete staff. Do you want to countinue?", "Warning", MessageBoxButton.OKCancel,MessageBoxImage.Warning) != MessageBoxResult.OK)
+            if (MessageBox.Show("Delete account will delete staff. Do you want to countinue?", "Warning", MessageBoxButton.OKCancel, MessageBoxImage.Warning) != MessageBoxResult.OK)
             {
                 return;
             }
@@ -70,7 +70,7 @@ namespace QuanLyNhaHang
         public void SetText(string userName, string name, int position)
         {
             txbUserName.Text = userName;
-            txbName.Text = name;            
+            txbName.Text = name;
             switch (position)
             {
                 case 0:
@@ -82,6 +82,21 @@ namespace QuanLyNhaHang
                 case 2:
                     txbWorkingPosition.Text = "Staff";
                     break;
+            }
+        }
+
+        private void resetPasswordButton_Click(object sender, RoutedEventArgs e)
+        {
+            string userName = txbUserName.Text;
+            string message = "Are you sure you want to reset password of " + userName + "?";
+            string title = "Reset Password";
+            MessageBoxResult result = MessageBox.Show(message, title, MessageBoxButton.OKCancel, MessageBoxImage.Warning, MessageBoxResult.Cancel);
+            if (result == MessageBoxResult.OK)
+            {
+                if (AccountDAO.Instance.ResetPassword(userName))
+                    MessageBox.Show("Reset password success, new password is: 123456", "Suscess", MessageBoxButton.OK, MessageBoxImage.None, MessageBoxResult.OK);
+                else
+                    MessageBox.Show("Reset password fail", "Fail", MessageBoxButton.OK, MessageBoxImage.None, MessageBoxResult.OK);
             }
         }
     }

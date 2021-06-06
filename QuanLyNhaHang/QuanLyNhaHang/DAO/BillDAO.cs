@@ -12,13 +12,13 @@ namespace QuanLyNhaHang.DAO
     {
         private static BillDAO instance;
 
-        internal static BillDAO Instance 
+        internal static BillDAO Instance
         {
-            get 
+            get
             {
                 if (instance == null)
                     instance = new BillDAO();
-                return BillDAO.instance; 
+                return BillDAO.instance;
             }
             set
             {
@@ -26,11 +26,25 @@ namespace QuanLyNhaHang.DAO
             }
         }
         private BillDAO() { }
+        public string GetDateCheckOut()
+        {
+            return DateTime.Now.ToString();
+        }
 
+        public string GetDateCheckInByTable(int id)
+        {
+            string query = "select b.DateCheckIn from Bill b where b.idTable = " + id + " and b.status = 0";
+            string dateCheckIn;
+            
+            dateCheckIn = Convert.ToString(DataProvider.Instance.ExecuteScalar(query));
+            
+            
+            return dateCheckIn;
+        }
         public int GetUncheckBillIDByTableID(int id)
         {
             DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM dbo.Bill where idTable = " + id + "AND status = 0");
-            if(data.Rows.Count>0)
+            if (data.Rows.Count > 0)
             {
                 BillDTO bill = new BillDTO(data.Rows[0]);
                 return bill.ID;

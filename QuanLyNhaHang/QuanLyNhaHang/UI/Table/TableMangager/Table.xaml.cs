@@ -25,12 +25,12 @@ namespace QuanLyNhaHang
         public Table()
         {
             InitializeComponent();
-            
+
         }
 
         public Action<object, RoutedEventArgs> Click { get; internal set; }
 
-        public void SetTest(string name,string status)
+        public void SetTest(string name, string status)
         {
             tableName.Text = name;
             tableStatus.Text = status;

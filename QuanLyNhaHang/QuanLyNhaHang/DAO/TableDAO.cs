@@ -41,5 +41,11 @@ namespace QuanLyNhaHang.DAO
             string query = "EXEC USP_SwitchTable @idTable1 , @idTable2";
             DataProvider.Instance.ExecuteQuery(query, new object[] { id1, id2 });
         }
+
+        public void SetTableStatus()
+        {
+            string query = "UPDATE TableFood SET TableFood.status = 'Using' where EXISTS (SELECT * from Bill where TableFood.id = Bill.idTable and Bill.status = 0)";
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
     }
 }

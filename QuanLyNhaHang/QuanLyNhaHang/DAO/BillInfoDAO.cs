@@ -20,24 +20,26 @@ namespace QuanLyNhaHang.DAO
                     instance = new BillInfoDAO();
                 return instance;
             }
-            private set
-            {
-                instance = value;
-            }
+            private set => instance = value;
         }
         private BillInfoDAO() { }
 
-        public List<BillInfoDTO> GetListBillInfo(int id)
+        public List<BillInfoDTO> GetListMenuByTable(int id)
         {
-            List<BillInfoDTO> listBillInfo = new List<BillInfoDTO>();
-            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM dbo.BillInfo where idBill = "+ id);
+            List<BillInfoDTO> listMenu = new List<BillInfoDTO>();
+         
+            string query = "SELECT f.name, bi.count,f.price, f.price*bi.count as totalPrice from BillInfo as bi, Bill as b , Food as f where bi.idBill = b.id and bi.idFood = f.id and b.status=0 and b.idTable = " + id + "group by f.name, bi.count, f.price";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
             foreach (DataRow item in data.Rows)
             {
-                BillInfoDTO info = new BillInfoDTO(item);
-                listBillInfo.Add(info);
+                BillInfoDTO menu = new BillInfoDTO(item);
+                listMenu.Add(menu);
             }
-            return listBillInfo;
+
+            return listMenu;
         }
+
     }
 }

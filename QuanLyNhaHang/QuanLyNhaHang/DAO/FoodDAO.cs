@@ -41,15 +41,15 @@ namespace QuanLyNhaHang.DAO
 
             return list;
         }
-        
+
         public int GetOrderQuantityByID(int idFood)
         {
             string query = string.Format("select sum(bf.count) from BillInfo bf where bf.idFood = " + idFood);
             int quantity;
 
-            try 
-            { 
-                quantity = (int)DataProvider.Instance.ExecuteScalar(query); 
+            try
+            {
+                quantity = (int)DataProvider.Instance.ExecuteScalar(query);
             }
             catch
             {
@@ -73,14 +73,6 @@ namespace QuanLyNhaHang.DAO
 
             return list;
         }
-
-        //public int FindCategoryID(string idCategory)
-        //{
-
-        //    string query = "select id from FoodCategory where Food.name = " + idCategory;
-        //    int result = (int)DataProvider.Instance.ExecuteScalar(query, new object[] { idCategory });
-        //    return result;
-        //}
 
         public bool AddMeal(string name, int id, float price)
         {

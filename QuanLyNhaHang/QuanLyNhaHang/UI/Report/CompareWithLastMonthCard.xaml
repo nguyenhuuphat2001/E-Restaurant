@@ -16,13 +16,25 @@
   Padding="15" Background="#FFE06339">
 
             <Grid>
-                <TextBlock x:Name="tbContent"  Text="Compare with last month" TextWrapping="Wrap" Margin="10,10,145,95" FontSize="18" FontWeight="Bold" Foreground="White"/>
-                
-                <Grid HorizontalAlignment="Right" >
-                    <Image Source="Assets/profit.png" Margin="10,0,0,0"/>
-                </Grid>
-                
-                <TextBlock x:Name="tbPercent" Text="%" TextWrapping="Wrap" Margin="10,95,223,0"  FontWeight="Bold" FontSize="35" Foreground="White"/>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock x:Name="tbContent"  
+                           Text="Compare with last month" 
+                           TextWrapping="Wrap" 
+                           FontSize="20" FontWeight="Bold" Foreground="White" VerticalAlignment="Center"/>
+
+                <Image Source="Assets/profit.png" Grid.Column="1" Grid.RowSpan="2" />
+
+                <TextBlock x:Name="tbPercent" Text="%" 
+                           TextWrapping="Wrap"      Grid.Row="1"
+                           FontWeight="Bold" VerticalAlignment="Center" 
+                           FontSize="12" Foreground="White"/>
             </Grid>
         </materialDesign:Card>
     </Grid>

@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,30 +9,28 @@ namespace QuanLyNhaHang.DTO
 {
     public class BillInfoDTO
     {
-        public BillInfoDTO(int id, int billID, int foodID, int count)
+        public BillInfoDTO(string foodName, int count, float price, float totalPrice = 0)
         {
-            this.ID = id;
-            this.BillID = billID;
-            this.FoodID = foodID;
+            this.FoodName = foodName;
             this.Count = count;
+            this.Price = price;
+            this.TotalPrice = totalPrice;
         }
-
         public BillInfoDTO(DataRow row)
         {
-            this.ID = (int)row["id"];
-            this.BillID = (int)row["idBill"];
-            this.FoodID = (int)row["idFood"];
+            this.FoodName = row["name"].ToString();
             this.Count = (int)row["count"];
+            this.Price = (float)Convert.ToDouble(row["price"]);
+            this.TotalPrice = (float)Convert.ToDouble(row["totalPrice"]);
         }
 
+        private float totalPrice;
+        private float price;
+        private string foodName;
         private int count;
-        private int foodID;
-        private int billID;
-        private int iD;
-
-        public int ID { get => iD; set => iD = value; }
-        public int BillID { get => billID; set => billID = value; }
-        public int FoodID { get => foodID; set => foodID = value; }
+        public float TotalPrice { get => totalPrice; set => totalPrice = value; }
+        public float Price { get => price; set => price = value; }
+        public string FoodName { get => foodName; set => foodName = value; }
         public int Count { get => count; set => count = value; }
     }
 }

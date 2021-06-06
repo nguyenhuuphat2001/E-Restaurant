@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Xuan Thai\\Downloads\\Github Repo\\E-Restaurant\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang.csproj": {}
+    "C:\\Nam2\\HocKy2\\nhap mon cnpm\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Xuan Thai\\Downloads\\Github Repo\\E-Restaurant\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang.csproj": {
+    "C:\\Nam2\\HocKy2\\nhap mon cnpm\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Xuan Thai\\Downloads\\Github Repo\\E-Restaurant\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang.csproj",
+        "projectUniqueName": "C:\\Nam2\\HocKy2\\nhap mon cnpm\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang.csproj",
         "projectName": "QuanLyNhaHang",
-        "projectPath": "C:\\Users\\Xuan Thai\\Downloads\\Github Repo\\E-Restaurant\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang.csproj",
-        "packagesPath": "C:\\Users\\Xuan Thai\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Xuan Thai\\Downloads\\Github Repo\\E-Restaurant\\QuanLyNhaHang\\QuanLyNhaHang\\obj\\",
+        "projectPath": "C:\\Nam2\\HocKy2\\nhap mon cnpm\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang.csproj",
+        "packagesPath": "C:\\Users\\thinh\\.nuget\\packages\\",
+        "outputPath": "C:\\Nam2\\HocKy2\\nhap mon cnpm\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Xuan Thai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\thinh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -71,7 +75,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
