@@ -62,7 +62,6 @@ namespace QuanLyNhaHang
             Labels = new[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
             Formatter = value => value.ToString("N");
             DataContext = this;
-
         }
 
         

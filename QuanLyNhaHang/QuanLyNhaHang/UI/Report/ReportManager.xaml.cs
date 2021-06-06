@@ -25,6 +25,8 @@ namespace QuanLyNhaHang
         public ReportManager()
         {
             InitializeComponent();
+            datePicker.SelectedDate = DateTime.Now;
+             
         }
 
         private void datePicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)

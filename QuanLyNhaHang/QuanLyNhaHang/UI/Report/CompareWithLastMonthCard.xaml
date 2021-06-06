@@ -9,7 +9,7 @@
              mc:Ignorable="d" 
              Height="Auto" Width="Auto">
     <Grid>
-        <materialDesign:Card VerticalAlignment="Top" HorizontalAlignment="Left"
+        <materialDesign:Card VerticalAlignment="Top" HorizontalAlignment="Center"
   Foreground="#DD825D5D"
   Width="320"
   Height="190"

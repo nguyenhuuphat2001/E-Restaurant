@@ -7,10 +7,7 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="MainTemplate\EditCategory.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="MainTemplate\AddNewCategory.xaml.cs">
+    <Compile Update="MainTemplate\ModifyCategory.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UI\Account\AccountCard.xaml.cs">
@@ -79,9 +76,6 @@
     <Compile Update="UI\Report\CompareWithLastMonthCard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="UI\Report\PieChart.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="UI\Report\TotalProfitCard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -132,10 +126,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="MainTemplate\EditCategory.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="MainTemplate\AddNewCategory.xaml">
+    <Page Update="MainTemplate\ModifyCategory.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UI\Account\AccountCard.xaml">
@@ -202,9 +193,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UI\Report\CompareWithLastMonthCard.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="UI\Report\PieChart.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UI\Report\TotalProfitCard.xaml">

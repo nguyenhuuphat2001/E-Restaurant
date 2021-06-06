@@ -40,6 +40,11 @@ namespace QuanLyNhaHang
         {
             ManagerFieldHolder.Children.Clear();
         }
+
+        private void ModifyCategory_Modify(object sender, EventArgs e)
+        {
+            SetCategoryPage();
+        }
         #endregion
 
         #region Set
@@ -295,14 +300,17 @@ namespace QuanLyNhaHang
                     addNewMeal.ShowDialog();
                     break;
                 case 3:
-                    AddNewCategory addNewCategory = new AddNewCategory();
-                    addNewCategory.ShowDialog();
+                    ModifyCategory modifyCategory = new ModifyCategory("Add",-1);
+                    modifyCategory.Modify += ModifyCategory_Modify;
+                    modifyCategory.ShowDialog();
                     break;
                 case 4:
                     //AddNewTable
                     break;
             }
         }
+
+        
         #endregion
 
         #region Field
