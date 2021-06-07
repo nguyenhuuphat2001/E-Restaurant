@@ -70,11 +70,12 @@ namespace QuanLyNhaHang
             List<float> list = new List<float>();
             for (int month = 1; month < 13; month++)
             {
-                List<ReportDTO> reports = ReportDAO.Instance.GetListRevenue(month);
+                List<BillInfoDTO> reports = BillInfoDAO.Instance.GetListRevenue(month);
                 float profit = 0;
-                foreach (ReportDTO report in reports)
+                foreach (BillInfoDTO report in reports)
                 {
-                    profit += report.Price;
+
+                    profit += (report.Price * report.Count);
                 }
                 list.Add(profit);
             }
@@ -86,11 +87,11 @@ namespace QuanLyNhaHang
             List<float> list = new List<float>();
             for (int month = 1; month < 13; month++)
             {
-                List<ReportDTO> reports = ReportDAO.Instance.GetListRevenue(month, year);
+                List<BillInfoDTO> reports = BillInfoDAO.Instance.GetListRevenue(month, year);
                 float profit = 0;
-                foreach (ReportDTO report in reports)
+                foreach (BillInfoDTO report in reports)
                 {
-                    profit += report.Price;
+                    profit += (report.Price * report.Count) ;
                 }
                 list.Add(profit);
             }

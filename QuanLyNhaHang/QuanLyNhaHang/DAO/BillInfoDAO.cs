@@ -41,5 +41,29 @@ namespace QuanLyNhaHang.DAO
             return listMenu;
         }
 
+        public List<BillInfoDTO>GetListRevenue(int month)
+        {
+            List<BillInfoDTO> list = new List<BillInfoDTO>();
+            string query = "SELECT f.name, bf.count,f.price, f.price* bf.count as totalPrice from BillInfo as bf, Bill as b , Food as f where b.id = bf.idBill and f.id = bf.idFood and b.status = 1 and month(b.DateCheckIn) = "+month+" group by f.name, bf.count, f.price"; 
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach(DataRow row in data.Rows)
+            {
+                BillInfoDTO bill = new BillInfoDTO(row);
+                list.Add(bill);
+            }
+            return list;
+        }
+        public List<BillInfoDTO>GetListRevenue(int month, int year)
+        {
+            List<BillInfoDTO> list = new List<BillInfoDTO>();
+            string query = "SELECT f.name, bf.count,f.price, f.price*bf.count as totalPrice from BillInfo as bf, Bill as b , Food as f where b.id = bf.idBill and f.id = bf.idFood and b.status = 1 and month(b.DateCheckIn) = "+month+" and year(b.DateCheckIn) = "+year+" group by f.name, bf.count, f.price";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow row in data.Rows)
+            {
+                BillInfoDTO bill = new BillInfoDTO(row);
+                list.Add(bill);
+            }
+            return list;
+        }
     }
 }
