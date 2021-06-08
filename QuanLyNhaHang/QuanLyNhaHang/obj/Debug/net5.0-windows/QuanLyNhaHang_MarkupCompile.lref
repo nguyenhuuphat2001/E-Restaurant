@@ -1,17 +1,16 @@
 ﻿
 FC:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\App.xaml;;
 FC:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\ChangeMealStatusCard.xaml;;
-FC:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\MainTemplate\AddNewCategory.xaml;;
 FC:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\MainTemplate\AddNewMeal.xaml;;
 FC:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\MainTemplate\AddNewStaff.xaml;;
 FC:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\MainTemplate\BillTemplate.xaml;;
 FC:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\MainTemplate\ChangeMealStatus.xaml;;
 FC:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\MainTemplate\ChangePassword.xaml;;
 FC:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\MainTemplate\ChangeTableStatus.xaml;;
-FC:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\MainTemplate\EditCategory.xaml;;
 FC:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\MainTemplate\ErrorBox.xaml;;
 FC:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\MainTemplate\Login.xaml;;
 FC:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\MainTemplate\MainMenu.xaml;;
+FC:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\MainTemplate\ModifyCategory.xaml;;
 FC:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\MainTemplate\TableManagement.xaml;;
 FC:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\SearchBox.xaml;;
 FC:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\UI\Account\AccountCard.xaml;;
@@ -21,7 +20,6 @@ FC:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\UI\Meal\
 FC:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\UI\Meal\MealCard.xaml;;
 FC:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\UI\Report\CartesianChart.xaml;;
 FC:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\UI\Report\CompareWithLastMonthCard.xaml;;
-FC:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\UI\Report\PieChart.xaml;;
 FC:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\UI\Report\ReportManager.xaml;;
 FC:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\UI\Report\TotalProfitCard.xaml;;
 FC:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\UI\Report\UserRatingCard.xaml;;

@@ -31,20 +31,20 @@ namespace QuanLyNhaHang
         private float GetTotalProfit()
         {
             float totalProfit = 0;
-            List<ReportDTO> list = ReportDAO.Instance.GetListRevenue(currentMonth);
-            foreach (ReportDTO report in list)
+            List<BillInfoDTO> list = BillInfoDAO.Instance.GetListRevenue(currentMonth);
+            foreach (BillInfoDTO report in list)
             {
-                totalProfit += report.Price;
+                totalProfit += (report.Price * report.Count) ;
             }
             return totalProfit;
         }
         public float GetTotalProfitByMonthAndYear(int month, int year)
         {
             float totalProfit = 0;
-            List<ReportDTO> list = ReportDAO.Instance.GetListRevenue(month, year);
-            foreach(ReportDTO report in list)
+            List<BillInfoDTO> list = BillInfoDAO.Instance.GetListRevenue(month, year);
+            foreach(BillInfoDTO report in list)
             {
-                totalProfit += report.Price;
+                totalProfit += (report.Price*report.Count);
             }    
             return totalProfit;
         }

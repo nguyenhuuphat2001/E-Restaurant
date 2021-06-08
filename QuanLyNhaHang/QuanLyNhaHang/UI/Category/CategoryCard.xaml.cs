@@ -53,17 +53,10 @@ namespace QuanLyNhaHang
         }
         private void editButton_Click(object sender, RoutedEventArgs e)
         {
-            EditCategory editCategory = new EditCategory();
-            editCategory.ShowDialog();
-            string name = editCategory.categoryName;
             int id = Convert.ToInt32(tbkID.Text);
-            if (editCategory.ableToChange == true)
-            {
-                CategoryDAO.Instance.UpdateCategory(name, id);
-                MessageBox.Show("Edit category succesfully");
-
-            }
-           
+            ModifyCategory modifyCategory = new ModifyCategory("Edit", id);
+            modifyCategory.ShowDialog();
+            tbkName.Text = modifyCategory.Name;
         }
 
         private void deleteButton_Click(object sender, RoutedEventArgs e)
@@ -72,7 +65,6 @@ namespace QuanLyNhaHang
             if (CategoryDAO.Instance.DeleteCategory(id))
             {
                 MessageBox.Show("Delete category succesfully");
-
             }
             else
             {

@@ -785,7 +785,6 @@ C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug
 C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Meal\MealManager.g.cs
 C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\CartesianChart.g.cs
 C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\CompareWithLastMonthCard.g.cs
-C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\PieChart.g.cs
 C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\ReportManager.g.cs
 C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\TotalProfitCard.g.cs
 C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\UserRatingCard.g.cs
@@ -846,7 +845,6 @@ C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug
 C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Meal\MealCard.baml
 C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\CartesianChart.baml
 C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\CompareWithLastMonthCard.baml
-C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\PieChart.baml
 C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\ReportManager.baml
 C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\TotalProfitCard.baml
 C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\UserRatingCard.baml
@@ -868,8 +866,6 @@ C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug
 C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.csproj.CoreCompileInputs.cache
 C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.csproj.CopyComplete
 C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.genruntimeconfig.cache
-C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewCategory.g.cs
-C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewCategory.baml
 C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\net5.0-windows\Assets\restaurant.png
 C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ChangePassword.g.cs
 C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ChangePassword.baml
@@ -901,7 +897,6 @@ C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\n
 C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Table\TableManager.baml
 C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\ChangeMealStatusCard.g.cs
 C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\ChangeMealStatusManager.g.cs
-C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewCategory.g.cs
 C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewMeal.g.cs
 C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewStaff.g.cs
 C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\BillTemplate.g.cs
@@ -923,7 +918,6 @@ C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\n
 C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Meal\MealManager.g.cs
 C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\CartesianChart.g.cs
 C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\CompareWithLastMonthCard.g.cs
-C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\PieChart.g.cs
 C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\ReportManager.g.cs
 C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\TotalProfitCard.g.cs
 C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\UserRatingCard.g.cs
@@ -947,7 +941,6 @@ C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\n
 C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang_MarkupCompile.lref
 C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\App.baml
 C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\ChangeMealStatusCard.baml
-C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewCategory.baml
 C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewMeal.baml
 C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\AddNewStaff.baml
 C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\BillTemplate.baml
@@ -966,7 +959,6 @@ C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\n
 C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Meal\MealCard.baml
 C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\CartesianChart.baml
 C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\CompareWithLastMonthCard.baml
-C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\PieChart.baml
 C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\ReportManager.baml
 C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\TotalProfitCard.baml
 C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Report\UserRatingCard.baml
@@ -994,5 +986,9 @@ C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\n
 C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\QuanLyNhaHang.csprojAssemblyReference.cache
 C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Meal\MealButton.g.cs
 C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Meal\MealButton.baml
-C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\EditCategory.g.cs
-C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\EditCategory.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\EditCategory.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\EditCategory.baml
+C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ModifyCategory.g.cs
+C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ModifyCategory.baml
+C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ModifyCategory.g.cs
+C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ModifyCategory.baml

@@ -32,26 +32,26 @@ namespace QuanLyNhaHang
         private float GetCurrentMonthProfit()
         {
             float profit = 0;
-            List<ReportDTO> list = ReportDAO.Instance.GetListRevenue(currentMonth);
-            foreach (ReportDTO report in list)
+            List<BillInfoDTO> list = BillInfoDAO.Instance.GetListRevenue(currentMonth);
+            foreach (BillInfoDTO report in list)
             {
-                profit += report.Price;
+                profit += (report.Price*report.Count);
             }
             return profit;
         }
         private float GetPreMonthProfit()
         {
-            List<ReportDTO> list;
+            List<BillInfoDTO> list;
             float profit = 0;
             if (currentMonth == 1)
             {
-                list = ReportDAO.Instance.GetListRevenue(12, currentYear - 1);
+                list = BillInfoDAO.Instance.GetListRevenue(12, currentYear - 1);
             }
             else
             {
-                list = ReportDAO.Instance.GetListRevenue(currentMonth - 1);
+                list = BillInfoDAO.Instance.GetListRevenue(currentMonth - 1);
             }
-            foreach (ReportDTO report in list)
+            foreach (BillInfoDTO report in list)
             {
                 profit += report.Price;
             }
@@ -68,10 +68,10 @@ namespace QuanLyNhaHang
         private float GetSelectedMonthProfit(int month, int year)
         {
             float profit = 0;
-            List<ReportDTO> list = ReportDAO.Instance.GetListRevenue(month, year);
-            foreach(ReportDTO report in list)
+            List<BillInfoDTO> list = BillInfoDAO.Instance.GetListRevenue(month, year);
+            foreach(BillInfoDTO report in list)
             {
-                profit += report.Price;
+                profit += (report.Price * report.Count) ;
             }
             return profit;
         }
@@ -88,11 +88,11 @@ namespace QuanLyNhaHang
             {
                 preMonth = month - 1;
             }
-            List<ReportDTO> list = ReportDAO.Instance.GetListRevenue(preMonth, year);
+            List<BillInfoDTO> list = BillInfoDAO.Instance.GetListRevenue(preMonth, year);
                
-            foreach(ReportDTO report in list)
+            foreach(BillInfoDTO report in list)
             {
-                profit += report.Price;
+                profit += (report.Price * report.Count) ;
             }
             return profit;
         }
