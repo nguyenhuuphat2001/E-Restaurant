@@ -25,6 +25,18 @@ namespace QuanLyNhaHang.DAO
 
         private CategoryDAO() { }
 
+        public List<CategoryDTO>GetListCategoryByName(string name)
+        {
+            List<CategoryDTO> categories = new List<CategoryDTO>();
+            string query = string.Format("select * from FoodCategory fc where fc.name like N'%{0}%'", name);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach(DataRow item in data.Rows)
+            {
+                CategoryDTO category = new CategoryDTO(item);
+                categories.Add(category);
+            }
+            return categories;
+        }
         public List<CategoryDTO> GetListCategory()
         {
             List<CategoryDTO> categories = new List<CategoryDTO>();
@@ -34,6 +46,59 @@ namespace QuanLyNhaHang.DAO
             {
                 CategoryDTO category = new CategoryDTO(item);
                 categories.Add(category);
+            }
+            return categories;
+        }
+
+        public List<CategoryDTO>GetListCategoryByNameAscending(string name)
+        {
+            List<CategoryDTO> categories = new List<CategoryDTO>();
+            if(string.IsNullOrWhiteSpace(name))
+            {
+                string query = "select * from FoodCategory fc order by fc.name asc";
+                DataTable data = DataProvider.Instance.ExecuteQuery(query);
+                foreach(DataRow item in data.Rows)
+                {
+                    CategoryDTO category = new CategoryDTO(item);
+                    categories.Add(category);
+                }
+            }
+            else
+            {
+                string query = string.Format("select * from FoodCategory fc where fc.name like N'%{0}%' order by fc.name asc", name) ;
+                DataTable data = DataProvider.Instance.ExecuteQuery(query);
+                foreach (DataRow item in data.Rows)
+                {
+                    CategoryDTO category = new CategoryDTO(item);
+                    categories.Add(category);
+                }
+
+            }
+            return categories;
+        }
+        public List<CategoryDTO> GetListCategoryByNameDescending(string name)
+        {
+            List<CategoryDTO> categories = new List<CategoryDTO>();
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                string query = "select * from FoodCategory fc order by fc.name desc";
+                DataTable data = DataProvider.Instance.ExecuteQuery(query);
+                foreach (DataRow item in data.Rows)
+                {
+                    CategoryDTO category = new CategoryDTO(item);
+                    categories.Add(category);
+                }
+            }
+            else
+            {
+                string query = string.Format("select * from FoodCategory fc where fc.name like N'%{0}%' order by fc.name desc", name);
+                DataTable data = DataProvider.Instance.ExecuteQuery(query);
+                foreach (DataRow item in data.Rows)
+                {
+                    CategoryDTO category = new CategoryDTO(item);
+                    categories.Add(category);
+                }
+
             }
             return categories;
         }

@@ -2,7 +2,6 @@
 go
 USE ERSystem
 GO
-
 set dateformat dmy
 CREATE TABLE Staff
 (
@@ -43,7 +42,9 @@ CREATE TABLE FoodCategory
 )
 GO
 
-
+Insert into FoodCategory values ('avc')
+select * from FoodCategory
+select * from FoodCategory fc where fc.name like N'%ả%'
 
 CREATE TABLE Food
 (
@@ -371,4 +372,6 @@ select * from Bill
 	where b.id = bf.idBill and f.id = bf.idFood and b.status = 1 and month(b.DateCheckIn) = 6 and year(b.DateCheckIn) = 2021
 	group by f.name, bf.count, f.price
 
+select * from FoodCategory fc
+order by fc.name asc
 

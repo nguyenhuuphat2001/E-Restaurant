@@ -18,6 +18,8 @@ namespace QuanLyNhaHang
     /// <summary>
     /// Interaction logic for ModifyCategory.xaml
     /// </summary>
+    
+    
     public partial class ModifyCategory : Window
     {
         private string funtion;

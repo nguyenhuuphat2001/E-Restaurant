@@ -35,7 +35,7 @@ namespace QuanLyNhaHang
         {
             GridAssistant.Children.Clear();
         }
-       
+
         private void ResetManagerFieldHolder()
         {
             ManagerFieldHolder.Children.Clear();
@@ -71,7 +71,7 @@ namespace QuanLyNhaHang
             SetGridAssistantToDefault();
             SetGridAssistant();
             IncludeReportManager();
-            
+
         }
         private void SetStaffPage()
         {
@@ -111,7 +111,7 @@ namespace QuanLyNhaHang
         #endregion
 
         #region Include
-        
+
         private void IncludeReportManager()
         {
             GridAssistant.Children.Add(new ReportManager());
@@ -142,9 +142,63 @@ namespace QuanLyNhaHang
                 ListHolder.Children.Add(categoryCard);
             }
         }
+        private void IncludeCategoryListByName(string name)
+        {
+            ListHolder.Children.Clear();
+            List<CategoryDTO> categoryList = CategoryDAO.Instance.GetListCategoryByName(name);
+
+            foreach (CategoryDTO category in categoryList)
+            {
+                CategoryCard categoryCard = new CategoryCard();
+                categoryCard.SetText(category.Id, category.Name);
+                ListHolder.Children.Add(categoryCard);
+                
+            }
+        }
+        private void IncludeCategoryListAscending(string name)
+        {
+            ListHolder.Children.Clear();
+            List<CategoryDTO> categoryList = CategoryDAO.Instance.GetListCategoryByNameAscending(name);
+
+            foreach(CategoryDTO category in categoryList)
+            {
+                CategoryCard categoryCard = new CategoryCard();
+                categoryCard.SetText(category.Id, category.Name);
+                ListHolder.Children.Add(categoryCard);
+            }
+        }
+        private void IncludeCategoryListDescending(string name)
+        {
+            ListHolder.Children.Clear();
+            List<CategoryDTO> categoryList = CategoryDAO.Instance.GetListCategoryByNameDescending(name);
+
+            foreach (CategoryDTO category in categoryList)
+            {
+                CategoryCard categoryCard = new CategoryCard();
+                categoryCard.SetText(category.Id, category.Name);
+                ListHolder.Children.Add(categoryCard);
+            }
+        }
         private void IncludeCategoryTable()
         {
-            ManagerFieldHolder.Children.Add(new CategoryManager());
+            ManagerFieldHolder.Children.Add(new CategoryManager(CategoryNameSort));
+        }
+        private int categoryButtonClickCount = 0;
+        private void CategoryNameSort(object sender, RoutedEventArgs e)
+        {
+            //categoryButtonClickCount % 2 == 0 : sort descending
+            //caegoryButtonClickCount % 2 != 0 : sort ascending
+            if (categoryButtonClickCount % 2 == 0)
+            {
+                
+                IncludeCategoryListDescending(searchTxb.Text);
+            }
+            else
+            {
+                IncludeCategoryListAscending(searchTxb.Text);
+            }
+
+            categoryButtonClickCount++;
         }
         private void IncludeTableManager()
         {
@@ -154,7 +208,6 @@ namespace QuanLyNhaHang
         {
             ManagerFieldHolder.Children.Add(new AccountManager());
         }
-
         private void IncludeAccountList()
         {
             ListHolder.Children.Clear();
@@ -212,12 +265,12 @@ namespace QuanLyNhaHang
         private void DisableGridAssistant()
         {
             GridAssistant.Visibility = Visibility.Collapsed;
-            
+
         }
         private void EnableGridAssistant()
         {
             GridAssistant.Visibility = Visibility.Visible;
-            
+
         }
 
         public void PieChar()
@@ -268,20 +321,32 @@ namespace QuanLyNhaHang
                     SetAccountManagerPage();
                     break;
             }
-
-
-
         }
-        private void PieChart_DataClick(object sender, ChartPoint chartPoint)
+        private void searchTxb_TextChanged(object sender, TextChangedEventArgs e)
         {
-            var chart = (LiveCharts.Wpf.PieChart)chartPoint.ChartView;
-            foreach (PieSeries pieSeries in chart.Series)
+            int index = ListViewMenu.SelectedIndex;
+            if (!String.IsNullOrWhiteSpace(searchTxb.Text))
             {
-                pieSeries.PushOut = 0;
+                switch (index)
+                {
+                    case 3:
+                        IncludeCategoryListByName(searchTxb.Text);
+                        break;
+                }
             }
-            var selectionSeries = (PieSeries)chartPoint.SeriesView;
-            selectionSeries.PushOut = 0;
+            else
+            {
+                switch (index)
+                {
+                    case 3:
+                        
+                        SetCategoryPage();
+                        break;
+                }
+            }
         }
+
+
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -300,7 +365,7 @@ namespace QuanLyNhaHang
                     addNewMeal.ShowDialog();
                     break;
                 case 3:
-                    ModifyCategory modifyCategory = new ModifyCategory("Add",-1);
+                    ModifyCategory modifyCategory = new ModifyCategory("Add", -1);
                     modifyCategory.Modify += ModifyCategory_Modify;
                     modifyCategory.ShowDialog();
                     break;
@@ -310,11 +375,13 @@ namespace QuanLyNhaHang
             }
         }
 
-        
+
         #endregion
 
         #region Field
         public Func<ChartPoint, string> PointLabel { get; set; }
+
+
         #endregion
 
 

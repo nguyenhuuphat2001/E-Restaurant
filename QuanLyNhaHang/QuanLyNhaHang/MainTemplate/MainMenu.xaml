@@ -92,12 +92,13 @@
                                 <StackPanel Orientation="Horizontal">
                                     <local:SearchBox VerticalAlignment="Center" />
                                     <TextBox
+                                        x:Name="searchTxb"
                                         Width="500"
                                         HorizontalAlignment="Left"
                                         VerticalAlignment="Center"
                                         materialDesign:HintAssist.Hint="Type to search"
                                         FontSize="19"
-                                        FontWeight="Bold" />
+                                        FontWeight="Bold" TextChanged="searchTxb_TextChanged" />
                                 </StackPanel>
 
                             </Border>
@@ -160,7 +161,6 @@
                         <StackPanel x:Name="ListHolder" Orientation="Vertical">
                             <local:CategoryCard />
                         </StackPanel>
-
                     </ScrollViewer>
 
                 </Grid>
