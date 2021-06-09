@@ -39,7 +39,7 @@ namespace QuanLyNhaHang
         {
             TableDAO.Instance.SetTableStatus();
             wpTable.Children.Clear();
-            List<TableDTO> tableList = TableDAO.Instance.LoadTableList();
+            List<TableDTO> tableList = TableDAO.Instance.GetTableList();
             for (int i = 0; i < tableList.Count; i++)
             {
                 TableDAO.Instance.SetTableStatus();

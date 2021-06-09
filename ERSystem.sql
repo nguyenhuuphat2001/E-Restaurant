@@ -2,6 +2,7 @@
 go
 USE ERSystem
 GO
+
 set dateformat dmy
 CREATE TABLE Staff
 (
@@ -347,7 +348,8 @@ select * from Bill
 
 select * from BillInfo
 
-
+select * from TableFood tf order by tf.status asc
+update TableFood set TableFood.status = 'Using' where id = 1
 select b.id , sum(bf.count*f.price) as price
 from BillInfo bf, Bill b, food f
 where b.id = bf.idBill and f.id = bf.idFood and b.status = 1 and month(b.DateCheckIn) = 5

@@ -23,7 +23,7 @@ namespace QuanLyNhaHang.DAO
             private set => instance = value;
         }
 
-        public List<TableDTO> LoadTableList()
+        public List<TableDTO> GetTableList()
         {
             List<TableDTO> tableList = new List<TableDTO>();
             string query = "SELECT * FROM dbo.TableFood";
@@ -35,7 +35,30 @@ namespace QuanLyNhaHang.DAO
             }
             return tableList;
         }
-
+        public List<TableDTO> GetTableListAscending()
+        {
+            List<TableDTO> tableList = new List<TableDTO>();
+            string query = "SELECT * FROM TableFood tf order by tf.status asc ";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                TableDTO table = new TableDTO(item);
+                tableList.Add(table);
+            }
+            return tableList;
+        }
+        public List<TableDTO>GetTableListDescending()
+        {
+            List<TableDTO> tableList = new List<TableDTO>();
+            string query = "SELECT * FROM TableFood tf order by tf.status desc ";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                TableDTO table = new TableDTO(item);
+                tableList.Add(table);
+            }
+            return tableList;
+        }
         public void SwitchTable(int id1, int id2)
         {
             string query = "EXEC USP_SwitchTable @idTable1 , @idTable2";
@@ -65,5 +88,6 @@ namespace QuanLyNhaHang.DAO
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
+        
     }
 }

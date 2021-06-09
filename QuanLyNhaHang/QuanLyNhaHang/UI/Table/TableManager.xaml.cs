@@ -20,9 +20,36 @@ namespace QuanLyNhaHang
     /// </summary>
     public partial class TableManager : UserControl
     {
+        public RoutedEventHandler eventHandler;
         public TableManager()
         {
             InitializeComponent();
+        }
+        public TableManager(RoutedEventHandler eventHandler)
+        {
+            this.eventHandler = eventHandler;
+            InitializeComponent();
+        }
+        private void sortButton_Click(object sender, RoutedEventArgs e)
+        {
+            ToggleIconStatus();
+            if(eventHandler != null)
+            {
+                eventHandler(this, e);
+            }
+        }
+        private void ToggleIconStatus()
+        {
+            if (buttonSortIcon.Kind == MaterialDesignThemes.Wpf.PackIconKind.ArrowBottom)
+            {
+                buttonSortIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.ArrowTop;
+                buttonSortIcon.Foreground = Brushes.Green;
+            }
+            else
+            {
+                buttonSortIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.ArrowBottom;
+                buttonSortIcon.Foreground = Brushes.Red;
+            }
         }
     }
 }

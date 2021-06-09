@@ -200,9 +200,44 @@ namespace QuanLyNhaHang
 
             categoryButtonClickCount++;
         }
+        private void IncludeTableListAscending()
+        {
+            ListHolder.Children.Clear();
+            List<TableDTO> tables = TableDAO.Instance.GetTableListAscending();
+            foreach(TableDTO table in tables)
+            {
+                TableCard tableCard = new TableCard();
+                tableCard.SetText(table.ID, table.Status);
+                ListHolder.Children.Add(tableCard);
+            }
+        }
+        private void IncludeTableListDescending()
+        {
+            ListHolder.Children.Clear();
+            List<TableDTO> tables = TableDAO.Instance.GetTableListDescending();
+            foreach (TableDTO table in tables)
+            {
+                TableCard tableCard = new TableCard();
+                tableCard.SetText(table.ID, table.Status);
+                ListHolder.Children.Add(tableCard);
+            }
+        }
+        private int tableButtonClickCount = 0;
+        private void TableSort(object sender, RoutedEventArgs eventArgs)
+        {
+            if (tableButtonClickCount % 2 == 0)
+            {
+                IncludeTableListDescending();
+            }
+            else
+            {
+                IncludeTableListAscending();
+            }
+            tableButtonClickCount++;
+        }
         private void IncludeTableManager()
         {
-            ManagerFieldHolder.Children.Add(new TableManager());
+            ManagerFieldHolder.Children.Add(new TableManager(TableSort));
         }
         private void IncludeAccountManager()
         {
@@ -244,11 +279,11 @@ namespace QuanLyNhaHang
         private void IncludeTableList()
         {
             ListHolder.Children.Clear();
-            List<TableDTO> tableList = TableDAO.Instance.LoadTableList();
+            List<TableDTO> tableList = TableDAO.Instance.GetTableList();
             foreach (TableDTO table in tableList)
             {
                 TableCard tableCard = new TableCard();
-                tableCard.SetText(table.Name, table.Status);
+                tableCard.SetText(table.ID, table.Status);
                 ListHolder.Children.Add(tableCard);
             }
         }

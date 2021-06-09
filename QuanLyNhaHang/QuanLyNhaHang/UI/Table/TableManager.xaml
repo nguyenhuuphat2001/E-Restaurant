@@ -25,13 +25,15 @@
             <StackPanel Orientation="Horizontal" Grid.Column="1" VerticalAlignment="Top" Height="16">
 
                 <TextBlock Text="Order"/>
-                <materialDesign:PackIcon  Kind="ArrowBottom" Foreground="Red"/>
+                
             </StackPanel>
             
             <StackPanel Orientation="Horizontal" Grid.Column="2" VerticalAlignment="Top" Height="16">
 
                 <TextBlock Text="Status"/>
-                <materialDesign:PackIcon  Kind="ArrowBottom" Foreground="Red"/>
+                <Button Name="sortButton" Height="18" Width="auto" Margin="5,0,0,0" Background="Transparent" Click="sortButton_Click">
+                    <materialDesign:PackIcon Name="buttonSortIcon" Kind="ArrowBottom" Foreground="Red" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Button>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Grid.Column="3" VerticalAlignment="Top" Height="16">
 
