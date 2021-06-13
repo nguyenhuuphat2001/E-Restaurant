@@ -108,5 +108,168 @@ namespace QuanLyNhaHang.DAO
 
             return result > 0;
         }
+
+        public List<AccountDTO> GetAccount_PositionListAscending(string username)
+        {
+            List<AccountDTO> accountList = new List<AccountDTO>();
+            string query = null;
+            if (string.IsNullOrWhiteSpace(username))
+            {
+                query = "SELECT acc.id,acc.idStaff,acc.userName,acc.passWord " +
+                            "FROM Account acc INNER JOIN Staff ON Staff.id = acc.idStaff " +
+                            "ORDER BY position ASC";
+            }
+            else
+            {
+                query = "SELECT acc.id,acc.idStaff,acc.userName,acc.passWord " +
+                        "FROM Account acc INNER JOIN Staff ON Staff.id = acc.idStaff " +
+                        "WHERE acc.userName like N'%"+username+"%' "+
+                        "ORDER BY position ASC";
+
+            }
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                AccountDTO account = new AccountDTO(item);
+                accountList.Add(account);
+            }
+            return accountList;
+        }
+
+        public List<AccountDTO> GetAccount_PositionListDescending(string username)
+        {
+            List<AccountDTO> accountList = new List<AccountDTO>();
+            string query = null;
+            if (string.IsNullOrWhiteSpace(username))
+            {
+                query = "SELECT acc.id,acc.idStaff,acc.userName,acc.passWord " +
+                            "FROM Account acc INNER JOIN Staff ON Staff.id = acc.idStaff " +
+                            "ORDER BY position DESC";
+            }
+            else
+            {
+                query = "SELECT acc.id,acc.idStaff,acc.userName,acc.passWord " +
+                        "FROM Account acc INNER JOIN Staff ON Staff.id = acc.idStaff " +
+                        "WHERE acc.userName like N'%" + username + "%' " +
+                        "ORDER BY position DESC";
+
+            }
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                AccountDTO account = new AccountDTO(item);
+                accountList.Add(account);
+            }
+            return accountList;
+        }
+
+        public List<AccountDTO> GetAccount_UsernameListAscending(string username)
+        {
+            List<AccountDTO> accountList = new List<AccountDTO>();
+            string query = null;
+            if (string.IsNullOrWhiteSpace(username))
+            {
+                query = "SELECT * FROM Account ORDER BY userName ASC";
+            }
+            else
+            {
+                query = string.Format("SELECT * FROM Account where userName like N'%{0}%' ORDER BY userName ASC", username);
+            }
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                AccountDTO account = new AccountDTO(item);
+                accountList.Add(account);
+            }
+            return accountList;
+        }
+
+        public List<AccountDTO> GetAccount_UsernameListDescending(string username)
+        {
+            List<AccountDTO> accountList = new List<AccountDTO>();
+            string query = null;
+            if (string.IsNullOrWhiteSpace(username))
+            {
+                query = "SELECT * FROM Account ORDER BY userName DESC";
+            }
+            else
+            {
+                query = string.Format("SELECT * FROM Account where userName like N'%{0}%' ORDER BY userName DESC", username);
+            }
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                AccountDTO account = new AccountDTO(item);
+                accountList.Add(account);
+            }
+            return accountList;
+        }
+
+        public List<AccountDTO> GetAccount_OwnerListAscending(string username)
+        {
+            List<AccountDTO> accountList = new List<AccountDTO>();
+            string query = null;
+            if (string.IsNullOrWhiteSpace(username))
+            {
+                query = "SELECT acc.id,acc.idStaff,acc.userName,acc.passWord " +
+                            "FROM Account acc INNER JOIN Staff ON Staff.id = acc.idStaff " +
+                            "ORDER BY name ASC";
+            }
+            else
+            {
+                query = "SELECT acc.id,acc.idStaff,acc.userName,acc.passWord " +
+                        "FROM Account acc INNER JOIN Staff ON Staff.id = acc.idStaff " +
+                        "WHERE acc.userName like N'%" + username + "%' " +
+                        "ORDER BY name ASC";
+
+            }
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                AccountDTO account = new AccountDTO(item);
+                accountList.Add(account);
+            }
+            return accountList;
+        }
+
+        public List<AccountDTO> GetAccount_OwnerListDescending(string username)
+        {
+            List<AccountDTO> accountList = new List<AccountDTO>();
+            string query = null;
+            if (string.IsNullOrWhiteSpace(username))
+            {
+                query = "SELECT acc.id,acc.idStaff,acc.userName,acc.passWord " +
+                            "FROM Account acc INNER JOIN Staff ON Staff.id = acc.idStaff " +
+                            "ORDER BY name DESC";
+            }
+            else
+            {
+                query = "SELECT acc.id,acc.idStaff,acc.userName,acc.passWord " +
+                        "FROM Account acc INNER JOIN Staff ON Staff.id = acc.idStaff " +
+                        "WHERE acc.userName like N'%" + username + "%' " +
+                        "ORDER BY name DESC";
+
+            }
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                AccountDTO account = new AccountDTO(item);
+                accountList.Add(account);
+            }
+            return accountList;
+        }
+
+        public List<AccountDTO> GetListAccountByUserName(string name)
+        {
+            List<AccountDTO> accounts = new List<AccountDTO>();
+            string query = string.Format("SELECT * FROM Account where userName like N'%{0}%'", name);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                AccountDTO account = new AccountDTO(item);
+                accounts.Add(account);
+            }
+            return accounts;
+        }
     }
 }

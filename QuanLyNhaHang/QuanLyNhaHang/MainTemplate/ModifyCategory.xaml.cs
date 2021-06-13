@@ -26,6 +26,7 @@ namespace QuanLyNhaHang
         private int id;
         private event EventHandler modify;
         private string name;
+        public bool isUpdate=false;
 
         public string Name { get => name; set => name = value; }
 
@@ -86,7 +87,11 @@ namespace QuanLyNhaHang
             {
                 MessageBox.Show("Edit category succesfully");
                 if (modify != null)
+                {
+                    isUpdate = true;
                     modify(this, new EventArgs());
+                }
+                    
                 this.Close();
             }
             else

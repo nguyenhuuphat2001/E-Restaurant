@@ -12,37 +12,8 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition Width="2*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Grid x:Name="gridImage"
-              Margin="50,50,0,0"
-              Width="150"
-              Height="150"
-              HorizontalAlignment="Left"
-              VerticalAlignment="Top">
-            <Rectangle x:Name="recImage"
-                       StrokeDashArray="4 2"
-                       Stroke="#FFF38413"
-                       StrokeThickness="4"
-                       RadiusX="4"
-                       RadiusY="4"
-                       Width="150"
-                       Height="150"
-                       HorizontalAlignment="Left"
-                       VerticalAlignment="Top"/>
-
-            <Button
-            Style="{StaticResource MaterialDesignRaisedLightButton}"
-            Height="30"
-            materialDesign:ButtonAssist.CornerRadius="5"
-            ToolTip="MaterialDesignRaisedLightButton with Round Corners" Margin="30,94,30,0"
-            VerticalAlignment="Top" Background="#FFF38413"
-                >
-                <TextBlock Text="Select Image" FontWeight="Bold" FontSize="10" Foreground="White" />
-            </Button>
-            <materialDesign:PackIcon Kind="FileImageOutline"
-                                     Foreground="#FFF38413"
-                                     HorizontalAlignment="Center" Margin="0,19,0,0" Height="45" Width="50"/>
-
-
+        <Grid x:Name="restaurantInformation" VerticalAlignment="Center">
+            <Image Source="/MainTemplate/restaurant.png" />
         </Grid>
         <Grid x:Name="gridInfo" Grid.Column="1" Margin="0,50,0,0">
             <Grid.RowDefinitions>

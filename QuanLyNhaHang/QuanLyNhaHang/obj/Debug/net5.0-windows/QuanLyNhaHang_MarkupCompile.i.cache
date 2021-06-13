@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\
+C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\
 QuanLyNhaHang
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-C:\Nam2\HocKy2\nhap mon cnpm\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\App.xaml
+C:\Users\Asus\Downloads\Git\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\App.xaml
 43-1638468795
 
 60-658258423
-198-1492422637
+1982003932181
 ChangeMealStatusCard.xaml;ChangeMealStatusManager.xaml;MainTemplate\AddNewMeal.xaml;MainTemplate\AddNewStaff.xaml;MainTemplate\AddNewTable.xaml;MainTemplate\BillTemplate.xaml;MainTemplate\ChangeMealStatus.xaml;MainTemplate\ChangePassword.xaml;MainTemplate\ChangeTableStatus.xaml;MainTemplate\EditTable.xaml;MainTemplate\ErrorBox.xaml;MainTemplate\Login.xaml;MainTemplate\MainMenu.xaml;MainTemplate\ModifyCategory.xaml;MainTemplate\TableManagement.xaml;SearchBox.xaml;UI\Account\AccountCard.xaml;UI\Account\AccountManager.xaml;UI\ButtonManager.xaml;UI\Category\CategoryCard.xaml;UI\Category\CategoryManager.xaml;UI\Meal\MealButton.xaml;UI\Meal\MealCard.xaml;UI\Meal\MealManager.xaml;UI\Report\CartesianChart.xaml;UI\Report\CompareWithLastMonthCard.xaml;UI\Report\ReportManager.xaml;UI\Report\TotalProfitCard.xaml;UI\Report\UserRatingCard.xaml;UI\Staff\EmployeeCard.xaml;UI\Staff\StaffManager.xaml;UI\Table\MealPicker\AdditionalNote.xaml;UI\Table\MealPicker\SelectCategory.xaml;UI\Table\MealPicker\SelectMeal.xaml;UI\Table\MealPicker\SelectQuantity.xaml;UI\Table\MealStatus\MealStatusCard.xaml;UI\Table\MealStatus\MealStatusManager.xaml;UI\Table\TableCard.xaml;UI\Table\TableManager.xaml;UI\Table\TableMangager\DiscountField.xaml;UI\Table\TableMangager\SelectTable.xaml;UI\Table\TableMangager\Table.xaml;UI\Table\TableMangager\TableRow.xaml;
 
-False
+True
 

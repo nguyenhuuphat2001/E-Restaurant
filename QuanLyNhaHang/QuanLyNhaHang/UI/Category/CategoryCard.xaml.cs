@@ -56,7 +56,8 @@ namespace QuanLyNhaHang
             int id = Convert.ToInt32(tbkID.Text);
             ModifyCategory modifyCategory = new ModifyCategory("Edit", id);
             modifyCategory.ShowDialog();
-            tbkName.Text = modifyCategory.Name;
+            if(modifyCategory.isUpdate)
+                tbkName.Text = modifyCategory.Name;
         }
 
         private void deleteButton_Click(object sender, RoutedEventArgs e)

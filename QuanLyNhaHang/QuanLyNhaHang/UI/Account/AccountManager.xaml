@@ -1,46 +1,107 @@
-﻿<UserControl x:Class="QuanLyNhaHang.AccountManager"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-             mc:Ignorable="d" 
-             Height="auto" Width="auto">
-    <Grid Height="auto" Width="auto">
+﻿<UserControl
+    x:Class="QuanLyNhaHang.AccountManager"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Width="auto"
+    Height="auto"
+    mc:Ignorable="d">
+    <Grid Width="auto" Height="auto">
 
 
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <CheckBox Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <CheckBox
+                Grid.Column="0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top">
                 <CheckBox.Resources>
                     <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="10"/>
+                        <Setter Property="CornerRadius" Value="10" />
                     </Style>
                 </CheckBox.Resources>
             </CheckBox>
-            <StackPanel Orientation="Horizontal" Grid.Column="1" VerticalAlignment="Top" Height="16">
+            <StackPanel
+                Grid.Column="1"
+                Height="16"
+                VerticalAlignment="Top"
+                Orientation="Horizontal">
 
-                <TextBlock Text="Username"/>
-                <materialDesign:PackIcon  Kind="ArrowBottom" Foreground="Red"/>
+                <TextBlock Text="Username" />
+                <Button
+                    Name="sortUsername"
+                    Width="auto"
+                    Height="18"
+                    Margin="5,0,0,0"
+                    Background="Transparent"
+                    Click="sortUsername_Click">
+                    <materialDesign:PackIcon
+                        Name="buttonSortUsername"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Foreground="Red"
+                        Kind="ArrowBottom" />
+                </Button>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Grid.Column="2" VerticalAlignment="Top" Height="16">
+            <StackPanel
+                Grid.Column="2"
+                Height="16"
+                VerticalAlignment="Top"
+                Orientation="Horizontal">
 
-                <TextBlock Text="Owner"/>
+                <TextBlock Text="Owner" />
+                <Button
+                    Name="sortOwner"
+                    Width="auto"
+                    Height="18"
+                    Margin="5,0,0,0"
+                    Background="Transparent"
+                    Click="sortOwner_Click">
+                    <materialDesign:PackIcon
+                        Name="buttonSortOwner"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Foreground="Red"
+                        Kind="ArrowBottom" />
+                </Button>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Grid.Column="3" VerticalAlignment="Top" Height="16">
+            <StackPanel
+                Grid.Column="3"
+                Height="16"
+                VerticalAlignment="Top"
+                Orientation="Horizontal">
 
-                <TextBlock Text="Position"/>
-                <materialDesign:PackIcon  Kind="ArrowBottom" Foreground="Red"/>
+                <TextBlock Text="Position" />
+                <Button
+                    Name="sortPosition"
+                    Width="auto"
+                    Height="18"
+                    Margin="5,0,0,0"
+                    Background="Transparent"
+                    Click="sortPosition_Click">
+                    <materialDesign:PackIcon
+                        Name="buttonSortPosition"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Foreground="Red"
+                        Kind="ArrowBottom" />
+                </Button>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Grid.Column="4" VerticalAlignment="Top" Height="16">
+            <StackPanel
+                Grid.Column="4"
+                Height="16"
+                VerticalAlignment="Top"
+                Orientation="Horizontal">
 
-                <TextBlock Text="Manage"/>
+                <TextBlock Text="Manage" />
 
             </StackPanel>
 

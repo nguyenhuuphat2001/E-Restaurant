@@ -111,26 +111,14 @@ namespace QuanLyNhaHang
         #endregion
 
         #region Include
-
+        #region Report
         private void IncludeReportManager()
         {
             GridAssistant.Children.Add(new ReportManager());
         }
-        private void IncludeStaffManagerTable()
-        {
-            ManagerFieldHolder.Children.Add(new StaffManager());
-        }
-        private void IncludeStaffList()
-        {
-            ///<summary>
-            /// This function load staff list from SQL
-            ///</summary>
+        #endregion
 
-        }
-        private void IncludeMealManagerTable()
-        {
-            ManagerFieldHolder.Children.Add(new MealManager());
-        }
+        #region Category
         private void IncludeCategoryList()
         {
             ListHolder.Children.Clear();
@@ -152,7 +140,6 @@ namespace QuanLyNhaHang
                 CategoryCard categoryCard = new CategoryCard();
                 categoryCard.SetText(category.Id, category.Name);
                 ListHolder.Children.Add(categoryCard);
-                
             }
         }
         private void IncludeCategoryListAscending(string name)
@@ -160,7 +147,7 @@ namespace QuanLyNhaHang
             ListHolder.Children.Clear();
             List<CategoryDTO> categoryList = CategoryDAO.Instance.GetListCategoryByNameAscending(name);
 
-            foreach(CategoryDTO category in categoryList)
+            foreach (CategoryDTO category in categoryList)
             {
                 CategoryCard categoryCard = new CategoryCard();
                 categoryCard.SetText(category.Id, category.Name);
@@ -183,65 +170,47 @@ namespace QuanLyNhaHang
         {
             ManagerFieldHolder.Children.Add(new CategoryManager(CategoryNameSort));
         }
-        private int categoryButtonClickCount = 0;
-        private void CategoryNameSort(object sender, RoutedEventArgs e)
-        {
-            //categoryButtonClickCount % 2 == 0 : sort descending
-            //caegoryButtonClickCount % 2 != 0 : sort ascending
-            if (categoryButtonClickCount % 2 == 0)
-            {
-                
-                IncludeCategoryListDescending(searchTxb.Text);
-            }
-            else
-            {
-                IncludeCategoryListAscending(searchTxb.Text);
-            }
+        #endregion
 
-            categoryButtonClickCount++;
+        #region Staff
+        private void IncludeStaffManagerTable()
+        {
+            ManagerFieldHolder.Children.Add(new StaffManager());
         }
-        private void IncludeTableListAscending()
+        private void IncludeStaffList()
+        {
+            ///<summary>
+            /// This function load staff list from SQL
+            ///</summary>
+
+        }
+        #endregion
+
+        #region Meal
+        private void IncludeMealManagerTable()
+        {
+            ManagerFieldHolder.Children.Add(new MealManager());
+        }
+        private void IncludeFoodList()
         {
             ListHolder.Children.Clear();
-            List<TableDTO> tables = TableDAO.Instance.GetTableListAscending();
-            foreach(TableDTO table in tables)
+            List<FoodDTO> foodList = FoodDAO.Instance.GetListFood();
+            foreach (FoodDTO food in foodList)
             {
-                TableCard tableCard = new TableCard();
-                tableCard.SetText(table.ID, table.Status);
-                ListHolder.Children.Add(tableCard);
+                string category = CategoryDAO.Instance.GetCategoryByID(food.CategoryID);
+                int quantity = FoodDAO.Instance.GetOrderQuantityByID(food.Id);
+
+                MealCard meal = new MealCard();
+                meal.SetText(food.Name, category, food.Price, quantity);
+                ListHolder.Children.Add(meal);
             }
         }
-        private void IncludeTableListDescending()
-        {
-            ListHolder.Children.Clear();
-            List<TableDTO> tables = TableDAO.Instance.GetTableListDescending();
-            foreach (TableDTO table in tables)
-            {
-                TableCard tableCard = new TableCard();
-                tableCard.SetText(table.ID, table.Status);
-                ListHolder.Children.Add(tableCard);
-            }
-        }
-        private int tableButtonClickCount = 0;
-        private void TableSort(object sender, RoutedEventArgs eventArgs)
-        {
-            if (tableButtonClickCount % 2 == 0)
-            {
-                IncludeTableListDescending();
-            }
-            else
-            {
-                IncludeTableListAscending();
-            }
-            tableButtonClickCount++;
-        }
-        private void IncludeTableManager()
-        {
-            ManagerFieldHolder.Children.Add(new TableManager(TableSort));
-        }
+        #endregion
+
+        #region Account
         private void IncludeAccountManager()
         {
-            ManagerFieldHolder.Children.Add(new AccountManager());
+            ManagerFieldHolder.Children.Add(new AccountManager(Account_UserNameSort,Account_OwnerSort,Account_PositionSort));
         }
         private void IncludeAccountList()
         {
@@ -261,21 +230,156 @@ namespace QuanLyNhaHang
                 ListHolder.Children.Add(acc);
             }
         }
-        private void IncludeFoodList()
+
+        private void IncludeAccountListByUserName(string username)
         {
             ListHolder.Children.Clear();
-            List<FoodDTO> foodList = FoodDAO.Instance.GetListFood();
-            foreach (FoodDTO food in foodList)
-            {
-                string category = CategoryDAO.Instance.GetCategoryByID(food.CategoryID);
-                int quantity = FoodDAO.Instance.GetOrderQuantityByID(food.Id);
+            List<AccountDTO> accountList = AccountDAO.Instance.GetListAccountByUserName(username);
 
-                MealCard meal = new MealCard();
-                meal.SetText(food.Name, category, food.Price, quantity);
-                ListHolder.Children.Add(meal);
+            foreach (AccountDTO item in accountList)
+            {
+                /// <example>
+                /// StaffDTO staff= StaffDAO().Instance.GetInfoAccount(item.IDStaff);
+                /// AccountCard acc = new AccountCard();
+                /// acc.SetText(item.UserName, staff.Name, staff.Position);
+                /// </example>
+
+                AccountCard acc = new AccountCard();
+                acc.SetText(item.UserName, "me", 0);
+                ListHolder.Children.Add(acc);
             }
         }
+        private void IncludeAccount_PositionListAscending(string text)
+        {
+            ListHolder.Children.Clear();
+            List<AccountDTO> accounts = AccountDAO.Instance.GetAccount_PositionListAscending(text);
+            foreach (AccountDTO item in accounts)
+            {
+                /// <example>
+                /// StaffDTO staff= StaffDAO().Instance.GetInfoAccount(item.IDStaff);
+                /// AccountCard acc = new AccountCard();
+                /// acc.SetText(item.UserName, staff.Name, staff.Position);
+                /// </example>
 
+                AccountCard acc = new AccountCard();
+                acc.SetText(item.UserName, "me", 0);
+                ListHolder.Children.Add(acc);
+            }
+        }
+        private void IncludeAccount_PositionListDescending(string text)
+        {
+            ListHolder.Children.Clear();
+            List<AccountDTO> accounts = AccountDAO.Instance.GetAccount_PositionListDescending(text);
+            foreach (AccountDTO item in accounts)
+            {
+                /// <example>
+                /// StaffDTO staff= StaffDAO().Instance.GetInfoAccount(item.IDStaff);
+                /// AccountCard acc = new AccountCard();
+                /// acc.SetText(item.UserName, staff.Name, staff.Position);
+                /// </example>
+
+                AccountCard acc = new AccountCard();
+                acc.SetText(item.UserName, "me", 0);
+                ListHolder.Children.Add(acc);
+            }
+        }
+        private void IncludeAccount_UsernameListAscending(string text)
+        {
+            ListHolder.Children.Clear();
+            List<AccountDTO> accounts = AccountDAO.Instance.GetAccount_UsernameListAscending(text);
+            foreach (AccountDTO item in accounts)
+            {
+                /// <example>
+                /// StaffDTO staff= StaffDAO().Instance.GetInfoAccount(item.IDStaff);
+                /// AccountCard acc = new AccountCard();
+                /// acc.SetText(item.UserName, staff.Name, staff.Position);
+                /// </example>
+
+                AccountCard acc = new AccountCard();
+                acc.SetText(item.UserName, "me", 0);
+                ListHolder.Children.Add(acc);
+            }
+        }
+        private void IncludeAccount_UsernameListDescending(string text)
+        {
+            ListHolder.Children.Clear();
+            List<AccountDTO> accounts = AccountDAO.Instance.GetAccount_UsernameListDescending(text);
+            foreach (AccountDTO item in accounts)
+            {
+                /// <example>
+                /// StaffDTO staff= StaffDAO().Instance.GetInfoAccount(item.IDStaff);
+                /// AccountCard acc = new AccountCard();
+                /// acc.SetText(item.UserName, staff.Name, staff.Position);
+                /// </example>
+
+                AccountCard acc = new AccountCard();
+                acc.SetText(item.UserName, "me", 0);
+                ListHolder.Children.Add(acc);
+            }
+        }
+        private void IncludeAccount_OwnerListAscending(string text)
+        {
+            ListHolder.Children.Clear();
+            List<AccountDTO> accounts = AccountDAO.Instance.GetAccount_OwnerListAscending(text);
+            foreach (AccountDTO item in accounts)
+            {
+                /// <example>
+                /// StaffDTO staff= StaffDAO().Instance.GetInfoAccount(item.IDStaff);
+                /// AccountCard acc = new AccountCard();
+                /// acc.SetText(item.UserName, staff.Name, staff.Position);
+                /// </example>
+
+                AccountCard acc = new AccountCard();
+                acc.SetText(item.UserName, "me", 0);
+                ListHolder.Children.Add(acc);
+            }
+        }
+        private void IncludeAccount_OwnerListDescending(string text)
+        {
+            ListHolder.Children.Clear();
+            List<AccountDTO> accounts = AccountDAO.Instance.GetAccount_OwnerListDescending(text);
+            foreach (AccountDTO item in accounts)
+            {
+                /// <example>
+                /// StaffDTO staff= StaffDAO().Instance.GetInfoAccount(item.IDStaff);
+                /// AccountCard acc = new AccountCard();
+                /// acc.SetText(item.UserName, staff.Name, staff.Position);
+                /// </example>
+
+                AccountCard acc = new AccountCard();
+                acc.SetText(item.UserName, "me", 0);
+                ListHolder.Children.Add(acc);
+            }
+        }
+        #endregion
+
+        #region Table
+        private void IncludeTableListAscending()
+        {
+            ListHolder.Children.Clear();
+            List<TableDTO> tables = TableDAO.Instance.GetTableListAscending();
+            foreach (TableDTO table in tables)
+            {
+                TableCard tableCard = new TableCard();
+                tableCard.SetText(table.ID, table.Status);
+                ListHolder.Children.Add(tableCard);
+            }
+        }
+        private void IncludeTableListDescending()
+        {
+            ListHolder.Children.Clear();
+            List<TableDTO> tables = TableDAO.Instance.GetTableListDescending();
+            foreach (TableDTO table in tables)
+            {
+                TableCard tableCard = new TableCard();
+                tableCard.SetText(table.ID, table.Status);
+                ListHolder.Children.Add(tableCard);
+            }
+        }
+        private void IncludeTableManager()
+        {
+            ManagerFieldHolder.Children.Add(new TableManager(TableSort));
+        }
         private void IncludeTableList()
         {
             ListHolder.Children.Clear();
@@ -287,6 +391,87 @@ namespace QuanLyNhaHang
                 ListHolder.Children.Add(tableCard);
             }
         }
+        #endregion
+        #endregion
+
+        #region Sort
+        private void TableSort(object sender, RoutedEventArgs eventArgs)
+        {
+            if (tableButtonClickCount % 2 == 0)
+            {
+                IncludeTableListDescending();
+            }
+            else
+            {
+                IncludeTableListAscending();
+            }
+            tableButtonClickCount++;
+        }
+        private void CategoryNameSort(object sender, RoutedEventArgs e)
+        {
+            //categoryButtonClickCount % 2 == 0 : sort descending
+            //caegoryButtonClickCount % 2 != 0 : sort ascending
+            if (categoryButtonClickCount % 2 == 0)
+            {
+
+                IncludeCategoryListDescending(searchTxb.Text);
+            }
+            else
+            {
+                IncludeCategoryListAscending(searchTxb.Text);
+            }
+
+            categoryButtonClickCount++;
+        }
+
+        #region Account
+        private void Account_UserNameSort(object sender, RoutedEventArgs e)
+        {
+            //Account_UsernameButtonClickCount % 2 == 0 : sort descending
+            //Account_UsernameButtonClickCount % 2 != 0 : sort ascending
+            if (Account_UsernameButtonClickCount % 2 == 0)
+            {
+                IncludeAccount_UsernameListDescending(searchTxb.Text);
+            }
+            else
+            {
+                IncludeAccount_UsernameListAscending(searchTxb.Text);
+            }
+
+            Account_UsernameButtonClickCount++;
+        }
+        private void Account_OwnerSort(object sender, RoutedEventArgs e)
+        {
+            //Account_OwnerButtonClickCount % 2 == 0 : sort descending
+            //Account_OwnerButtonClickCount % 2 != 0 : sort ascending
+            if (Account_OwnerButtonClickCount % 2 == 0)
+            {
+                IncludeAccount_OwnerListDescending(searchTxb.Text);
+            }
+            else
+            {
+                IncludeAccount_OwnerListAscending(searchTxb.Text);
+            }
+
+            Account_OwnerButtonClickCount++;
+        }
+        private void Account_PositionSort(object sender, RoutedEventArgs e)
+        {
+            //Account_PositionButtonClickCount % 2 == 0 : sort descending
+            //Account_PositionButtonClickCount % 2 != 0 : sort ascending
+            if (Account_PositionButtonClickCount % 2 == 0)
+            {
+
+                IncludeAccount_PositionListDescending(searchTxb.Text);
+            }
+            else
+            {
+                IncludeAccount_PositionListAscending(searchTxb.Text);
+            }
+
+            Account_PositionButtonClickCount++;
+        }
+        #endregion
         #endregion
 
         private void DisableGridPrincipal()
@@ -308,11 +493,6 @@ namespace QuanLyNhaHang
 
         }
 
-        public void PieChar()
-        {
-            PointLabel = chartPoint => string.Format("{0}({1}:P)", chartPoint.Y, chartPoint.Participation);
-            DataContext = this;
-        }
         private void MoveCursorMenu(int index)
         {
             //TrainsitioningContentSlide.OnApplyTemplate();
@@ -367,21 +547,33 @@ namespace QuanLyNhaHang
                     case 3:
                         IncludeCategoryListByName(searchTxb.Text);
                         break;
+                    case 5:
+                        IncludeAccountListByUserName(searchTxb.Text);
+                        break;
                 }
             }
             else
             {
                 switch (index)
                 {
+                    case 1:
+                        SetStaffPage();
+                        break;
+                    case 2:
+                        SetMealPage();
+                        break;
                     case 3:
-                        
                         SetCategoryPage();
+                        break;
+                    case 4:
+                        SetTableManagerPage();
+                        break;
+                    case 5:
+                        SetAccountManagerPage();
                         break;
                 }
             }
         }
-
-
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -409,13 +601,20 @@ namespace QuanLyNhaHang
                     break;
             }
         }
-
-
         #endregion
 
         #region Field
         public Func<ChartPoint, string> PointLabel { get; set; }
 
+        private int categoryButtonClickCount = 0;
+
+        private int tableButtonClickCount = 0;
+
+        private int Account_UsernameButtonClickCount = 0;
+
+        private int Account_OwnerButtonClickCount = 0;
+
+        private int Account_PositionButtonClickCount = 0;
 
         #endregion
 

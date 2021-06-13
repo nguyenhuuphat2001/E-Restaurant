@@ -20,9 +20,57 @@ namespace QuanLyNhaHang
     /// </summary>
     public partial class AccountManager : UserControl
     {
-        public AccountManager()
+        public RoutedEventHandler eventSortByUsername;
+        public RoutedEventHandler eventSortByOwner;
+        public RoutedEventHandler eventSortByPosition;
+        public AccountManager(RoutedEventHandler eventSortByUsername, RoutedEventHandler eventSortByOwner, RoutedEventHandler eventSortByPosition)
         {
+            this.eventSortByUsername = eventSortByUsername;
+            this.eventSortByOwner = eventSortByOwner;
+            this.eventSortByPosition = eventSortByPosition;
             InitializeComponent();
         }
+
+        private void sortUsername_Click(object sender, RoutedEventArgs e)
+        {
+            ToggleIconStatus(buttonSortUsername);
+            if (eventSortByUsername != null)
+            {
+                eventSortByUsername(this, e);
+            }
+        }
+
+        private void sortOwner_Click(object sender, RoutedEventArgs e)
+        {
+            ToggleIconStatus(buttonSortOwner);
+            if (eventSortByOwner != null)
+            {
+                eventSortByOwner(this, e);
+            }
+        }
+
+        private void sortPosition_Click(object sender, RoutedEventArgs e)
+        {
+            ToggleIconStatus(buttonSortPosition);
+            if (eventSortByPosition != null)
+            {
+                eventSortByPosition(this, e);
+            }
+        }
+        private void ToggleIconStatus(MaterialDesignThemes.Wpf.PackIcon btn)
+        {
+            if (btn.Kind == MaterialDesignThemes.Wpf.PackIconKind.ArrowBottom)
+            {
+                btn.Kind = MaterialDesignThemes.Wpf.PackIconKind.ArrowTop;
+                btn.Foreground = Brushes.Green;
+            }
+            else
+            {
+                btn.Kind = MaterialDesignThemes.Wpf.PackIconKind.ArrowBottom;
+                btn.Foreground = Brushes.Red;
+            }
+        }
+
+        
     }
 }

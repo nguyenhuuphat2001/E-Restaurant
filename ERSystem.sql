@@ -90,8 +90,6 @@ CREATE TABLE BillInfo
 	FOREIGN KEY (idBill) REFERENCES dbo.Bill(id),
 	FOREIGN KEY (idFood) REFERENCES dbo.Food(id)
 )
-select ISNULL(sum(bf.count),0) OrderQuantity  from BillInfo bf, Food f where bf.idFood = f.id
-
 GO
 
 --Thêm NV
@@ -113,8 +111,6 @@ VALUES
     0     -- position - int
     )
 GO
-
-
 
 INSERT INTO dbo.Staff
 (
@@ -322,6 +318,7 @@ VALUES  ( 3, -- idBill - int
           2  -- count - int
           )   
 GO
+
 --Procedure
 CREATE PROC USP_Login
 @userName varchar(100), @passWord varchar(100)
@@ -341,39 +338,3 @@ BEGIN
 	WHERE UserName = @userName COLLATE SQL_Latin1_General_CP1_CS_AS
 END
 GO
-
-select * from Food
-
-select * from Bill
-
-select * from BillInfo
-
-select * from TableFood tf order by tf.status asc
-update TableFood set TableFood.status = 'Using' where id = 1
-select b.id , sum(bf.count*f.price) as price
-from BillInfo bf, Bill b, food f
-where b.id = bf.idBill and f.id = bf.idFood and b.status = 1 and month(b.DateCheckIn) = 5
-group by b.id, bf.idFood
-
-select * from TableFood
-select * from BillInfo
-select * from Bill
----Lay tong so bill trong thang
-select b.id , sum(bf.count*f.price) as price,b.status
-INTO #SumBill
-from BillInfo bf, Bill b, food f
-where b.id = bf.idBill and f.id = bf.idFood and b.status = 1 and month(b.DateCheckIn) = 6
-group by b.id, bf.idFood,b.status
-SELECT SUM(price) AS TotalPrice  FROM #SumBill 
-	
-select * from Bill
-
-
-	SELECT f.name, bf.count,f.price, f.price*bf.count as totalPrice 
-	from BillInfo as bf, Bill as b , Food as f 
-	where b.id = bf.idBill and f.id = bf.idFood and b.status = 1 and month(b.DateCheckIn) = 6 and year(b.DateCheckIn) = 2021
-	group by f.name, bf.count, f.price
-
-select * from FoodCategory fc
-order by fc.name asc
-
