@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyNhaHang.DAO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -50,5 +51,34 @@ namespace QuanLyNhaHang
             tbkName.Text = name.ToString();
             tbkStatus.Text = status;
         }
+
+        private void addButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private event EventHandler deleteTable;
+        public event EventHandler DeleteTable
+        {
+            add { DeleteTable += value; }
+    remove { DeleteTable -= value; }
+        }
+
+        private void deleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            int id = Int32.Parse(tbkName.Text);
+            if (TableDAO.Instance.DeleteTable(id))
+            {
+                MessageBox.Show("Thành công");
+                if (deleteTable != null)
+                    deleteTable(this, new EventArgs());
+            }
+            else
+            {
+                MessageBox.Show("Không thành công");
+            }
+        }
+
     }
 }
+
+

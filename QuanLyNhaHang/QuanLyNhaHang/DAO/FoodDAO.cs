@@ -74,9 +74,9 @@ namespace QuanLyNhaHang.DAO
             return list;
         }
 
-        public bool AddMeal(string name, int id, float price)
+        public bool AddMeal(string name,int idCategory, float price)
         {
-            string query = string.Format("INSERT dbo.Food ( name, idCategory, price ) VALUES  ( N'{0}', {1}, {2})", name, id, price);
+            string query = string.Format("INSERT dbo.Food ( name,idCategory, price ) VALUES  ( N'{0}', {1},{2})", name,idCategory, price);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;
@@ -90,12 +90,19 @@ namespace QuanLyNhaHang.DAO
             return result > 0;
         }
 
-        public bool DeleteMeal(int idFood)
+        public bool DeleteMeal(string name)
         {
-            string query = string.Format("Delete Food where id = {0}", idFood);
+            string query = string.Format("Delete FROM Food where Food.name = N'{0}'",name);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;
+        }
+
+        public int GetIDFoodByName(string name)
+        {
+            string query = string.Format("Select food.id from Food where food.name = N'{0}'", name);
+            int id = DataProvider.Instance.ExecuteNonQuery(query);
+            return id;
         }
     }
 }

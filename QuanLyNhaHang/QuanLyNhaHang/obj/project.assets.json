@@ -596,19 +596,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Asus\\.nuget\\packages\\": {}
+    "C:\\Users\\Xuan Thai\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Asus\\Downloads\\Git\\E-Restaurant\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang.csproj",
+      "projectUniqueName": "C:\\Users\\Xuan Thai\\Downloads\\Github Repo\\E-Restaurant\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang.csproj",
       "projectName": "QuanLyNhaHang",
-      "projectPath": "C:\\Users\\Asus\\Downloads\\Git\\E-Restaurant\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang.csproj",
-      "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Asus\\Downloads\\Git\\E-Restaurant\\QuanLyNhaHang\\QuanLyNhaHang\\obj\\",
+      "projectPath": "C:\\Users\\Xuan Thai\\Downloads\\Github Repo\\E-Restaurant\\QuanLyNhaHang\\QuanLyNhaHang\\QuanLyNhaHang.csproj",
+      "packagesPath": "C:\\Users\\Xuan Thai\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Xuan Thai\\Downloads\\Github Repo\\E-Restaurant\\QuanLyNhaHang\\QuanLyNhaHang\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Xuan Thai\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -665,7 +665,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   },

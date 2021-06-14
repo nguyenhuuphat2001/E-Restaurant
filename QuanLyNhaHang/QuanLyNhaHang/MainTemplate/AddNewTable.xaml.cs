@@ -29,8 +29,10 @@ namespace QuanLyNhaHang.MainTemplate
         private void btnConfirm_Click(object sender, RoutedEventArgs e)
         {
             {
+                int id = Int32.Parse(txtTableID.Text);
                 string name = txtNameTable.Text;
-                if (TableDAO.Instance.AddTable(name))
+                string status = txtTableStatus.Text;
+                if (TableDAO.Instance.AddTable(name,status))
                 {
                     MessageBox.Show("Add new category succesfully");
 
