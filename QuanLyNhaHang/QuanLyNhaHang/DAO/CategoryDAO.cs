@@ -130,7 +130,7 @@ namespace QuanLyNhaHang.DAO
 
         public int GetIDCategoryByName(string name)
         {
-            string query = string.Format("select fc.id from FoodCategory fc where fc.name = " + name);
+            string query = string.Format("select FoodCategory.id from FoodCategory where FoodCategory.name = N'{0}'", name);
             int id = DataProvider.Instance.ExecuteNonQuery(query);
             return id;
         }

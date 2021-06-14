@@ -35,6 +35,10 @@ CREATE TABLE TableFood
 	status VARCHAR(100) NOT NULL DEFAULT 'Empty'	-- Empty || Using
 )
 GO
+SET IDENTITY_INSERT TableFood On
+INSERT TableFood (id,name,status) VALUES (1,'Năm','Trống')
+INSERT TableFood (id,name,status) VALUES (2,'BA','Full')
+
 
 CREATE TABLE FoodCategory
 (
@@ -53,9 +57,24 @@ CREATE TABLE Food
 	name NVARCHAR(100) NOT NULL DEFAULT N'No name',
 	idCategory INT NOT NULL,
 	price FLOAT NOT NULL DEFAULT 0
-	
-	FOREIGN KEY (idCategory) REFERENCES dbo.FoodCategory(id)
 )
+
+SELECT * FROM Food
+SELECT * FROM FoodCategory
+
+	ALTER TABLE Food 
+	ADD CONSTRAINT FK_idCategory
+	FOREIGN KEY (idCategory) 
+	REFERENCES FoodCategory (id)
+
+
+select FoodCategory.id from FoodCategory where FoodCategory.name = N'Nước'
+
+
+INSERT dbo.Food ( name, idCategory, price )
+VALUES  ( N'Mojt', 9, 12000)
+
+set IDENTITY_INSERT Food OFF
  
 CREATE TABLE Book
 (
@@ -218,6 +237,9 @@ INSERT dbo.FoodCategory ( name )
 VALUES  ( N'Nước' )
 GO
 
+
+
+
 -- thêm món ăn
 INSERT dbo.Food ( name, idCategory, price )
 VALUES  ( N'Mực một nắng nước sa tế', 1 , 120000)
@@ -234,6 +256,11 @@ VALUES  ( N'7Up', 4, 15000)
 INSERT dbo.Food ( name, idCategory, price )
 VALUES  ( N'Cafe', 4, 12000)
 GO
+
+Select food.id from Food where food.name = 'Cafe'
+Delete from Food where food.id = 17
+
+INSERT TableFood (name,id,status)
 
 --Thêm bàn
 DECLARE @i INT = 1

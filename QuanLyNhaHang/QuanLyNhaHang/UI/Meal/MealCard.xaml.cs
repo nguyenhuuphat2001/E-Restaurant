@@ -91,12 +91,34 @@ namespace QuanLyNhaHang
             remove { editMeal -= value; }
         }
 
-        private void deleteIcon_ContextMenuClosing(object sender, ContextMenuEventArgs e)
-        {
-            //Fix: get IDfood by name, idCategory first then delete 
-            int id = 1;
+        //private void deleteIcon_ContextMenuClosing(object sender, ContextMenuEventArgs e)
+        //{
+        //    //Fix: get IDfood by name, idCategory first then delete 
+        //    int id = 1;
 
-            if (FoodDAO.Instance.DeleteMeal(id))
+        //    if (FoodDAO.Instance.DeleteMeal(id))
+        //    {
+        //        MessageBox.Show("Thành công");
+        //        if (deleteMeal != null)
+        //            deleteMeal(this, new EventArgs());
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Không thành công");
+        //    }
+        //}
+
+        private event EventHandler deleteMeal;
+        public event EventHandler DeleteMeal
+        {
+            add { DeleteMeal += value; }
+            remove { DeleteMeal -= value; }
+        }
+
+        private void deleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            string name = mealName.Text;
+            if (FoodDAO.Instance.DeleteMeal(name))
             {
                 MessageBox.Show("Thành công");
                 if (deleteMeal != null)
@@ -106,13 +128,6 @@ namespace QuanLyNhaHang
             {
                 MessageBox.Show("Không thành công");
             }
-        }
-
-        private event EventHandler deleteMeal;
-        public event EventHandler DeleteMeal
-        {
-            add { DeleteMeal += value; }
-            remove { DeleteMeal -= value; }
         }
     }
 }
