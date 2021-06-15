@@ -11,33 +11,37 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Microsoft.Win32;
 using QuanLyNhaHang.DAO;
 using QuanLyNhaHang.DTO;
 
-namespace QuanLyNhaHang
+namespace QuanLyNhaHang.MainTemplate
 {
     /// <summary>
-    /// Interaction logic for AddNewMeal.xaml
+    /// Interaction logic for EditMeal.xaml
     /// </summary>
-    public partial class AddNewMeal : Window
+    public partial class EditMeal : Window
     {
-        public AddNewMeal()
+        public EditMeal()
         {
             InitializeComponent();
             LoadCategory();
         }
-
-
-
-        #region events
+        private event EventHandler editMeal;
+        public event EventHandler editmeal
+        {
+            add { editMeal += value; }
+            remove { editMeal -= value; }
+        }
         private void btnConfirm_Click(object sender, RoutedEventArgs e)
         {
+
+            
+         
+
             string name = txtNameMeal.Text;
+            int categoryID = 2;
             string category = cmbCategory.Text;
-            //int categoryID = CategoryDAO.Instance.GetIDCategoryByName(category);
             float price = float.Parse(txtPriceMeal.Text);
-            int categoryID = 1 ;
             switch (category)
             {
                 case "Hải sản":
@@ -55,66 +59,30 @@ namespace QuanLyNhaHang
                 default:
                     break;
             }
-          
 
-            if (FoodDAO.Instance.AddMeal(name,categoryID, price))
+
+            if (FoodDAO.Instance.EditMeal(name, categoryID, price))
             {
                 MessageBox.Show("Thành công");
- 
-                if (addMeal != null)
-                    addMeal(this, new EventArgs());
-                
+                if (editMeal != null)
+                    editMeal(this, new EventArgs());
             }
             else
             {
                 MessageBox.Show("Không thành công");
             }
         }
+
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
-        private event EventHandler addMeal;
-        public event EventHandler AddMeal
-        {
-            add { addMeal += value; }
-            remove { addMeal -= value; }
-        }
 
-
-
-
-
-
-        #endregion
-
-        #region Method
         void LoadCategory()
         {
             List<CategoryDTO> listCategory = CategoryDAO.Instance.GetListCategory();
             cmbCategory.ItemsSource = listCategory;
             cmbCategory.DisplayMemberPath = "Name";
-        }
-
-        #endregion
-
-        private void ChooseImageButton_Click(object sender, RoutedEventArgs e)
-        {
-            string link="";
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Image files (*.png;*.jpeg)|*.png;*.jpeg|All files (*.*)|*.*";
-            openFileDialog.ShowDialog();
-            bool? diaglogOK = openFileDialog.ShowDialog();
-            if (diaglogOK == true)
-            {
-                link = openFileDialog.FileName;
-
-                Image.Source = new BitmapImage(new Uri(link));
-                Imageicon.Visibility = Visibility.Hidden;
-
-                
-            }   
-
         }
     }
 }

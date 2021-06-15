@@ -82,9 +82,9 @@ namespace QuanLyNhaHang.DAO
             return result > 0;
         }
 
-        public bool EditMeal(int idFood, string name, int idCategory, float price)
+        public bool EditMeal(string name, int idCategory, float price)
         {
-            string query = string.Format("UPDATE dbo.Food SET name = N'{0}', price = {1}, idCategory={2} WHERE id = {3}", name, price, idCategory, idFood);
+            string query = string.Format("UPDATE dbo.Food SET price = {0}, idCategory={1} WHERE name = N'{2}'", price, idCategory, name);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;
