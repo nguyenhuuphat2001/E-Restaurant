@@ -72,7 +72,7 @@ namespace QuanLyNhaHang
             float price = float.Parse(mealPrice.Text);
 
 
-            if (FoodDAO.Instance.EditMeal(id, name, categoryID, price))
+            if (FoodDAO.Instance.EditMeal( name, categoryID, price))
             {
                 MessageBox.Show("Thành công");
                 if (editMeal != null)
