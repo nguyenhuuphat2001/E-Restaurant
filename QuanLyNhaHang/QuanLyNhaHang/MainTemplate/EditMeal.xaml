@@ -1,16 +1,16 @@
-﻿<Window x:Class="QuanLyNhaHang.AddNewMeal"
+﻿<Window x:Class="QuanLyNhaHang.MainTemplate.EditMeal"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:QuanLyNhaHang"
+        xmlns:local="clr-namespace:QuanLyNhaHang.MainTemplate"
         mc:Ignorable="d"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="AddNewMeal" Height="400" Width="900" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" >
+           xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="EditMeal" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="76*"></ColumnDefinition>
-            <ColumnDefinition Width="149*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Button x:Name="ChooseImageButton"
                 Style="{StaticResource MaterialDesignRaisedLightButton}"
@@ -18,7 +18,7 @@
                 materialDesign:ButtonAssist.CornerRadius="5"
                 ToolTip="MaterialDesignRaisedLightButton with Round Corners" 
                 Margin="60,217,60,0"
-                VerticalAlignment="Top" Background="#FFF38413" Click="ChooseImageButton_Click">
+                VerticalAlignment="Top" Background="#FFF38413">
             <TextBlock Text="Select Image" FontWeight="Bold" FontSize="10" Foreground="White" />
         </Button>
         <Grid x:Name="gridImage"
@@ -127,7 +127,6 @@
                         </ItemsPanelTemplate>
                     </ComboBox.ItemsPanel>
                 </ComboBox>
-
             </Grid>
             <Label
                 x:Name="lbPriceMeal"    Content="Price"     Grid.Row="2"
