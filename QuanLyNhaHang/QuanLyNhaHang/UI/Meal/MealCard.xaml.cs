@@ -16,6 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using QuanLyNhaHang.DAO;
 using QuanLyNhaHang.DTO;
+using QuanLyNhaHang.MainTemplate;
 
 namespace QuanLyNhaHang
 {
@@ -24,6 +25,14 @@ namespace QuanLyNhaHang
     /// </summary>
     public partial class MealCard : UserControl
     {
+        private string nameFood;
+
+        public string NameFood
+        {
+            get { return nameFood; }
+            set { nameFood = value; }
+        }
+
         public MealCard()
         {
             InitializeComponent();
@@ -64,32 +73,16 @@ namespace QuanLyNhaHang
 
         private void addButton_Click(object sender, RoutedEventArgs e)
         {
-            int id = 1;
-
-            string name = mealName.Text;
-            int categoryID = 0;
-            string category = mealCategory.Text;
-            float price = float.Parse(mealPrice.Text);
-
-
-            if (FoodDAO.Instance.EditMeal(id, name, categoryID, price))
-            {
-                MessageBox.Show("Thành công");
-                if (editMeal != null)
-                    editMeal(this, new EventArgs());
-            }
-            else
-            {
-                MessageBox.Show("Không thành công");
-            }
+            nameFood = mealName.Text;
+         
+            EditMeal editmeal = new EditMeal();
+            editmeal.txtNameMeal.Text = nameFood;
+            editmeal.ShowDialog();
+            
+           
         }
 
-        private event EventHandler editMeal;
-        public event EventHandler EditMeal
-        {
-            add { editMeal += value; }
-            remove { editMeal -= value; }
-        }
+
 
         //private void deleteIcon_ContextMenuClosing(object sender, ContextMenuEventArgs e)
         //{

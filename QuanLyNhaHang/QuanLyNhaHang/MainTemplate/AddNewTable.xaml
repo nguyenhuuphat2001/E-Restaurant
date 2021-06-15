@@ -78,68 +78,12 @@
                     VerticalContentAlignment="Center"   VerticalAlignment="Center" 
                     FontWeight="Bold" />
             </Grid>
-            <Label
-                x:Name="lbCategory"     Content="ID"      Grid.Row="1"
-                HorizontalAlignment="{Binding HorizontalAlignment, ElementName=lbNameMeal}" 
-                VerticalAlignment="{Binding VerticalAlignment, ElementName=lbNameMeal}"
-                Foreground="{Binding Foreground, ElementName=lbNameMeal}" 
-                FontSize="{Binding FontSize, ElementName=lbNameMeal}"
-                FontWeight="{Binding FontWeight, ElementName=lbNameMeal}"/>
             <Grid 
                 x:Name="grdCategory1"    Margin="{Binding Margin, ElementName=grdNameMeal}"
-                Grid.Column="1"         Grid.Row="1">
-                <Rectangle x:Name="recCategory"
-                           Height="{Binding ActualHeight, ElementName=recNameMeal}"
-                           Width="{Binding ActualWidth, ElementName=recNameMeal}"
-                           RadiusX="{Binding RadiusX, ElementName=recNameMeal}"
-                           RadiusY="{Binding RadiusY, ElementName=recNameMeal}"
-                           Stroke="{Binding Stroke, ElementName=recNameMeal}"        
-                           Margin="{Binding Margin, ElementName=recNameMeal}"
-                           HorizontalAlignment="{Binding HorizontalAlignment, ElementName=recNameMeal}"/>
-                <TextBox 
-                    x:Name="txtTableID"
-                    materialDesign:HintAssist.Hint="Table's ID"
-                    Width="{Binding ActualWidth, ElementName=txtNameMeal}" 
-                    Height="{Binding ActualHeight, ElementName=txtNameMeal}" 
-                    FontSize="{Binding FontSize, ElementName=txtNameMeal}"
-                    BorderThickness="{Binding BorderThickness, ElementName=txtNameMeal}" 
-                    MaxLines="{Binding MaxLines, ElementName=txtNameMeal}"        
-                    SelectionBrush="{x:Null}" 
-                    HorizontalContentAlignment="{Binding HorizontalContentAlignment, ElementName=txtNameMeal}" 
-                    VerticalContentAlignment="{Binding VerticalContentAlignment, ElementName=txtNameMeal}" 
-                    FontWeight="Bold" Margin="0,10,0,10"/>
-
-            </Grid>
-            <Label
-                x:Name="lbPriceMeal"    Content="Status"     Grid.Row="2"
-                HorizontalAlignment="{Binding HorizontalAlignment, ElementName=lbNameMeal}" 
-                VerticalAlignment="{Binding VerticalAlignment, ElementName=lbNameMeal}"
-                Foreground="{Binding Foreground, ElementName=lbNameMeal}" 
-                FontSize="{Binding FontSize, ElementName=lbNameMeal}"
-                FontWeight="{Binding FontWeight, ElementName=lbNameMeal}"/>
+                Grid.Column="1"         Grid.Row="1"/>
             <Grid 
                 x:Name="grdPriceMeal"   Grid.Column="1"     Grid.Row="2"
-                Margin="{Binding Margin, ElementName=grdNameMeal}">
-                <Rectangle x:Name="recPriceMeal"
-                           Height="{Binding ActualHeight, ElementName=recNameMeal}"
-                           Width="{Binding ActualWidth, ElementName=recNameMeal}"
-                           RadiusX="{Binding RadiusX, ElementName=recNameMeal}"
-                           RadiusY="{Binding RadiusY, ElementName=recNameMeal}"
-                           Stroke="{Binding Stroke, ElementName=recNameMeal}"        
-                           HorizontalAlignment="{Binding HorizontalAlignment, ElementName=recNameMeal}"/>
-                <TextBox 
-                    x:Name="txtTableStatus"
-                    materialDesign:HintAssist.Hint="Table's status"
-                    Width="{Binding ActualWidth, ElementName=txtNameMeal}" 
-                    Height="{Binding ActualHeight, ElementName=txtNameMeal}" 
-                    FontSize="{Binding FontSize, ElementName=txtNameMeal}"
-                    BorderThickness="{Binding BorderThickness, ElementName=txtNameMeal}" 
-                    MaxLines="{Binding MaxLines, ElementName=txtNameMeal}"        
-                    SelectionBrush="{x:Null}" 
-                    HorizontalContentAlignment="{Binding HorizontalContentAlignment, ElementName=txtNameMeal}" 
-                    VerticalContentAlignment="{Binding VerticalContentAlignment, ElementName=txtNameMeal}" 
-                    FontWeight="{Binding FontWeight, ElementName=txtNameMeal}" Margin="0,10,0,10"/>
-            </Grid>
+                Margin="{Binding Margin, ElementName=grdNameMeal}"/>
             <Grid x:Name="grdSelection" 
                   Width="{Binding ActualWidth, ElementName=recNameMeal}"
                   Margin="{Binding Margin, ElementName=grdNameMeal}"

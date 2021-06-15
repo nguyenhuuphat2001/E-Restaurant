@@ -70,9 +70,9 @@ namespace QuanLyNhaHang.DAO
             string query = "UPDATE TableFood SET TableFood.status = 'Using' where EXISTS (SELECT * from Bill where TableFood.id = Bill.idTable and Bill.status = 0)";
             DataProvider.Instance.ExecuteNonQuery(query);
         }
-        public bool AddTable(string name,string status)
+        public bool AddTable(string name)
         {
-            string query = string.Format("INSERT TableFood (name,status) VALUES ('{0}','{1}')", name, status);
+            string query = string.Format("INSERT TableFood (name) VALUES ('{0}')", name);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
