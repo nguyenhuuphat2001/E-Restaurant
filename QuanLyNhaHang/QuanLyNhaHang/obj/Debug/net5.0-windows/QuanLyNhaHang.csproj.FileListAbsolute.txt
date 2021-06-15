@@ -1132,3 +1132,4 @@ C:\Users\Xuan Thai\Downloads\Github Repo\E-Restaurant\QuanLyNhaHang\QuanLyNhaHan
 C:\Users\Xuan Thai\Downloads\Github Repo\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\ModifyCategory.baml
 C:\Users\Xuan Thai\Downloads\Github Repo\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\UI\Meal\MealButton.baml
 >>>>>>> 9fcd4c9d52bf2e4f8adc8c9cd39fd24445f86640
+E:\DOAN\E-Restaurant\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\net5.0-windows\MainTemplate\EditMeal.g.cs
