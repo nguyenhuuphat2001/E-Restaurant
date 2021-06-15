@@ -6,10 +6,14 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:QuanLyNhaHang"
              mc:Ignorable="d" 
+              x:Name="ucTalble"
+             DataContext="{StaticResource tbVM}"
              Height="Auto" Width="Auto">
     <Grid Margin="5">
         <Button x:Name="btnTable" materialDesign:ButtonAssist.CornerRadius="20" 
-                Height="70" Width="100">
+                Height="70" Width="100"
+                 Command="{Binding LoadCommand}"
+                CommandParameter="{Binding ElementName=ucTalble}">
             <StackPanel Orientation="Vertical">
                 <TextBlock x:Name="tableName" Text="Table 1" Foreground="Black" FontWeight="Bold" HorizontalAlignment="Center"/>
                 <TextBlock x:Name="tableStatus" Text="Reserved" Foreground="Black" FontWeight="Bold" HorizontalAlignment="Center"/>

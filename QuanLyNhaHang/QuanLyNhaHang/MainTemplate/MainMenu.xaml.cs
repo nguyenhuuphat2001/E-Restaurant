@@ -15,6 +15,7 @@ using LiveCharts;
 using LiveCharts.Wpf;
 using QuanLyNhaHang.DAO;
 using QuanLyNhaHang.DTO;
+using QuanLyNhaHang.MainTemplate;
 
 namespace QuanLyNhaHang
 {
@@ -597,7 +598,8 @@ namespace QuanLyNhaHang
                     modifyCategory.ShowDialog();
                     break;
                 case 4:
-                    //AddNewTable
+                    AddNewTable addNewTable = new AddNewTable();
+                    addNewTable.ShowDialog();
                     break;
             }
         }

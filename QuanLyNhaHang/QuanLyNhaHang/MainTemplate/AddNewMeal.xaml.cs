@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Microsoft.Win32;
 using QuanLyNhaHang.DAO;
 using QuanLyNhaHang.DTO;
 
@@ -33,11 +34,30 @@ namespace QuanLyNhaHang
         private void btnConfirm_Click(object sender, RoutedEventArgs e)
         {
             string name = txtNameMeal.Text;
-            string category = cmbCategory.SelectedItem.ToString();
-            int categoryID = CategoryDAO.Instance.GetIDCategoryByName(category);
+            string category = cmbCategory.Text;
+            //int categoryID = CategoryDAO.Instance.GetIDCategoryByName(category);
             float price = float.Parse(txtPriceMeal.Text);
+            int categoryID = 1 ;
+            switch (category)
+            {
+                case "Hải sản":
+                    categoryID = 1;
+                    break;
+                case "Lâm sản":
+                    categoryID = 3;
+                    break;
+                case "Nông sản":
+                    categoryID = 2;
+                    break;
+                case "Nước":
+                    categoryID = 4;
+                    break;
+                default:
+                    break;
+            }
+          
 
-            if (FoodDAO.Instance.AddMeal(name, categoryID, price))
+            if (FoodDAO.Instance.AddMeal(name,categoryID, price))
             {
                 MessageBox.Show("Thành công");
                 if (addMeal != null)
@@ -48,16 +68,10 @@ namespace QuanLyNhaHang
                 MessageBox.Show("Không thành công");
             }
         }
-
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
-
-
-
-
-
         private event EventHandler addMeal;
         public event EventHandler AddMeal
         {
@@ -78,8 +92,26 @@ namespace QuanLyNhaHang
             cmbCategory.ItemsSource = listCategory;
             cmbCategory.DisplayMemberPath = "Name";
         }
+
         #endregion
 
+        private void ChooseImageButton_Click(object sender, RoutedEventArgs e)
+        {
+            string link="";
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image files (*.png;*.jpeg)|*.png;*.jpeg|All files (*.*)|*.*";
+            openFileDialog.ShowDialog();
+            bool? diaglogOK = openFileDialog.ShowDialog();
+            if (diaglogOK == true)
+            {
+                link = openFileDialog.FileName;
 
+                Image.Source = new BitmapImage(new Uri(link));
+                Imageicon.Visibility = Visibility.Hidden;
+
+                
+            }   
+
+        }
     }
 }

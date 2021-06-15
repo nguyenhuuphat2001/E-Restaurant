@@ -34,6 +34,7 @@ namespace QuanLyNhaHang
             LoadTable();
             LoadCategory();
             LoadFoodList();
+            LoadCbTable();
         }
         private void LoadTable()
         {
@@ -59,18 +60,12 @@ namespace QuanLyNhaHang
         }
         private void LoadFoodList()
         {
-            wpFood.Children.Clear();
-
             List<FoodDTO> foodList = FoodDAO.Instance.GetListFood();
-            foreach (FoodDTO food in foodList)
-            {
-                MealButton foodBTN = new MealButton();
-                foodBTN.SetName(food.Name);
-                wpFood.Children.Add(foodBTN);
-            }
+            cbFood.ItemsSource = foodList;
+            cbFood.DisplayMemberPath = "Name";
 
         }
-        void LoadCategory()
+        private void LoadCategory()
         {
             List<CategoryDTO> listCategory = CategoryDAO.Instance.GetListCategory();
             cbCategory.ItemsSource = listCategory;
@@ -78,17 +73,41 @@ namespace QuanLyNhaHang
         }
         private void LoadFoodListByCategory(int id)
         {
-            wpFood.Children.Clear();
 
             List<FoodDTO> listFoodByCategory = FoodDAO.Instance.GetFoodByCategoryID(id);
 
-            foreach (FoodDTO food in listFoodByCategory)
-            {
-                MealButton foodBTN = new MealButton();
-                foodBTN.SetName(food.Name);
-                wpFood.Children.Add(foodBTN);
-            }
+            cbFood.ItemsSource = listFoodByCategory;
+            cbFood.DisplayMemberPath = "Name";
         }
+        private void LoadMealStatus(int tableID)
+        {
+            float price=0;
+            List<MealStatusDTO> listBillInfo = MealStatusDAO.Instance.GetListMealStatuses(tableID);
+
+            spmealstatus.Children.Clear();
+
+            foreach (MealStatusDTO item in listBillInfo)
+            {
+                MealStatusCard card = new MealStatusCard();
+                card.Tag = item;
+                card.SetText(item.Foodname, item.Count, item.Description, item.Status);
+                spmealstatus.Children.Add(card);
+            }
+            List<BillInfoDTO> listBill = BillInfoDAO.Instance.GetListMenuByTable(tableID);
+            foreach (BillInfoDTO bill in listBill)
+            {
+                price += bill.TotalPrice;
+            }
+
+            Price.Text = price.ToString() + " VND";
+        }
+        private void LoadCbTable()
+        {
+            List<TableDTO> tableList = TableDAO.Instance.GetTableList();
+            ucCbTable.cbTable.ItemsSource = tableList;
+            ucCbTable.cbTable.DisplayMemberPath = "Name";
+        }
+
         #endregion
 
         #region event
@@ -100,8 +119,88 @@ namespace QuanLyNhaHang
         }
         private void exportBillBtn_Click(object sender, RoutedEventArgs e)
         {
-            BillTemplate bill = new BillTemplate();
-            bill.Show();
+            TableDTO table = spmealstatus.Tag as TableDTO;
+            int idBill = BillDAO.Instance.GetUncheckBillIDByTableID(table.ID);
+            int dis;
+            try
+            {
+                dis = Int16.Parse(discount.discountTextBox.Text);
+            }
+            catch
+            {
+                dis = 0;
+            }
+            
+
+            if (idBill != -1)
+            {
+                MessageBox.Show("Do you want check out bill for " + table.Name, "Notify");                
+                BillTemplate bill = new BillTemplate(table.iD);
+                bill.Show();
+                BillDAO.Instance.CheckOut(idBill);
+            }
+            MealStatusDAO.Instance.DeleteMealStatusByTable(table.ID);
+            spmealstatus.Children.Clear();
+            LoadTable();
+           
+        }
+        private void confirmBtn_Click(object sender, RoutedEventArgs e)
+        {
+            TableDTO table = spmealstatus.Tag as TableDTO;
+            int idBill = BillDAO.Instance.GetUncheckBillIDByTableID(table.iD);
+            int idFood = (cbFood.SelectedItem as FoodDTO).id;
+            int count = Int16.Parse(txbQuantity.Text);
+
+            if (idBill == -1)
+            {
+                BillDAO.Instance.InsertBill(table.ID);               
+                BillInfoDAO.Instance.InsertBillInfo(BillDAO.Instance.GetMaxIDBill(), idFood, count);
+                int idBillInfo = BillInfoDAO.Instance.GetBillInfo(BillDAO.Instance.GetMaxIDBill(), idFood);
+                MealStatusDAO.Instance.InsertMealStatus(idBillInfo, addtionalNoteTextbox.Text);
+            }
+            else
+            {
+                int idBillInfo = BillInfoDAO.Instance.GetBillInfo(idBill, idFood);
+
+                if (idBillInfo == -1)
+                {
+                    BillInfoDAO.Instance.InsertBillInfo(idBill, idFood, count);
+                    idBillInfo = BillInfoDAO.Instance.GetBillInfo(idBill, idFood);
+                    MealStatusDAO.Instance.InsertMealStatus(idBillInfo, addtionalNoteTextbox.Text);
+                }
+                else
+                {
+                    int countFood = BillInfoDAO.Instance.GetCount(idBillInfo) + count;
+                    if(countFood>0)
+                    {
+                        BillInfoDAO.Instance.InsertBillInfo(idBill, idFood, count);
+                        MealStatusDAO.Instance.UpdateDes(idBillInfo, addtionalNoteTextbox.Text);
+                    }
+                    else
+                    {
+                        MealStatusDAO.Instance.DeleteMealStatusByBillInfo(idBillInfo);
+                        BillInfoDAO.Instance.InsertBillInfo(idBill, idFood, count);
+                    }
+                }
+                
+            }
+            LoadMealStatus(table.iD);
+            LoadTable();
+        }
+        private void applyDiscountBtn_Click(object sender, RoutedEventArgs e)
+        {
+            TableDTO table = spmealstatus.Tag as TableDTO;
+            int idBill = BillDAO.Instance.GetUncheckBillIDByTableID(table.ID);
+            int dis;
+            try
+            {
+                dis = Int16.Parse(discount.discountTextBox.Text);
+            }
+            catch
+            {
+                dis = 0;
+            }
+            BillDAO.Instance.UpdateDiscount(idBill, dis);
         }
         private void cbCategory_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -116,6 +215,19 @@ namespace QuanLyNhaHang
             id = selected.Id;
 
             LoadFoodListByCategory(id);
+
+        }
+        private void changeTableBtn_Click(object sender, RoutedEventArgs e)
+        {
+            TableDTO table = spmealstatus.Tag as TableDTO;
+            int id1 = BillDAO.Instance.GetUncheckBillIDByTableID(table.ID);
+
+            int id2 = (ucCbTable.cbTable.SelectedItem as TableDTO).ID;
+
+            MessageBox.Show(string.Format("Bạn có thật sự muốn chuyển bàn {0} qua bàn {1}", table.Name, (ucCbTable.cbTable.SelectedItem as TableDTO).Name), "Notify");
+            TableDAO.Instance.SwitchTable(table.iD, id2);
+
+            LoadTable();
 
         }
         private void cbFood_SelectionChanged(object sender, SelectionChangedEventArgs e)

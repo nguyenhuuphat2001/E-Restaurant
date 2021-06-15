@@ -22,16 +22,9 @@ namespace QuanLyNhaHang
     /// </summary>
     public partial class BillTemplate : Window
     {
-        private float subTotal = 0;
-        private float discount = 0;
-        private float total = 0;
         public BillTemplate()
         {
-
             InitializeComponent();
-
-            ShowBill(3);
-            
         }
         public BillTemplate(int id)
         {
@@ -40,8 +33,10 @@ namespace QuanLyNhaHang
         }
         private void ShowBill(int id)
         {
-
-            List<BillInfoDTO> listBill = BillInfoDAO.Instance.GetListMenuByTable(id);
+        float subTotal = 0;
+        int discount = 0;
+        float total = 0;
+        List<BillInfoDTO> listBill = BillInfoDAO.Instance.GetListMenuByTable(id);
             foreach(BillInfoDTO bill in listBill)
             {
                 subTotal += bill.TotalPrice;
@@ -50,9 +45,12 @@ namespace QuanLyNhaHang
             GetDateCheckIn(id);
             GetDateCheckOut();
             GetUncheckedBillIDByTable(id);
-            GetSubTotal();
-            GetDiscount();
-            GetTotal();
+            int idBill = BillDAO.Instance.GetUncheckBillIDByTableID(id);
+            discount = BillDAO.Instance.GetDiscount(idBill);
+            subTotalTxb.Text = "Subtotal: " + subTotal.ToString() + " VND";
+            discountTxb.Text = "Discount: " + discount.ToString() + "%";
+            total = subTotal * (100 - discount) / 100;
+            totalTxb.Text = "Total: " + total.ToString() + " VND";
 
         }
         private void GetUncheckedBillIDByTable(int id)
@@ -70,19 +68,6 @@ namespace QuanLyNhaHang
         {
             string dateCheckIn = BillDAO.Instance.GetDateCheckInByTable(id);
             dateCheckinTxb.Text = dateCheckIn;
-        }
-        private void GetSubTotal()
-        {
-            subTotalTxb.Text = "Subtotal: " + subTotal.ToString() +" VND"; 
-        }
-        private void GetDiscount()
-        {
-            discountTxb.Text = "Discount: " + discount.ToString() + "%";
-        }
-        private void GetTotal()
-        {
-            total = subTotal * (100-discount) / 100;
-            totalTxb.Text = "Total: " + total.ToString() + " VND";
         }
         private void LoadBillByTable(int id)
         {

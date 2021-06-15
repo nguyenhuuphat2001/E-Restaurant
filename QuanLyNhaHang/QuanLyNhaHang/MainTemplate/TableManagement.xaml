@@ -7,8 +7,11 @@
     xmlns:local1="clr-namespace:QuanLyNhaHang.UI.Meal"
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+     xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    x:Name="TableManagerment"
+    DataContext="{StaticResource tbVM}"
     Title="TableManagement"
-    Width="1500"
+    Width="1050"
     Height="700"
     ResizeMode="NoResize"
     WindowStartupLocation="CenterScreen"
@@ -60,16 +63,21 @@
             </StackPanel>
         </Grid>
         <Grid Grid.Row="1">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Loaded">
+                    <i:InvokeCommandAction Command="{Binding GetTableManagement}"
+                             CommandParameter="{Binding ElementName=TableManagerment}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="7*" />
                 <ColumnDefinition />
-                <ColumnDefinition Width="10*" />
-                <ColumnDefinition />
+              
                 <ColumnDefinition Width="9*" />
             </Grid.ColumnDefinitions>
             <Border Background="Gray" CornerRadius="10">
                 <ScrollViewer Grid.Column="0">
-                    <WrapPanel x:Name="wpTable" Orientation="Horizontal">
+                    <WrapPanel x:Name="wpTable" Orientation="Horizontal" Margin="20">
                         <local:Table Margin="5" />
                         <local:Table Margin="5" />
                         <local:Table Margin="5" />
@@ -83,20 +91,8 @@
                 </Separator.LayoutTransform>
             </Separator>
 
-            <Border
-                Grid.Column="2"
-                Background="Gray"
-                CornerRadius="10">
-                <ScrollViewer Grid.Column="0">
-                    <WrapPanel x:Name="wpFood" Orientation="Horizontal">
-                        <local1:MealButton />
-                        <local1:MealButton />
-                        <local1:MealButton />
-                    </WrapPanel>
-                </ScrollViewer>
-            </Border>
-
-            <Separator Grid.Column="3">
+ 
+            <Separator Grid.Column="2" Height="616" Margin="0,2,0,0" VerticalAlignment="Top">
                 <Separator.LayoutTransform>
                     <RotateTransform Angle="90" />
                 </Separator.LayoutTransform>
@@ -122,6 +118,8 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="30" />
                             <RowDefinition Height="30" />
+                            <RowDefinition Height="30" />
+                         
                             <RowDefinition />
                         </Grid.RowDefinitions>
                         <ComboBox
@@ -131,16 +129,23 @@
                             materialDesign:HintAssist.HintOpacity=".26"
                             IsEditable="True"
                             SelectionChanged="cbCategory_SelectionChanged" />
+                        <ComboBox
+                            x:Name="cbFood"
+                            Grid.Row="1"
+                            materialDesign:HintAssist.Hint="Select Food"
+                            materialDesign:HintAssist.HintOpacity=".26"
+                            IsEditable="True"
+                            SelectionChanged="cbFood_SelectionChanged" />
                         <TextBox
                             x:Name="txbQuantity"
-                            Grid.Row="1"
+                            Grid.Row="2"
                             materialDesign:HintAssist.Hint="Input quantity"
                             AcceptsReturn="True"
                             MaxLines="1"
                             TextWrapping="Wrap" />
                         <TextBox
                             x:Name="addtionalNoteTextbox"
-                            Grid.Row="2"
+                            Grid.Row="3"
                             materialDesign:HintAssist.HelperText="Special requirement"
                             materialDesign:HintAssist.Hint="Additonal note"
                             AcceptsReturn="True"
@@ -153,6 +158,7 @@
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         Content="Confirm"
+                        Click="confirmBtn_Click"
                         FontWeight="Bold"
                         Foreground="WhiteSmoke" />
                 </Grid>
@@ -168,7 +174,7 @@
                         <local:MealStatusManager VerticalAlignment="Center" />
                     </Grid>
                     <ScrollViewer x:Name="MealStatusCardContainer" Grid.Row="1">
-                        <StackPanel Orientation="Vertical">
+                        <StackPanel x:Name="spmealstatus" Orientation="Vertical">
                             <local:MealStatusCard />
                             <local:MealStatusCard />
                             <local:MealStatusCard />
@@ -201,7 +207,7 @@
                         </materialDesign:Card>
 
                         <Grid Grid.Row="1">
-                            <local:SelectTable Height="50" />
+                            <local:SelectTable x:Name="ucCbTable" Height="50" />
                         </Grid>
                         <Button
                             Grid.Row="2"
@@ -209,6 +215,7 @@
                             HorizontalAlignment="Stretch"
                             VerticalAlignment="Center"
                             Content="Change"
+                            Click="changeTableBtn_Click"
                             FontWeight="Bold"
                             Foreground="WhiteSmoke" />
                     </Grid>
@@ -231,14 +238,16 @@
                         </materialDesign:Card>
 
                         <Grid Grid.Row="1">
-                            <local:DiscountField Height="50" />
+                            <local:DiscountField x:Name="discount" Height="50" />
                         </Grid>
                         <Button
+                            
                             Grid.Row="2"
                             Margin="3"
                             HorizontalAlignment="Stretch"
                             VerticalAlignment="Center"
                             Content="Apply"
+                            Click="applyDiscountBtn_Click"
                             FontWeight="Bold"
                             Foreground="WhiteSmoke" />
                     </Grid>
@@ -246,7 +255,7 @@
                         <Grid.RowDefinitions>
                             <RowDefinition />
                             <RowDefinition />
-                            <RowDefinition />
+                            <RowDefinition Height="40" />
                         </Grid.RowDefinitions>
                         <materialDesign:Card
                             Height="30"
@@ -261,6 +270,7 @@
                         </materialDesign:Card>
 
                         <TextBlock
+                            x:Name="Price" 
                             Grid.Row="1"
                             HorizontalAlignment="Stretch"
                             VerticalAlignment="Center"

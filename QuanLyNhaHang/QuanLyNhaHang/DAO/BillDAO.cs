@@ -51,5 +51,43 @@ namespace QuanLyNhaHang.DAO
             }
             return -1;
         }
+        public void InsertBill(int id)
+        {
+            DataProvider.Instance.ExecuteNonQuery("exec USP_InsertBill @idTable", new object[] { id });
+        }
+        public void CheckOut(int id)
+        {
+            string query = "UPDATE dbo.Bill SET status = 1 WHERE id = " + id;
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public void UpdateDiscount(int id,int discount)
+        {
+            string query = "UPDATE dbo.Bill SET discount =" + discount + "WHERE id = " + id;
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
+
+        public int GetDiscount(int id)
+        {
+            try
+            {
+                return (int)DataProvider.Instance.ExecuteScalar("SELECT discount FROM Bill where id=" + id);
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
+        public int GetMaxIDBill()
+        {
+            try
+            {
+                return (int)DataProvider.Instance.ExecuteScalar("SELECT MAX(id) FROM dbo.Bill");
+            }
+            catch
+            {
+                return 1;
+            }
+        }
     }
 }

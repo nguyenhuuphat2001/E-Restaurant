@@ -65,5 +65,35 @@ namespace QuanLyNhaHang.DAO
             }
             return list;
         }
+
+        public void InsertBillInfo(int idBill, int idFood, int count)
+        {
+            DataProvider.Instance.ExecuteNonQuery("USP_InsertBillInfo @idBill , @idFood , @count", new object[] { idBill, idFood, count });
+        }
+
+        public int GetBillInfo(int idBill,int idFood)
+        {
+         
+            try
+            {
+                return (int)DataProvider.Instance.ExecuteScalar("SELECT id FROM BillInfo where idBill="+idBill+ "and idFood= "+idFood);
+            }
+            catch
+            {
+                return -1;
+            }
+        }
+
+        public int GetCount(int idBillInfo)
+        {
+            try
+            {
+                return (int)DataProvider.Instance.ExecuteScalar("SELECT count FROM BillInfo where id = " +idBillInfo);
+            }
+            catch
+            {
+                return -1;
+            }
+        }
     }
 }

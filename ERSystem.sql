@@ -35,6 +35,10 @@ CREATE TABLE TableFood
 	status VARCHAR(100) NOT NULL DEFAULT 'Empty'	-- Empty || Using
 )
 GO
+SET IDENTITY_INSERT TableFood On
+INSERT TableFood (id,name,status) VALUES (1,'Năm','Trống')
+INSERT TableFood (id,name,status) VALUES (2,'BA','Full')
+
 
 CREATE TABLE FoodCategory
 (
@@ -53,9 +57,24 @@ CREATE TABLE Food
 	name NVARCHAR(100) NOT NULL DEFAULT N'No name',
 	idCategory INT NOT NULL,
 	price FLOAT NOT NULL DEFAULT 0
-	
-	FOREIGN KEY (idCategory) REFERENCES dbo.FoodCategory(id)
 )
+
+SELECT * FROM Food
+SELECT * FROM FoodCategory
+
+	ALTER TABLE Food 
+	ADD CONSTRAINT FK_idCategory
+	FOREIGN KEY (idCategory) 
+	REFERENCES FoodCategory (id)
+
+
+select FoodCategory.id from FoodCategory where FoodCategory.name = N'Nước'
+
+
+INSERT dbo.Food ( name, idCategory, price )
+VALUES  ( N'Mojt', 9, 12000)
+
+set IDENTITY_INSERT Food OFF
  
 CREATE TABLE Book
 (
@@ -90,6 +109,17 @@ CREATE TABLE BillInfo
 	FOREIGN KEY (idBill) REFERENCES dbo.Bill(id),
 	FOREIGN KEY (idFood) REFERENCES dbo.Food(id)
 )
+GO
+CREATE TABLE MealStatus
+(
+    id INT IDENTITY PRIMARY KEY,
+	idBillInfo INT NOT NULL,
+	des NVARCHAR(100),
+	status INT NOT NULL DEFAULT 0 -- 1: đã thanh toán && 0: chưa thanh toán	
+	
+	FOREIGN KEY (idBillInfo) REFERENCES dbo.BillInfo(id),
+)
+
 GO
 
 --Thêm NV
@@ -218,6 +248,9 @@ INSERT dbo.FoodCategory ( name )
 VALUES  ( N'Nước' )
 GO
 
+
+
+
 -- thêm món ăn
 INSERT dbo.Food ( name, idCategory, price )
 VALUES  ( N'Mực một nắng nước sa tế', 1 , 120000)
@@ -234,6 +267,11 @@ VALUES  ( N'7Up', 4, 15000)
 INSERT dbo.Food ( name, idCategory, price )
 VALUES  ( N'Cafe', 4, 12000)
 GO
+
+Select food.id from Food where food.name = 'Cafe'
+Delete from Food where food.id = 17
+
+INSERT TableFood (name,id,status)
 
 --Thêm bàn
 DECLARE @i INT = 1
@@ -319,6 +357,23 @@ VALUES  ( 3, -- idBill - int
           )   
 GO
 
+--Thêm MealStatus
+INSERT dbo.MealStatus(idBillInfo,des,status)
+VALUES(1, 'CAY' , 1 )
+
+INSERT dbo.MealStatus(idBillInfo,des,status)
+VALUES(2, 'Ngot' , 0 )
+
+INSERT dbo.MealStatus(idBillInfo,des,status)
+VALUES(3, 'Man' , 0 )
+
+INSERT dbo.MealStatus(idBillInfo,des,status)
+VALUES(5, 'Hoi ngot' , 1 )
+
+INSERT dbo.MealStatus(idBillInfo,des,status)
+VALUES(6, 'Cay nhieu' , 1 )
+
+
 --Procedure
 CREATE PROC USP_Login
 @userName varchar(100), @passWord varchar(100)
@@ -338,3 +393,215 @@ BEGIN
 	WHERE UserName = @userName COLLATE SQL_Latin1_General_CP1_CS_AS
 END
 GO
+
+CREATE PROC USP_InsertBill
+@idTable INT
+AS
+BEGIN
+     INSERT dbo.Bill
+	 (DateCheckIn,
+	 DateCheckOut,
+	 idTable,
+	 status,
+	 discount
+	 )
+	 VALUES
+	 (GETDATE(),
+	 NULL,
+	 @idTable,
+	 0,
+	 0
+	 )
+
+END
+
+GO
+
+CREATE PROC USP_InsertBillInfo
+@idBill INT, @idFood INT, @count INT
+AS
+BEGIN
+  
+   DECLARE @isExistBillInfo INT
+   DECLARE @foodcount INT = 1 
+
+   SELECT @isExistBillInfo = id,@foodcount=b.count
+   FROM dbo.BillInfo AS b
+   WHERE idBill = @idBill AND idFood = @idFood
+
+   IF(@isExistBillInfo > 0)
+   BEGIN
+       DECLARE @newCount INT =@foodcount + @count
+	   IF(@newCount > 0)
+	      UPDATE dbo.BillInfo SET count = @newCount WHERE idFood = @idFood
+       ELSE
+	      DELETE dbo.BillInfo WHERE idBill=@idBill AND idFood = @idFood
+		  
+   END   
+   ELSE
+   BEGIN
+     INSERT	dbo.BillInfo
+        ( idBill, idFood, count )
+VALUES  ( @idBill, -- idBill - int
+          @idFood, -- idFood - int
+          @count  -- count - int
+          )
+	END
+END
+GO
+
+CREATE PROC USP_InsertMealStatus
+@idBillInfo INT, @des NVARCHAR(100)
+AS
+BEGIN
+   INSERT dbo.MealStatus(idBillInfo,des,status)
+   VALUES(@idBillInfo, @des , 0 )
+END
+
+Alter PROC USP_SwitchTable
+@idTable1 INT, @idTable2 int
+AS 
+BEGIN
+
+	DECLARE @idFirstBill INT
+	DECLARE @idSecondBill INT
+	
+	DECLARE @isFirstTablEmty INT = 1
+	DECLARE @isSecondTablEmty INT = 1
+	
+	
+	SELECT @idSecondBill = id FROM dbo.Bill WHERE idTable = @idTable2 AND status = 0
+	SELECT @idFirstBill = id FROM dbo.Bill WHERE idTable = @idTable1 AND status = 0
+	
+
+	PRINT @idFirstBill
+	PRINT @idSecondBill
+	PRINT '----------1'
+	
+	IF (@idFirstBill IS NULL)
+	BEGIN
+		PRINT '0000001'
+		INSERT dbo.Bill
+		        ( DateCheckIn ,
+		          DateCheckOut ,
+		          idTable,
+		          status,
+				  discount
+		        )
+		VALUES  ( GETDATE() , -- DateCheckIn - date
+		          NULL , -- DateCheckOut - date
+		          @idTable1 , -- idTable - int
+		          0 ,
+				  0
+		        )
+		        
+		SELECT @idFirstBill = MAX(id) FROM dbo.Bill WHERE idTable = @idTable1 AND status = 0
+		
+	END
+	
+	SELECT @isFirstTablEmty = COUNT(*) FROM dbo.BillInfo WHERE idBill = @idFirstBill
+	
+	PRINT @idFirstBill
+	PRINT @idSecondBill
+	PRINT '----------2'
+	
+	IF (@idSecondBill IS NULL)
+	BEGIN
+		PRINT '0000002'
+		INSERT dbo.Bill
+		        ( DateCheckIn ,
+		          DateCheckOut ,
+		          idTable ,
+		          status,
+				  discount
+		        )
+		VALUES  ( GETDATE() , -- DateCheckIn - date
+		          NULL , -- DateCheckOut - date
+		          @idTable2 , -- idTable - int
+		          0 ,
+				  0
+		        )
+		SELECT @idSecondBill = MAX(id) FROM dbo.Bill WHERE idTable = @idTable2 AND status = 0
+		
+	END
+	
+	SELECT @isSecondTablEmty = COUNT(*) FROM dbo.BillInfo WHERE idBill = @idSecondBill
+	
+	PRINT @idFirstBill
+	PRINT @idSecondBill
+	PRINT '----------3'
+
+	SELECT id INTO IDBillInfoTable FROM dbo.BillInfo WHERE idBill = @idSecondBill
+	
+	UPDATE dbo.BillInfo SET idBill = @idSecondBill WHERE idBill = @idFirstBill
+	
+	UPDATE dbo.BillInfo SET idBill = @idFirstBill WHERE id IN (SELECT * FROM IDBillInfoTable)
+	
+	DROP TABLE IDBillInfoTable
+	
+	IF (@isFirstTablEmty = 0)
+	BEGIN
+	    DELETE dbo.Bill WHERE idTable=@idTable2
+		UPDATE dbo.TableFood SET status = N'Empty' WHERE id = @idTable2
+	END
+	IF (@isSecondTablEmty= 0)
+	BEGIN
+	    DELETE dbo.Bill WHERE idTable=@idTable1
+		UPDATE dbo.TableFood SET status = N'Empty' WHERE id = @idTable1
+	END
+END
+GO
+
+
+-- Trigger
+
+CREATE TRIGGER UTG_UpdateBill
+ON dbo.Bill FOR UPDATE
+AS 
+BEGIN
+     DECLARE @idBill INT
+
+	 SELECT @idBill = id FROM inserted
+
+	 DECLARE @idTable INT
+
+	 SELECT @idTable = idTable FROM dbo.Bill WHERE id=@idBill
+
+	 DECLARE @count int = 0
+
+	 SELECT @count = COUNT(*) FROM DBO.Bill WHERE idTable = @idTable AND status = 0
+
+	 IF(@count = 0)
+	    UPDATE dbo.TableFood SET status = 'Empty' WHERE id = @idTable
+END
+GO
+
+CREATE TRIGGER UTG_UpdateBillInfo
+ON dbo.BillInfo FOR INSERT, UPDATE
+AS 
+BEGIN
+     DECLARE @idBill INT
+
+	 SELECT @idBill = idBill FROM inserted
+
+	 DECLARE @idTable INT
+
+	 SELECT @idTable = idTable FROM dbo.Bill WHERE id=@idBill AND status = 0
+
+	 UPDATE dbo.TableFood SET status = 'Empty' WHERE id = @idTable
+
+END
+GO
+
+
+
+
+
+--UPDATE BILL
+
+ALTER TABLE dbo.bill
+ADD discount INT
+
+UPDATE dbo.Bill set discount=0
+
+

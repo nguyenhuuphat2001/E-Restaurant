@@ -39,7 +39,7 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Button x:Name="addButton" Grid.Column="0" Background="Gray" BorderBrush="Gray" MouseEnter="addButton_MouseEnter" MouseLeave="addButton_MouseLeave"  >
+                    <Button x:Name="addButton" Grid.Column="0" Background="Gray" BorderBrush="Gray" MouseEnter="addButton_MouseEnter" MouseLeave="addButton_MouseLeave" Click="addButton_Click"  >
                         <materialDesign:PackIcon Kind="Pencil" Name="addIcon" Foreground="White" />
                     </Button>
                     <Separator Grid.Column="1" Width="41" Height="20" Background="White" >
@@ -47,7 +47,7 @@
                             <RotateTransform Angle="90" />
                         </Separator.LayoutTransform>
                     </Separator>
-                    <Button x:Name="deleteButton" Grid.Column="2" Background="Gray" BorderBrush="Gray" MouseEnter="deleteButton_MouseEnter" MouseLeave="deleteButton_MouseLeave"  >
+                    <Button x:Name="deleteButton" Grid.Column="2" Background="Gray" BorderBrush="Gray" MouseEnter="deleteButton_MouseEnter" MouseLeave="deleteButton_MouseLeave" Click="deleteButton_Click"  >
                         <materialDesign:PackIcon x:Name="deleteIcon" Kind="GarbageCan" Foreground="White"/>
                     </Button>
                 </Grid>

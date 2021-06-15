@@ -21,7 +21,7 @@
               
                 <StackPanel x:Name="MealOrderContainer" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                    
-                    <TextBlock x:Name="mealOrdder" Text="1" Margin="5" />
+                    <TextBlock x:Name="mealOrder" Text="1" Margin="5" />
                 </StackPanel>
                 <StackPanel x:Name="mealNameContainer" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <TextBlock x:Name="name" Text="Pork with rice" Margin="5" />

@@ -129,6 +129,9 @@
     <Page Update="MainTemplate\ModifyCategory.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Resource.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="UI\Account\AccountCard.xaml">
       <SubType>Designer</SubType>
     </Page>
